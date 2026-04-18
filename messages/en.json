@@ -10,9 +10,9 @@
       "titleMain": "Legal AI Assistant",
       "titleFor": "for:",
       "titleAudienceRotating": ["lawyers", "accountants", "SME founders"],
-      "description": "DoLegal is an assistant for RA law—research, document drafting, and contract checks tied to official legislation with citations. It’s for solo and firm lawyers, accountants, and founders who carry tax and compliance work. Why now: e-filing, weekly legal updates, and heavier reporting loads—manual search in tabs no longer fits the pace.",
+      "description": "Working under RA law means pulling rules from many places—and you need to show which article you used. DoLegal answers and drafts from indexed official legislation with citations, so your work points to the statute, not a generic model.",
       "primaryCta": "Join Early Access",
-      "secondaryCta": "See how it works ->",
+      "secondaryCta": "See how it works",
       "onlineStatus": "Online",
       "previewBadge": "Example",
       "previewQuestionLabel": "Question",
@@ -78,7 +78,7 @@
       }
     },
     "heroStats": [
-      { "value": "10,000+", "label": "Laws indexed" },
+      { "value": "100,000+", "label": "Laws indexed" },
       { "value": "3 languages", "label": "AM · RU · EN" },
       { "value": "Weekly", "label": "Database updates" }
     ],

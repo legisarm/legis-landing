@@ -1,12 +1,11 @@
 import type { LandingContent } from "./content";
-import { marketingSectionLabel, marketingSectionSub, marketingSectionTitle } from "./marketing-constants";
+import { marketingSectionSub, marketingSectionTitle } from "./marketing-constants";
 
 export function PricingSection({ pricing }: { pricing: LandingContent["pricing"] }) {
   return (
     <section className="landing-scroll-target bg-[#f5f5f7] px-5 py-24 md:px-10" id="pricing">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto mb-16 max-w-2xl text-center">
-          <span className={marketingSectionLabel}>{pricing.sectionLabel}</span>
           <h1 className={marketingSectionTitle}>
             {pricing.titleMain}
             <br />

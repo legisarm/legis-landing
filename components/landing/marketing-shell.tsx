@@ -127,26 +127,27 @@ export function MarketingShell({ children }: { children: ReactNode }) {
                   />
                 </svg>
               </summary>
-              <div className="absolute right-0 top-[calc(100%+8px)] z-20 min-w-[160px] overflow-hidden rounded-xl border border-black/10 bg-white shadow-[0_12px_24px_rgba(0,0,0,0.08)]">
+              <div className="absolute right-0 top-[calc(100%+8px)] z-20 min-w-[88px] overflow-hidden rounded-xl border border-black/10 bg-white shadow-[0_12px_24px_rgba(0,0,0,0.08)]">
                 {languageOptions.map((option) => (
                   <button
                     key={option.code}
                     type="button"
+                    aria-label={option.label}
                     onClick={() => router.replace(pathname, { locale: option.locale })}
-                    className={`flex w-full items-center gap-2 px-3 py-2.5 text-left text-sm transition ${
+                    className={`flex w-full items-center justify-center gap-2 px-3 py-2.5 text-sm transition ${
                       option.locale === locale ? "bg-black/5 font-medium text-black" : "text-black/70 hover:bg-black/5"
                     }`}
                   >
                     <Image
                       src={option.flagSrc}
-                      alt={`${option.label} flag`}
+                      alt=""
                       width={24}
                       height={24}
                       sizes="24px"
                       className="h-6 w-6 rounded-full object-cover"
+                      aria-hidden={true}
                     />
-                    <span>{option.label}</span>
-                    <span className="ml-auto text-[12px]">{option.code}</span>
+                    <span className="font-medium tabular-nums">{option.code}</span>
                   </button>
                 ))}
               </div>

@@ -25,25 +25,22 @@ export function HeroRotatingAudience({ items }: { items: string[] }) {
   if (!mounted || reduceMotion) {
     const text = reduceMotion ? items.join(", ") : items[0] ?? "";
     return (
-      <em className="font-normal italic">
+      <span className="font-semibold not-italic text-purple-900 [font-family:inherit] [font-size:inherit] [line-height:inherit]">
         {text}
-        {text ? "." : null}
-      </em>
+      </span>
     );
   }
 
   return (
-    <em className="font-normal italic">
-      <span className="inline-block min-h-[1.2em] align-bottom">
-        <span
-          key={index}
-          aria-live="polite"
-          aria-atomic="true"
-          className="hero-audience-slide-up inline-block [font-family:inherit]"
-        >
-          {items[index]}.
-        </span>
+    <span className="font-semibold not-italic [font-family:inherit] [font-size:inherit] [line-height:inherit]">
+      <span
+        key={index}
+        aria-live="polite"
+        aria-atomic="true"
+        className="hero-audience-slide-up inline-block align-baseline text-purple-900"
+      >
+        {items[index]}
       </span>
-    </em>
+    </span>
   );
 }

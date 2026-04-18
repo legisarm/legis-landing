@@ -67,8 +67,8 @@ export function LandingPage() {
             <div className="text-left">
               <h1 className="mb-6 max-w-2xl [font-family:var(--font-playfair)] text-[64px] font-semibold leading-[1.05] tracking-[-0.03em] text-[#1d1d1f]">
                 <span className="block">{content.hero.titleMain}</span>
-                <span className="mt-1.5 block">
-                  <span className="inline">{content.hero.titleFor}</span>{" "}
+                <span className="mt-1.5 flex flex-wrap items-baseline gap-x-[0.35em]">
+                  <span>{content.hero.titleFor}</span>
                   <HeroRotatingAudience items={content.hero.titleAudienceRotating} />
                 </span>
               </h1>
@@ -149,7 +149,7 @@ export function LandingPage() {
               ))}
             </div>
 
-            <div className="mt-16 -mx-5 bg-[#f5f5f7] px-5 py-14 md:mt-20 md:-mx-10 md:px-10 md:py-16">
+            <div className="mt-16 md:mt-20">
               <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-2">
                 <ComparisonCard badge={content.problem.oldWayBadge} negative items={content.problem.oldWayItems} />
                 <ComparisonCard badge={content.problem.withDoLegalBadge} items={content.problem.doLegalItems} />
