@@ -1,15 +1,24 @@
 "use client";
 
 import Image from "next/image";
-import type { MouseEvent, ReactNode } from "react";
+import type { CSSProperties, MouseEvent, ReactNode } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Outfit, Playfair_Display } from "next/font/google";
+import { Noto_Sans_Armenian, Noto_Serif_Armenian, Outfit, Playfair_Display } from "next/font/google";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { languageOptions, type LandingContent } from "./content";
 import { DoLegalWordmark } from "./dolegal-wordmark";
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
+const notoSerifArmenian = Noto_Serif_Armenian({
+  subsets: ["armenian"],
+  variable: "--font-noto-serif-armenian",
+});
+const notoSansArmenian = Noto_Sans_Armenian({
+  subsets: ["armenian"],
+  variable: "--font-noto-sans-armenian",
+  weight: ["600"],
+});
 
 const FIXED_NAV_OFFSET = 104;
 
@@ -54,6 +63,9 @@ export function MarketingShell({ children }: { children: ReactNode }) {
   const content = t.raw("landing") as LandingContent;
   const currentLanguage = languageOptions.find((option) => option.locale === locale) ?? languageOptions[0];
   const isHome = pathname === "/";
+  const playfairOverrideStyle =
+    locale === "hy" ? ({ "--font-playfair": "var(--font-noto-serif-armenian)" } as CSSProperties) : undefined;
+  const armenianSansClass = locale === "hy" ? "[font-family:var(--font-noto-sans-armenian)]" : "";
 
   const handleAnchorClick = (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
     if (!href.startsWith("#")) return;
@@ -67,20 +79,23 @@ export function MarketingShell({ children }: { children: ReactNode }) {
   };
 
   return (
-    <div className={`${outfit.variable} ${playfair.variable} bg-white text-[#1d1d1f]`}>
+    <div
+      className={`${outfit.variable} ${playfair.variable} ${notoSerifArmenian.variable} ${notoSansArmenian.variable} bg-white text-[#1d1d1f]`}
+      style={playfairOverrideStyle}
+    >
       <nav className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-white/90 px-6 backdrop-blur-xl md:px-8">
         <div className="mx-auto flex h-[68px] w-full max-w-7xl items-center justify-between">
           <Link className="[font-family:var(--font-playfair)] text-[32px] font-semibold" href="/">
             <DoLegalWordmark />
           </Link>
-          <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 md:flex">
+          <ul className={`absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 md:flex ${armenianSansClass}`}>
             {content.navigationLinks.map((link) => {
               const { href, label } = link;
               if (href.startsWith("#")) {
                 if (isHome) {
                   return (
                     <li key={href}>
-                      <a className={navLinkClass} href={href} onClick={handleAnchorClick(href)}>
+                      <a className={`${navLinkClass} ${armenianSansClass}`} href={href} onClick={handleAnchorClick(href)}>
                         {label}
                       </a>
                     </li>
@@ -88,7 +103,7 @@ export function MarketingShell({ children }: { children: ReactNode }) {
                 }
                 return (
                   <li key={href}>
-                    <Link className={navLinkClass} href={`/#${href.slice(1)}`}>
+                    <Link className={`${navLinkClass} ${armenianSansClass}`} href={`/#${href.slice(1)}`}>
                       {label}
                     </Link>
                   </li>
@@ -96,7 +111,7 @@ export function MarketingShell({ children }: { children: ReactNode }) {
               }
               return (
                 <li key={href}>
-                  <Link className={navLinkClass} href={href}>
+                  <Link className={`${navLinkClass} ${armenianSansClass}`} href={href}>
                     {label}
                   </Link>
                 </li>
@@ -157,13 +172,17 @@ export function MarketingShell({ children }: { children: ReactNode }) {
               <a
                 href="#early-access"
                 onClick={handleAnchorClick("#early-access")}
-                className="flex h-12 items-center rounded-xl bg-[#1d1d1f] px-5 text-[15px] font-medium text-white transition hover:bg-[#3a3a3c]"
+                className={`flex h-12 items-center rounded-xl bg-[#1d1d1f] px-5 text-[15px] text-white transition hover:bg-[#3a3a3c] ${
+                  locale === "hy" ? `${armenianSansClass} font-semibold` : "font-medium"
+                }`}
               >
                 {content.hero.primaryCta}
               </a>
             ) : (
               <Link
-                className="flex h-12 items-center rounded-xl bg-[#1d1d1f] px-5 text-[15px] font-medium text-white transition hover:bg-[#3a3a3c]"
+                className={`flex h-12 items-center rounded-xl bg-[#1d1d1f] px-5 text-[15px] text-white transition hover:bg-[#3a3a3c] ${
+                  locale === "hy" ? `${armenianSansClass} font-semibold` : "font-medium"
+                }`}
                 href="/#early-access"
               >
                 {content.hero.primaryCta}

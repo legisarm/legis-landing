@@ -1,13 +1,21 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useLocale } from "next-intl";
 import { useTranslations } from "next-intl";
+import { Noto_Sans_Armenian } from "next/font/google";
 import { DoLegalWordmark } from "./dolegal-wordmark";
 import { DocxFileIcon, PdfFileIcon } from "./hero-document-icons";
 
-/** ~8.5s per slide — five scenarios cycle in under 45s */
-const ROTATE_MS = 8_500;
-const TYPE_MS = 16;
+/** ~17s per slide for a calmer preview pace */
+const ROTATE_MS = 17_000;
+const TYPE_MS = 32;
+const ANSWER_TYPE_MS = 3;
+const notoSansArmenian = Noto_Sans_Armenian({
+  subsets: ["armenian"],
+  variable: "--font-noto-sans-armenian",
+  weight: ["600"],
+});
 
 type DropPhase = "idle" | "dropped" | "analyzing";
 
@@ -23,6 +31,7 @@ type PreviewUseCase = {
 };
 
 export function HeroDoodleCanvas() {
+  const locale = useLocale();
   const t = useTranslations("landing");
   const useCases = useMemo(
     () => t.raw("hero.previewUseCases") as PreviewUseCase[],
@@ -33,9 +42,15 @@ export function HeroDoodleCanvas() {
   const [slide, setSlide] = useState(0);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [displayQuestion, setDisplayQuestion] = useState("");
+  const [composerText, setComposerText] = useState("");
+  const [questionSent, setQuestionSent] = useState(false);
+  const [requestSliding, setRequestSliding] = useState(false);
+  const [displayAnswerBody, setDisplayAnswerBody] = useState("");
   const [typingDone, setTypingDone] = useState(false);
   const [dropPhase, setDropPhase] = useState<DropPhase>("idle");
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const sendTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const answerTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const s = useCases[slide % slideCount] ?? useCases[0];
   const needsAttachment = Boolean(s.withAttachment);
@@ -66,8 +81,8 @@ export function HeroDoodleCanvas() {
     const kick = window.setTimeout(() => {
       setDropPhase("idle");
     }, 0);
-    const t1 = window.setTimeout(() => setDropPhase("dropped"), 700);
-    const t2 = window.setTimeout(() => setDropPhase("analyzing"), 1650);
+    const t1 = window.setTimeout(() => setDropPhase("dropped"), 1_400);
+    const t2 = window.setTimeout(() => setDropPhase("analyzing"), 3_300);
     return () => {
       clearTimeout(kick);
       clearTimeout(t1);
@@ -77,16 +92,38 @@ export function HeroDoodleCanvas() {
 
   const contextReady = !needsAttachment || reducedMotion || dropPhase === "analyzing";
 
+  const submitQuestion = (question: string) => {
+    const value = question.trim();
+    if (!value) return;
+    setDisplayQuestion(value);
+    setComposerText("");
+    setQuestionSent(true);
+    setRequestSliding(true);
+    window.requestAnimationFrame(() => setRequestSliding(false));
+  };
+
   useEffect(() => {
     if (timerRef.current) {
       clearTimeout(timerRef.current);
       timerRef.current = null;
     }
+    if (sendTimerRef.current) {
+      clearTimeout(sendTimerRef.current);
+      sendTimerRef.current = null;
+    }
+    if (answerTimerRef.current) {
+      clearTimeout(answerTimerRef.current);
+      answerTimerRef.current = null;
+    }
 
     if (!contextReady) {
       if (!reducedMotion) {
         const clear = window.setTimeout(() => {
+          setComposerText("");
           setDisplayQuestion("");
+          setDisplayAnswerBody("");
+          setQuestionSent(false);
+          setRequestSliding(false);
           setTypingDone(false);
         }, 0);
         return () => clearTimeout(clear);
@@ -96,8 +133,8 @@ export function HeroDoodleCanvas() {
 
     if (reducedMotion) {
       const raf = requestAnimationFrame(() => {
-        setDisplayQuestion(s.question);
-        setTypingDone(true);
+        setComposerText(s.question);
+        submitQuestion(s.question);
       });
       return () => cancelAnimationFrame(raf);
     }
@@ -107,9 +144,9 @@ export function HeroDoodleCanvas() {
 
     const step = () => {
       idx += 1;
-      setDisplayQuestion(full.slice(0, idx));
+      setComposerText(full.slice(0, idx));
       if (idx >= full.length) {
-        setTypingDone(true);
+        sendTimerRef.current = window.setTimeout(() => submitQuestion(full), TYPE_MS * 10);
         return;
       }
       const ch = full[idx - 1];
@@ -118,7 +155,11 @@ export function HeroDoodleCanvas() {
     };
 
     const kickoff = window.setTimeout(() => {
+      setComposerText("");
       setDisplayQuestion("");
+      setDisplayAnswerBody("");
+      setQuestionSent(false);
+      setRequestSliding(false);
       setTypingDone(false);
       timerRef.current = setTimeout(step, TYPE_MS * 1.1);
     }, 0);
@@ -126,11 +167,61 @@ export function HeroDoodleCanvas() {
     return () => {
       clearTimeout(kickoff);
       if (timerRef.current) clearTimeout(timerRef.current);
+      if (sendTimerRef.current) clearTimeout(sendTimerRef.current);
+      if (answerTimerRef.current) clearTimeout(answerTimerRef.current);
     };
   }, [slide, s.question, reducedMotion, contextReady]);
 
-  const showCaret =
-    contextReady && !reducedMotion && !typingDone && displayQuestion.length < s.question.length;
+  useEffect(() => {
+    if (answerTimerRef.current) {
+      clearTimeout(answerTimerRef.current);
+      answerTimerRef.current = null;
+    }
+
+    if (!questionSent) {
+      setDisplayAnswerBody("");
+      setTypingDone(false);
+      return;
+    }
+
+    if (reducedMotion) {
+      const raf = requestAnimationFrame(() => {
+        setDisplayAnswerBody(s.answerBody);
+        setTypingDone(true);
+      });
+      return () => cancelAnimationFrame(raf);
+    }
+
+    setDisplayAnswerBody("");
+    setTypingDone(false);
+    let idx = 0;
+    const full = s.answerBody;
+
+    const typeAnswer = () => {
+      idx += 1;
+      setDisplayAnswerBody(full.slice(0, idx));
+      if (idx >= full.length) {
+        setTypingDone(true);
+        return;
+      }
+      const ch = full[idx - 1];
+      const delay = ch === " " || ch === "\n" ? ANSWER_TYPE_MS * 0.55 : ANSWER_TYPE_MS;
+      answerTimerRef.current = setTimeout(typeAnswer, delay);
+    };
+
+    const startDelay = window.setTimeout(() => {
+      setTypingDone(true);
+      answerTimerRef.current = setTimeout(typeAnswer, ANSWER_TYPE_MS);
+    }, 500);
+
+    return () => {
+      clearTimeout(startDelay);
+      if (answerTimerRef.current) clearTimeout(answerTimerRef.current);
+    };
+  }, [questionSent, s.answerBody, reducedMotion]);
+
+  const showComposerCaret =
+    contextReady && !reducedMotion && !questionSent && composerText.length < s.question.length;
 
   const exportPdf = s.exportPdfName ?? t("hero.previewExportPdfName");
   const exportDocx = s.exportDocxName ?? t("hero.previewExportDocxName");
@@ -146,23 +237,25 @@ export function HeroDoodleCanvas() {
     >
       {!contextReady && needsAttachment ? (
         <span className="text-black/28">{t("hero.previewWaitingQuestion")}</span>
+      ) : !questionSent ? (
+        <span className="text-black/28">{t("hero.previewWaitingQuestion")}</span>
       ) : (
         <>
-          <span className="whitespace-pre-wrap">{displayQuestion}</span>
-          {showCaret ? (
-            <span
-              className="ml-px inline-block min-h-[1em] w-[2px] translate-y-px animate-pulse bg-[#1d1d1f]/55 align-baseline motion-reduce:animate-none"
-              aria-hidden
-            />
-          ) : null}
+          <span
+            className={`inline-block whitespace-pre-wrap transition-all duration-300 ease-out ${
+              requestSliding ? "translate-y-4 opacity-0" : "translate-y-0 opacity-100"
+            }`}
+          >
+            {displayQuestion}
+          </span>
         </>
       )}
     </div>
   );
 
   return (
-    <div className="relative mx-auto w-full max-w-3xl">
-      <div className="hero-preview-card-idle overflow-hidden rounded-2xl border border-black/10 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.04),0_12px_48px_rgba(0,0,0,0.07)] md:p-8">
+    <div className={`relative mx-auto w-full max-w-3xl ${notoSansArmenian.variable}`}>
+      <div className="hero-preview-card-idle flex h-[555px] flex-col overflow-hidden rounded-2xl border border-black/10 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.04),0_12px_48px_rgba(0,0,0,0.07)] md:p-8">
         <div className="mb-8 flex items-center justify-between gap-4">
           <DoLegalWordmark className="[font-family:var(--font-playfair)] text-xl font-semibold tracking-tight text-[#1d1d1f] md:text-2xl" />
           <span className="shrink-0 rounded-full border border-black/10 bg-neutral-50 px-3 py-1.5 text-[11px] font-medium tracking-wide text-black/50">
@@ -170,9 +263,13 @@ export function HeroDoodleCanvas() {
           </span>
         </div>
 
-        <div className="space-y-8">
+        <div className="flex flex-1 flex-col overflow-hidden">
           <section>
-            <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.14em] text-black/40">
+            <p
+              className={`mb-3 text-[11px] uppercase tracking-[0.14em] text-black/40 ${
+                locale === "hy" ? "font-semibold [font-family:var(--font-noto-sans-armenian)]" : "font-medium"
+              }`}
+            >
               {t("hero.previewQuestionLabel")}
             </p>
 
@@ -231,24 +328,34 @@ export function HeroDoodleCanvas() {
             )}
           </section>
 
-          {typingDone ? (
-            <section key={slide} className="space-y-8">
+          {questionSent ? (
+            <section key={slide} className="mt-8 space-y-8">
               <div>
-                <p className="hero-ans-label mb-3 text-[11px] font-medium uppercase tracking-[0.14em] text-black/40">
+                <p
+                  className={`hero-ans-label mb-3 text-[11px] uppercase tracking-[0.14em] text-black/40 ${
+                    locale === "hy" ? "font-semibold [font-family:var(--font-noto-sans-armenian)]" : "font-medium"
+                  }`}
+                >
                   {t("hero.previewAnswerLabel")}
                 </p>
                 <div className="rounded-xl border border-black/[0.06] bg-white px-4 py-4 md:px-5 md:py-5">
-                  <p className="hero-ans-1 text-[13px] font-semibold text-[#1d1d1f] md:text-sm">{s.answerTitle}</p>
-                  <p className="hero-ans-2 mt-2 line-clamp-4 text-[14px] leading-relaxed text-black/65 md:line-clamp-none md:text-[15px]">
-                    {s.answerBody}
+                  <p
+                    className={`hero-ans-1 text-[13px] font-semibold text-[#1d1d1f] md:text-sm ${
+                      locale === "hy" ? "[font-family:var(--font-noto-sans-armenian)]" : ""
+                    }`}
+                  >
+                    {s.answerTitle}
                   </p>
-                  {tags ? (
+                  <p className="hero-ans-2 mt-2 line-clamp-4 text-[14px] leading-relaxed text-black/65 md:line-clamp-none md:text-[15px]">
+                    {displayAnswerBody}
+                  </p>
+                  {typingDone && tags ? (
                     <p className="hero-ans-3 mt-4 border-t border-black/[0.06] pt-4 text-[12px] leading-relaxed text-black/45">
                       {tags.join(" · ")}
                     </p>
                   ) : null}
 
-                  {showExport ? (
+                  {typingDone && showExport ? (
                     <div className="hero-ans-export mt-5 border-t border-black/[0.06] pt-5">
                       <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.14em] text-black/40">
                         {t("hero.previewExportLabel")}
@@ -273,6 +380,28 @@ export function HeroDoodleCanvas() {
               </div>
             </section>
           ) : null}
+
+          <div className="mt-auto pt-3">
+            <div className="flex items-center gap-2 rounded-xl border border-black/[0.08] bg-white p-2.5">
+              <div className="flex min-h-[42px] flex-1 items-center rounded-lg border border-black/[0.08] bg-neutral-50/80 px-3 text-[13px] text-black/70">
+                <span className="line-clamp-1 whitespace-pre-wrap">{composerText}</span>
+                {showComposerCaret ? (
+                  <span
+                    className="ml-1 inline-block min-h-[1em] w-[2px] animate-pulse bg-[#1d1d1f]/45 motion-reduce:animate-none"
+                    aria-hidden
+                  />
+                ) : null}
+              </div>
+              <button
+                type="button"
+                onClick={() => submitQuestion(composerText || s.question)}
+                disabled={!contextReady || questionSent}
+                className="min-h-[42px] rounded-lg bg-[#1d1d1f] px-4 text-[12px] font-medium text-white transition disabled:cursor-not-allowed disabled:opacity-45"
+              >
+                {t("hero.previewSend")}
+              </button>
+            </div>
+          </div>
         </div>
 
         {!reducedMotion ? (

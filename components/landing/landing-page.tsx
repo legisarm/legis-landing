@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import type { MouseEvent } from "react";
 import { HeroRotatingAudience } from "./hero-rotating-audience";
 import { HeroDoodleCanvas } from "./hero-doodle-canvas";
@@ -47,6 +47,7 @@ function animateScrollTo(targetY: number) {
 
 export function LandingPage() {
   const t = useTranslations();
+  const locale = useLocale();
   const content = t.raw("landing") as LandingContent;
   const handleAnchorClick = (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
     if (!href.startsWith("#")) return;
@@ -62,14 +63,16 @@ export function LandingPage() {
   return (
     <MarketingShell>
       <main className="[font-family:var(--font-outfit)]">
-        <section className="landing-hero-dotted px-5 pb-24 pt-40 md:px-10">
-          <div className="relative z-[1] mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-2">
+        <section className="landing-hero-dotted h-[920px] overflow-hidden px-5 pb-24 pt-40 md:h-[980px] md:px-10 lg:h-[900px]">
+          <div className="relative z-[1] mx-auto grid w-full max-w-7xl items-start gap-10 lg:grid-cols-2">
             <div className="text-left">
-              <h1 className="mb-6 max-w-2xl [font-family:var(--font-playfair)] text-[64px] font-semibold leading-[1.05] tracking-[-0.03em] text-[#1d1d1f]">
-                <span className="block">{content.hero.titleMain}</span>
-                <span className="mt-1.5 flex flex-wrap items-baseline gap-x-[0.35em]">
-                  <span>{content.hero.titleFor}</span>
-                  <HeroRotatingAudience items={content.hero.titleAudienceRotating} />
+              <h1 className="mb-6 max-w-2xl [font-family:var(--font-playfair)] text-[44.8px] font-semibold leading-[1.05] tracking-[-0.03em] text-[#1d1d1f]">
+                <span className="block text-[31.36px]">{content.hero.titleMain}</span>
+                <span className="mt-[0.5625rem] flex flex-wrap items-baseline gap-x-[0.35em]">
+                  <span className="text-[57.34px]">{content.hero.titleFor}</span>
+                  {content.hero.titleAudienceRotating.length > 0 ? (
+                    <HeroRotatingAudience items={content.hero.titleAudienceRotating} />
+                  ) : null}
                 </span>
               </h1>
               <p className="mb-10 max-w-xl text-lg leading-8 text-black/60">
@@ -79,7 +82,9 @@ export function LandingPage() {
                 <a
                   href="#early-access"
                   onClick={handleAnchorClick("#early-access")}
-                  className="rounded-full bg-[#1d1d1f] px-7 py-3.5 text-[15px] font-medium text-white transition hover:bg-[#3a3a3c]"
+                  className={`rounded-full bg-[#1d1d1f] px-7 py-3.5 text-[15px] font-medium text-white transition hover:bg-[#3a3a3c] ${
+                    locale === "hy" ? "[font-family:var(--font-noto-sans-armenian)] font-semibold" : ""
+                  }`}
                 >
                   {content.hero.primaryCta}
                 </a>
@@ -102,7 +107,7 @@ export function LandingPage() {
               </div>
             </div>
 
-            <div className="w-full">
+            <div className="w-full self-start">
               <HeroDoodleCanvas />
             </div>
           </div>
@@ -262,7 +267,9 @@ export function LandingPage() {
             <div className="w-full text-left">
               <label
                 htmlFor="early-access-email"
-                className="mb-2 block text-[12px] font-medium uppercase tracking-[0.08em] text-white/55"
+                className={`mb-2 block text-[12px] uppercase tracking-[0.08em] text-white/55 ${
+                  locale === "hy" ? "[font-family:var(--font-noto-sans-armenian)] font-semibold" : "font-medium"
+                }`}
               >
                 {content.earlyAccess.emailLabel}
               </label>
@@ -277,7 +284,9 @@ export function LandingPage() {
             </div>
             <button
               type="submit"
-              className="h-12 whitespace-nowrap rounded-xl bg-white px-6 text-[15px] font-medium text-[#1d1d1f] transition hover:bg-[#f5f5f7]"
+              className={`h-12 whitespace-nowrap rounded-xl bg-white px-6 text-[15px] text-[#1d1d1f] transition hover:bg-[#f5f5f7] ${
+                locale === "hy" ? "[font-family:var(--font-noto-sans-armenian)] font-semibold" : "font-medium"
+              }`}
             >
               {content.earlyAccess.buttonLabel}
             </button>

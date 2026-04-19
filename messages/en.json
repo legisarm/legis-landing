@@ -7,10 +7,10 @@
       { "href": "#faq", "label": "FAQ" }
     ],
     "hero": {
-      "titleMain": "Legal AI Assistant",
-      "titleFor": "for:",
-      "titleAudienceRotating": ["lawyers", "accountants", "SME founders"],
-      "description": "DoLegal provides legal assistance grounded in indexed RA legislation—from answering complex, contextual questions to drafting agreements, references, and reports—in minutes.",
+      "titleMain": "Legal AI-assistant",
+      "titleFor": "Exponential efficiency",
+      "titleAudienceRotating": [],
+      "description": "Forward-thinking founders, top lawyers, accountants, clerks, and other professionals simplify and speed up their daily work with DoLegal.",
       "primaryCta": "Join Early Access",
       "secondaryCta": "See how it works",
       "onlineStatus": "Online",
@@ -28,6 +28,7 @@
       "previewExportLabel": "Download",
       "previewExportPdfName": "service_agreement.pdf",
       "previewExportDocxName": "service_agreement.docx",
+      "previewSend": "Send",
       "previewWaitingQuestion": "Your question appears once context is ready…",
       "askPlaceholder": "Ask about Armenian law...",
       "previewUseCases": [

@@ -8,10 +8,10 @@
     ],
     "hero": {
       "titleMain": "Юридический ИИ-ассистент",
-      "titleFor": "для:",
-      "titleAudienceRotating": ["юристов", "бухгалтеров", "основателей МСП"],
-      "description": "DoLegal — юридическая помощь на базе индексированного законодательства РА: от разбора сложных контекстных вопросов до подготовки договоров, справок и отчётов за считанные минуты.",
-      "primaryCta": "Присоединиться к раннему доступу",
+      "titleFor": "Многократная эффективность",
+      "titleAudienceRotating": [],
+      "description": "Прогрессивные предприниматели, лучшие юристы, бухгалтеры, делопроизводители и другие профессионалы упрощают и ускоряют свою ежедневную работу с DoLegal.",
+      "primaryCta": "Записаться в лист ожидания",
       "secondaryCta": "Посмотреть как это работает",
       "onlineStatus": "Онлайн",
       "previewBadge": "Пример",
@@ -28,6 +28,7 @@
       "previewExportLabel": "Скачать",
       "previewExportPdfName": "service_agreement.pdf",
       "previewExportDocxName": "service_agreement.docx",
+      "previewSend": "Отправить",
       "previewWaitingQuestion": "Вопрос появится, когда контекст будет готов…",
       "askPlaceholder": "Спросите о законодательстве Армении...",
       "previewUseCases": [

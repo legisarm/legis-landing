@@ -1,21 +1,21 @@
 {
   "landing": {
     "navigationLinks": [
-      { "href": "#features", "label": "Առանձնահատկություններ" },
-      { "href": "#how", "label": "Ինչպես է այն աշխատում" },
+      { "href": "#features", "label": "Գործիքակազմ" },
+      { "href": "#how", "label": "Ինչ է DOLEGAL-Ը" },
       { "href": "/pricing", "label": "Սակագներ" },
       { "href": "#faq", "label": "ՀՏՀ" }
     ],
     "hero": {
-      "titleMain": "Իրավական AI",
-      "titleFor": "օգնական՝",
-      "titleAudienceRotating": ["իրավաբանների", "հաշվապահների", "փոքր ու միջին բիզնեսի ղեկավարների"],
-      "description": "DoLegal-ը իրավական աջակցություն է ՀՀ ինդեքսավորված օրենսդրության հիման վրա՝ բարդ համատեքստային հարցերից մինչև պայմանագրեր, հղումներ ու հաշվետվություններ՝ րոպեների ընթացքում։",
-      "primaryCta": "Միանալ վաղ հասանելիության ծրագրին",
+      "titleMain": "Իրավական AI-օգնական",
+      "titleFor": "Բազմապատիկ արդյունավետություն",
+      "titleAudienceRotating": [],
+      "description": "Առաջադեմ ձեռնարկատերերը, լավագույն իրավաբանները, հաշվապահները, գործավարները և այլ պրոֆեսիոնալները հեշտացնում և արագացնում են իրենց առօրյա աշխատանքը DoLegal-ի միջոցով։",
+      "primaryCta": "Վաղ հերթագրում",
       "secondaryCta": "Տեսնել, թե ինչպես է այն աշխատում",
       "onlineStatus": "Առցանց",
       "previewBadge": "Օրինակ",
-      "previewQuestionLabel": "Հարց",
+      "previewQuestionLabel": "Հարցում",
       "previewAnswerLabel": "Պատասխան",
       "previewDocumentLabel": "Փաստաթուղթ",
       "previewAttachmentLabel": "Համատեքստ",
@@ -28,6 +28,7 @@
       "previewExportLabel": "Ներբեռնում",
       "previewExportPdfName": "service_agreement.pdf",
       "previewExportDocxName": "service_agreement.docx",
+      "previewSend": "Ուղարկել",
       "previewWaitingQuestion": "Հարցը կհայտնվի համատեքստը պատրաստվելուց հետո…",
       "askPlaceholder": "Տվեք Ձեր հարցը ՀՀ օրենսդրության վերաբերյալ...",
       "previewUseCases": [
@@ -305,8 +306,8 @@
       "description": "Պրոդուկտը դեռևս հասանելի չէ լայն հանրությանը։ Միացեք հերթացուցակին (waitlist) և ստացեք հրավեր հենց որ մենք բացենք մուտքը։",
       "emailLabel": "Էլ․ հասցե",
       "emailPlaceholder": "you@company.com",
-      "buttonLabel": "Միանալ վաղ հասանելիությանը",
-      "footnote": "Միայն վաղ հասանելիության ցանկի համար - Հրավերներն ուղարկվում են փուլերով"
+      "buttonLabel": "Միանալ հերթացուցակին",
+      "footnote": "Միանալ հերթացուցակին - Հրավերներն ուղարկվում են փուլերով"
     },
     "footer": {
       "description": "Արհեստական բանականությամբ աշխատող իրավական հետազոտության և փաստաթղթերի նախագծման գործիք հայկական շուկայի համար։ Հիմնված է բացառապես ՀՀ պաշտոնական օրենսդրական աղբյուրների վրա։",
