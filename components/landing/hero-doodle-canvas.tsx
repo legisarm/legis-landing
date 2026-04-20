@@ -416,10 +416,10 @@ export function HeroDoodleCanvas() {
 
   return (
     <div
-      className={`${previewUi.variable} ${previewBrand.variable} ${previewMono.variable} ${previewHy.variable} relative mx-auto w-full max-w-3xl`}
+      className={`${previewUi.variable} ${previewBrand.variable} ${previewMono.variable} ${previewHy.variable} relative mx-auto w-full`}
     >
       <div
-        className={`hero-preview-card-idle flex h-[555px] flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-[#e8ebf2] p-6 shadow-[0_1px_0_rgba(15,23,42,0.06),0_22px_60px_rgba(15,23,42,0.11)] ring-1 ring-white/75 md:p-8 ${cardFontClass}`}
+        className={`hero-preview-card-idle flex h-[555px] w-full flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-slate-100 p-6 shadow-[0_1px_0_rgba(15,23,42,0.06),0_22px_60px_rgba(15,23,42,0.11)] ring-1 ring-white/75 md:p-8 ${cardFontClass}`}
       >
         <div className="mb-4 flex shrink-0 items-center justify-between gap-4">
           <DoLegalWordmark className="[font-family:var(--font-hero-preview-brand)] text-xl font-semibold tracking-tight text-slate-800 md:text-2xl" />

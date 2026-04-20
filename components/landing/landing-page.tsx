@@ -63,22 +63,24 @@ export function LandingPage() {
   return (
     <MarketingShell>
       <main className="[font-family:var(--font-outfit)]">
-        <section className="landing-hero-dotted h-[920px] overflow-hidden px-5 pb-24 pt-40 md:h-[980px] md:px-10 lg:h-[900px]">
-          <div className="relative z-[1] mx-auto grid w-full max-w-7xl items-start gap-10 lg:grid-cols-2">
-            <div className="text-left">
-              <h1 className="mb-6 max-w-2xl [font-family:var(--font-playfair)] text-[44.8px] font-semibold leading-[1.05] tracking-[-0.03em] text-[#1d1d1f]">
-                <span className="block text-[31.36px]">{content.hero.titleMain}</span>
-                <span className="mt-[0.5625rem] flex flex-wrap items-baseline gap-x-[0.35em]">
-                  <span className="text-[57.34px]">{content.hero.titleFor}</span>
+        <section className="landing-hero-dotted overflow-hidden px-5 pb-24 pt-36 md:px-10 md:pt-40">
+          <div className="relative z-[1] mx-auto w-full max-w-7xl">
+            <div className="mx-auto max-w-4xl text-center">
+              <h1 className="mx-auto mb-6 [font-family:var(--font-playfair)] text-[40px] font-semibold leading-[1.04] tracking-[-0.03em] text-[#1d1d1f] sm:text-[52px] md:text-[68px]">
+                <span className="block text-[0.68em]">{content.hero.titleMain}</span>
+                <span className="mt-[0.2em] block text-[30px] sm:text-[42px] md:text-[58px]">
+                  {content.hero.titleFor}{" "}
                   {content.hero.titleAudienceRotating.length > 0 ? (
                     <HeroRotatingAudience items={content.hero.titleAudienceRotating} />
                   ) : null}
                 </span>
               </h1>
-              <p className="mb-10 max-w-xl text-lg leading-8 text-black/60">
+
+              <p className="mx-auto mb-10 max-w-2xl text-base leading-7 text-black/60 md:text-lg md:leading-8">
                 {content.hero.description}
               </p>
-              <div className="mb-10 flex flex-wrap items-center gap-3">
+
+              <div className="mb-14 flex flex-wrap items-center justify-center gap-3 md:mb-16">
                 <a
                   href="#early-access"
                   onClick={handleAnchorClick("#early-access")}
@@ -96,19 +98,12 @@ export function LandingPage() {
                   {content.hero.secondaryCta}
                 </a>
               </div>
-
-              <div className="inline-flex flex-col overflow-hidden rounded-3xl border border-black/20 md:flex-row">
-                {content.heroStats.map((stat) => (
-                  <div className="border-black/20 px-8 py-4 md:border-r last:md:border-r-0" key={stat.label}>
-                    <div className="[font-family:var(--font-playfair)] text-2xl font-semibold tracking-tight">{stat.value}</div>
-                    <div className="mt-1 text-[11px] uppercase tracking-[0.06em] text-black/40">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            <div className="w-full self-start">
-              <HeroDoodleCanvas />
+            <div className="relative mx-auto w-full max-w-6xl">
+              <div className="overflow-hidden rounded-[28px] border border-black/10 bg-white/80 p-3 shadow-[0_36px_100px_rgba(17,17,17,0.15)] backdrop-blur-sm md:rounded-[36px] md:p-4">
+                <HeroDoodleCanvas />
+              </div>
             </div>
           </div>
         </section>
@@ -257,7 +252,7 @@ export function LandingPage() {
 
         <section className="landing-scroll-target bg-[#1d1d1f] px-5 py-24 text-center text-white md:px-10" id="early-access">
           <span className="mb-4 block text-[11px] uppercase tracking-[0.09em] text-white/40">{content.earlyAccess.sectionLabel}</span>
-          <h2 className="mb-4 [font-family:var(--font-playfair)] text-4xl font-semibold leading-[1.1] tracking-[-0.02em] md:text-6xl">
+          <h2 className="mb-4 [font-family:var(--font-playfair)] text-[44px] font-semibold leading-[1.1] tracking-[-0.02em]">
             {content.earlyAccess.titleMain}
             <br />
             <em className="font-normal italic">{content.earlyAccess.titleAccent}</em>
@@ -308,7 +303,7 @@ function ComparisonCard({
   negative?: boolean;
 }) {
   return (
-    <article className="rounded-2xl border border-black/10 bg-white p-8">
+    <article className="rounded-2xl border border-black/10 bg-[#f5f5f7] p-8">
       <span
         className={`mb-6 inline-block rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.08em] ${
           negative ? "bg-red-600 text-white" : "bg-[#1d1d1f] text-white"
