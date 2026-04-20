@@ -1,11 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Geist_Mono } from "next/font/google";
 import { getLocale } from "next-intl/server";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const weblySans = localFont({
+  variable: "--font-webly-sans",
+  display: "swap",
+  src: [
+    {
+      path: "../public/fonts/webly/weblysleek-light.woff",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/webly/weblysleek-light-italic.woff",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/webly/weblysleek-semibold.woff",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/webly/weblysleek-semibold-italic.woff",
+      weight: "600",
+      style: "italic",
+    },
+  ],
 });
 
 const geistMono = Geist_Mono({
@@ -29,7 +52,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${weblySans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

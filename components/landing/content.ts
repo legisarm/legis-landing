@@ -102,7 +102,7 @@ export const languageOptions: Array<{
 }> = [
   { locale: "en", code: "EN", label: "English", flagSrc: "/flags/en.svg" },
   { locale: "ru", code: "RU", label: "Русский", flagSrc: "/flags/ru.svg" },
-  { locale: "hy", code: "HY", label: "Հայերեն", flagSrc: "/flags/hy.svg" },
+  { locale: "hy", code: "AM", label: "Հայերեն", flagSrc: "/flags/hy.svg" },
 ];
 
 export const landingImages = {

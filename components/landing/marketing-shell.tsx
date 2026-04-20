@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import type { CSSProperties, MouseEvent, ReactNode } from "react";
+import { useEffect, useRef } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Noto_Sans_Armenian, Noto_Serif_Armenian, Outfit, Playfair_Display } from "next/font/google";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
@@ -53,7 +54,7 @@ function animateScrollTo(targetY: number) {
 }
 
 const navLinkClass =
-  "text-[14px] font-medium uppercase tracking-[0.06em] text-black/60 transition hover:text-black";
+  "text-[14px] font-medium uppercase tracking-[0.12em] text-slate-300 transition-colors hover:text-white";
 
 export function MarketingShell({ children }: { children: ReactNode }) {
   const t = useTranslations();
@@ -63,9 +64,29 @@ export function MarketingShell({ children }: { children: ReactNode }) {
   const content = t.raw("landing") as LandingContent;
   const currentLanguage = languageOptions.find((option) => option.locale === locale) ?? languageOptions[0];
   const isHome = pathname === "/";
+  const languageDropdownRef = useRef<HTMLDetailsElement | null>(null);
   const playfairOverrideStyle =
     locale === "hy" ? ({ "--font-playfair": "var(--font-noto-serif-armenian)" } as CSSProperties) : undefined;
   const armenianSansClass = locale === "hy" ? "[font-family:var(--font-noto-sans-armenian)]" : "";
+
+  useEffect(() => {
+    const handlePointerDown = (event: MouseEvent | globalThis.MouseEvent) => {
+      const dropdown = languageDropdownRef.current;
+      if (!dropdown || !dropdown.open) return;
+      const target = event.target as Node | null;
+      if (target && !dropdown.contains(target)) {
+        dropdown.removeAttribute("open");
+      }
+    };
+
+    document.addEventListener("mousedown", handlePointerDown as EventListener);
+    document.addEventListener("touchstart", handlePointerDown as EventListener);
+
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown as EventListener);
+      document.removeEventListener("touchstart", handlePointerDown as EventListener);
+    };
+  }, []);
 
   const handleAnchorClick = (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
     if (!href.startsWith("#")) return;
@@ -80,12 +101,14 @@ export function MarketingShell({ children }: { children: ReactNode }) {
 
   return (
     <div
-      className={`${outfit.variable} ${playfair.variable} ${notoSerifArmenian.variable} ${notoSansArmenian.variable} bg-white text-[#1d1d1f]`}
+      className={`${outfit.variable} ${playfair.variable} ${notoSerifArmenian.variable} ${notoSansArmenian.variable} bg-white text-slate-900 ${
+        locale === "hy" ? "[font-family:var(--font-noto-sans-armenian)]" : ""
+      }`}
       style={playfairOverrideStyle}
     >
-      <nav className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-white/90 px-6 backdrop-blur-xl md:px-8">
+      <nav className="fixed inset-x-0 top-0 z-50 border-b border-slate-700/80 bg-slate-950/90 px-6 backdrop-blur-xl md:px-8">
         <div className="mx-auto flex h-[68px] w-full max-w-7xl items-center justify-between">
-          <Link className="[font-family:var(--font-playfair)] text-[32px] font-semibold" href="/">
+          <Link className="[font-family:var(--font-playfair)] text-[32px] font-semibold text-white" href="/">
             <DoLegalWordmark />
           </Link>
           <ul className={`absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 md:flex ${armenianSansClass}`}>
@@ -119,8 +142,8 @@ export function MarketingShell({ children }: { children: ReactNode }) {
             })}
           </ul>
           <div className="flex items-center gap-2">
-            <details className="group relative">
-              <summary className="flex h-12 cursor-pointer list-none items-center gap-2 rounded-xl bg-transparent px-3 text-[14px] font-medium text-black/75">
+            <details className="group relative" ref={languageDropdownRef}>
+              <summary className="flex h-10 cursor-pointer list-none items-center gap-2 rounded-lg border border-transparent bg-transparent px-3 text-[14px] font-medium text-slate-200 transition hover:border-slate-700 hover:bg-slate-900">
                 <Image
                   src={currentLanguage.flagSrc}
                   alt={`${currentLanguage.label} flag`}
@@ -131,7 +154,7 @@ export function MarketingShell({ children }: { children: ReactNode }) {
                 />
                 <span>{currentLanguage.code}</span>
                 <svg
-                  className="size-4 text-black/45 transition group-open:rotate-180"
+                  className="size-4 text-slate-400 transition group-open:rotate-180"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
@@ -143,7 +166,7 @@ export function MarketingShell({ children }: { children: ReactNode }) {
                   />
                 </svg>
               </summary>
-              <div className="absolute right-0 top-[calc(100%+8px)] z-20 min-w-[88px] overflow-hidden rounded-xl border border-black/10 bg-white shadow-[0_12px_24px_rgba(0,0,0,0.08)]">
+              <div className="absolute right-0 top-[calc(100%+8px)] z-20 min-w-[88px] overflow-hidden rounded-xl border border-slate-700 bg-slate-900 shadow-[0_12px_24px_rgba(2,6,23,0.45)]">
                 {languageOptions.map((option) => (
                   <button
                     key={option.code}
@@ -151,7 +174,7 @@ export function MarketingShell({ children }: { children: ReactNode }) {
                     aria-label={option.label}
                     onClick={() => router.replace(pathname, { locale: option.locale })}
                     className={`flex w-full items-center justify-center gap-2 px-3 py-2.5 text-sm transition ${
-                      option.locale === locale ? "bg-black/5 font-medium text-black" : "text-black/70 hover:bg-black/5"
+                      option.locale === locale ? "bg-slate-800 font-medium text-white" : "text-slate-200 hover:bg-slate-800"
                     }`}
                   >
                     <Image
@@ -172,7 +195,7 @@ export function MarketingShell({ children }: { children: ReactNode }) {
               <a
                 href="#early-access"
                 onClick={handleAnchorClick("#early-access")}
-                className={`flex h-12 items-center rounded-xl bg-[#1d1d1f] px-5 text-[15px] text-white transition hover:bg-[#3a3a3c] ${
+                className={`inline-flex h-10 items-center rounded-lg border border-white bg-white px-4 text-[14px] text-slate-950 transition hover:bg-slate-200 ${
                   locale === "hy" ? `${armenianSansClass} font-semibold` : "font-medium"
                 }`}
               >
@@ -180,7 +203,7 @@ export function MarketingShell({ children }: { children: ReactNode }) {
               </a>
             ) : (
               <Link
-                className={`flex h-12 items-center rounded-xl bg-[#1d1d1f] px-5 text-[15px] text-white transition hover:bg-[#3a3a3c] ${
+                className={`inline-flex h-10 items-center rounded-lg border border-white bg-white px-4 text-[14px] text-slate-950 transition hover:bg-slate-200 ${
                   locale === "hy" ? `${armenianSansClass} font-semibold` : "font-medium"
                 }`}
                 href="/#early-access"
@@ -194,20 +217,20 @@ export function MarketingShell({ children }: { children: ReactNode }) {
 
       {children}
 
-      <footer className="border-t border-white/15 bg-[#1d1d1f] px-5 pt-14 text-white md:px-10">
+      <footer className="border-t border-slate-200 bg-[#f8fafc] px-5 pt-14 text-slate-900 md:px-10">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 xl:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div>
             <div className="mb-3 [font-family:var(--font-playfair)] text-2xl font-semibold">
               <DoLegalWordmark variant="dark" />
             </div>
-            <p className="max-w-xs text-sm leading-7 text-white/65">{content.footer.description}</p>
+            <p className="max-w-xs text-sm leading-7 text-slate-600">{content.footer.description}</p>
           </div>
           {content.footer.columns.map((column) => (
             <FooterColumn key={column.title} title={column.title} links={column.links} />
           ))}
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-7xl flex-wrap items-center justify-between gap-3 border-t border-white/15 py-4 text-xs text-white/45">
+        <div className="mx-auto mt-10 flex max-w-7xl flex-wrap items-center justify-between gap-3 border-t border-slate-200 py-4 text-xs text-slate-500">
           <span>{content.footer.copyright}</span>
         </div>
 
@@ -220,11 +243,11 @@ export function MarketingShell({ children }: { children: ReactNode }) {
 function FooterColumn({ title, links }: { title: string; links: string[] }) {
   return (
     <div>
-      <h3 className="mb-4 text-[11px] uppercase tracking-[0.1em] text-white/45">{title}</h3>
+      <h3 className="mb-4 text-[11px] uppercase tracking-[0.1em] text-slate-500">{title}</h3>
       <ul className="space-y-2">
         {links.map((link) => (
           <li key={link}>
-            <a className="text-sm text-white/70 transition hover:text-white" href="#">
+            <a className="text-sm text-slate-700 transition hover:text-slate-900" href="#">
               {link}
             </a>
           </li>
