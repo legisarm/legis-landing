@@ -36,19 +36,19 @@ const PRICING_FAQ = [
 
 const TOPUPS = [
   {
-    num: "i.",
+    num: "1",
     tokens: "10,000",
     note: "≈ 7,500 words of research output",
     price: "4,000",
   },
   {
-    num: "ii.",
+    num: "2",
     tokens: "15,000",
     note: "≈ 11,000 words · good for one long drafting session",
     price: "6,000",
   },
   {
-    num: "iii.",
+    num: "3",
     tokens: "25,000",
     note: "≈ 18,500 words · covers a week of heavy use",
     price: "10,000",
@@ -57,31 +57,31 @@ const TOPUPS = [
 
 const TOKEN_EX = [
   {
-    n: "i.",
+    n: "1",
     what: "A short legal question with a short answer.",
     note: "“When is VAT registration mandatory?”",
     cost: "≈ 500–1,500",
   },
   {
-    n: "ii.",
+    n: "2",
     what: "A longer answer with extensive citations.",
     note: "Tax filing calendar, cross-referenced",
     cost: "≈ 2,000–4,000",
   },
   {
-    n: "iii.",
+    n: "3",
     what: "Contract draft from a prompt.",
     note: "NDA, employment, service agreement",
     cost: "≈ 6,000–12,000",
   },
   {
-    n: "iv.",
+    n: "4",
     what: "Document comparison (upload two PDFs).",
     note: "Redline with article mapping",
     cost: "≈ 10,000–20,000",
   },
   {
-    n: "v.",
+    n: "5",
     what: "Full case review (upload + Q&A thread).",
     note: "Uploaded judgment + 5–10 questions",
     cost: "≈ 15,000–35,000",

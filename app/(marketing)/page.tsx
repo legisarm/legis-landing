@@ -105,7 +105,7 @@ export default function LandingPage() {
           <div className="cap-grid">
             {featureCards.map((cap: any, i: number) => (
               <div className="cap" key={cap.title}>
-                <div className="cap-num">{['i.', 'ii.', 'iii.'][i]}</div>
+                <div className="cap-num">{i + 1}</div>
                 <h3>{cap.title}</h3>
                 <p className="cap-desc">{cap.description}</p>
                 <ul className="cap-list">
