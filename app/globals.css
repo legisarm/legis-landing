@@ -229,7 +229,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 
 .lang {
   position: relative; display: inline-flex;
-  border: 1px solid var(--rule); border-radius: var(--r);
+  border: 1px solid var(--rule); border-radius: 4px;
   font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em;
 }
 .lang-toggle {
@@ -237,6 +237,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
   font: inherit; letter-spacing: inherit;
   display: inline-flex; align-items: center; gap: 6px;
   text-transform: uppercase;
+  border-radius: 8px;
 }
 .lang-toggle::after {
   content: ""; width: 6px; height: 6px;
@@ -311,10 +312,10 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
   font-family: var(--mono);
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--ink-3);
-  display: flex; align-items: center; gap: 14px;
-  margin: 0 0 28px;
+  display: inline-flex; flex-direction: column; align-items: flex-start; gap: 10px;
+  margin: 0 0 8px;
 }
-.eyebrow::before { content: ""; width: 36px; height: 1px; background: var(--accent); }
+.eyebrow::before { content: ""; width: 36px; height: 3px; background: var(--accent); }
 
 .h-display {
   font-family: var(--serif-display);
@@ -580,11 +581,12 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 .cap-list li {
   font-family: var(--sans); font-size: 13.5px; color: var(--ink-2);
   padding: 7px 0 7px 18px; position: relative;
-  border-top: 1px dashed var(--rule-soft);
+  border-top: 0;
 }
 .cap-list li::before {
-  content: "§"; position: absolute; left: 0; top: 6px;
-  font-family: var(--serif); color: var(--accent); font-size: 15px;
+  content: ""; position: absolute; left: 0; top: 12px;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent);
 }
 
 /* ================================================================

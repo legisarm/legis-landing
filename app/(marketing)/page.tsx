@@ -68,7 +68,7 @@ export default function LandingPage() {
               <div className="hero-stats">
                 <div className="stat">
                   <div className="stat-num">
-                    100,000<span style={{ color: "var(--accent)" }}>+</span>
+                    100,000<span style={{ color: "var(--ink)" }}>+</span>
                   </div>
                   <div className="stat-label">{stats[0].label}</div>
                 </div>
