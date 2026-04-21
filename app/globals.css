@@ -186,7 +186,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 .menu-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .menu-toggle.open span:nth-child(2) { opacity: 0; }
 .menu-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
   .masthead-inner {
     position: relative;
     padding: 10px 0;
