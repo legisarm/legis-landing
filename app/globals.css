@@ -319,7 +319,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 .h-display {
   font-family: var(--serif-display);
   font-weight: 400;
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: clamp(28px, 5vw, 56px);
   line-height: 1.2;
   letter-spacing: -0.035em;
   margin: 0 0 28px;
@@ -333,15 +333,15 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 }
 .h-display .amp { font-style: normal; color: var(--accent); font-weight: 400; }
 .h-display .small {
-  font-size: 0.55em; font-weight: 400; letter-spacing: -0.02em;
+  font-size: 24px; font-weight: 400; letter-spacing: -0.02em;
   display: block; color: var(--ink-3); font-style: normal;
   font-variation-settings: "opsz" 36;
   margin-top: 8px;
 }
 
 .lede {
-  font-family: var(--serif); font-size: 20px; line-height: 1.5;
-  color: var(--ink-2); max-width: 44ch; margin: 0 0 40px;
+  font-family: var(--serif); font-size: 16px; line-height: 1.5;
+  color: var(--ink-2); max-width: 56ch; margin: 0 0 40px;
   font-variation-settings: "opsz" 16;
 }
 .lede .drop::first-letter {
@@ -543,7 +543,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 }
 .section-title em { font-style: normal; color: var(--ink-2); font-weight: 400; }
 .section-sub {
-  font-family: var(--serif); font-size: 19px; line-height: 1.5;
+  font-family: var(--serif); font-size: 16px; line-height: 1.5;
   color: var(--ink-2); max-width: 56ch; margin: 0 0 56px;
 }
 
@@ -747,7 +747,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
   line-height: 1.2; letter-spacing: -0.03em; margin: 0 0 22px; color: var(--paper);
 }
 .waitlist h2 em { font-style: normal; color: color-mix(in oklch, var(--paper) 65%, transparent); font-weight: 400; }
-.waitlist p { font-family: var(--serif); font-size: 19px; color: color-mix(in oklch, var(--paper) 75%, transparent); max-width: 50ch; }
+.waitlist p { font-family: var(--serif); font-size: 16px; color: color-mix(in oklch, var(--paper) 75%, transparent); max-width: 50ch; }
 .waitlist-form {
   display: flex; gap: 0;
   border: 1px solid color-mix(in oklch, var(--paper) 35%, transparent);
@@ -815,7 +815,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 .price-hero h1 {
   font-family: var(--serif-display);
   font-weight: 400;
-  font-size: clamp(40px, 6vw, 64px);
+  font-size: clamp(32px, 6vw, 56px);
   line-height: 1.2; letter-spacing: -0.035em;
   margin: 0 0 26px; color: var(--ink);
   font-variation-settings: "opsz" 60;
@@ -825,7 +825,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
   font-style: normal; font-weight: 400;
   color: color-mix(in oklch, var(--ink) 65%, var(--paper));
 }
-.price-hero .lede { font-family: var(--serif); font-size: 20px; line-height: 1.55; color: var(--ink-2); max-width: 58ch; }
+.price-hero .lede { font-family: var(--serif); font-size: 16px; line-height: 1.55; color: var(--ink-2); max-width: 58ch; }
 .price-hero .meta-row {
   margin-top: 36px;
   display: flex; flex-wrap: wrap; gap: 28px 44px;
@@ -976,7 +976,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
   margin: 0 0 16px;
 }
 .topups-grid h2 em { font-style: normal; font-weight: 400; color: var(--ink-2); }
-.topups-grid .descr { font-family: var(--serif); color: var(--ink-2); font-size: 17px; max-width: 42ch; }
+.topups-grid .descr { font-family: var(--serif); color: var(--ink-2); font-size: 16px; max-width: 42ch; }
 
 .topup-table { border-top: 1px solid var(--rule); }
 .topup-row {
@@ -1075,7 +1075,7 @@ table.compare tbody tr td.feat-cell { background: var(--paper-2); }
   margin: 0 0 14px;
 }
 .howtokens h2 em { font-style: normal; color: var(--ink-2); font-weight: 400; }
-.howtokens p.lead { font-family: var(--serif); color: var(--ink-2); font-size: 17px; max-width: 40ch; }
+.howtokens p.lead { font-family: var(--serif); color: var(--ink-2); font-size: 16px; max-width: 40ch; }
 .token-examples { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--rule); }
 .token-ex {
   display: grid; grid-template-columns: 80px 1fr 120px;
@@ -1216,7 +1216,7 @@ table.compare tbody tr td.feat-cell { background: var(--paper-2); }
 }
 .research-header h1 {
   font-family: var(--serif);
-  font-weight: 500; font-size: 28px; letter-spacing: -0.015em; margin: 0;
+  font-weight: 500; font-size: 20px; letter-spacing: -0.015em; margin: 0;
 }
 .meta-chips { display: flex; gap: 6px; }
 .chip {

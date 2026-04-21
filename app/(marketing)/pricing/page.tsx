@@ -222,7 +222,7 @@ export default function PricingPage() {
       {/* HERO */}
       <section className="price-hero">
         <div className="wrap">
-          <p className="eyebrow">{tPricing("sectionLabel")} · §00</p>
+          <p className="eyebrow">{tPricing("sectionLabel")}</p>
           <h1>
             {tPricing("titleMain")}
             <br />
@@ -260,7 +260,7 @@ export default function PricingPage() {
         <div className="wrap">
           <div className="topups-grid">
             <div>
-              <p className="eyebrow">{tP("oneTimeTopup")} · §01</p>
+              <p className="eyebrow">{tP("oneTimeTopup")}</p>
               <h2>
                 {tPricing("needsMoreTokensTitle")}
               </h2>
@@ -360,7 +360,7 @@ export default function PricingPage() {
         <div className="wrap">
           <div className="howtokens-grid">
             <div>
-              <p className="eyebrow">Unit economics · §03</p>
+              <p className="eyebrow">Unit economics</p>
               <h2>
                 A token, <em>loosely speaking.</em>
               </h2>
