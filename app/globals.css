@@ -755,9 +755,12 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 .waitlist-form input {
   flex: 1; background: transparent; border: 0; outline: 0;
   font-family: var(--serif); font-size: 17px; color: var(--paper);
-  padding: 14px 18px; font-style: italic;
+  padding: 14px 18px; font-style: normal;
 }
-.waitlist-form input::placeholder { color: color-mix(in oklch, var(--paper) 50%, transparent); }
+.waitlist-form input::placeholder {
+  color: color-mix(in oklch, var(--paper) 50%, transparent);
+  font-style: normal;
+}
 .waitlist-form button {
   background: var(--paper); color: var(--ink);
   border: 0; padding: 0 24px;
@@ -765,6 +768,15 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
   cursor: pointer;
 }
 .waitlist-form button:hover { background: var(--accent); color: var(--paper); }
+.waitlist-status {
+  margin-top: 12px;
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.4;
+  max-width: 44ch;
+}
+.waitlist-status.success { color: color-mix(in oklch, var(--paper) 85%, transparent); }
+.waitlist-status.error { color: oklch(0.78 0.17 28); }
 .waitlist-foot {
   margin-top: 16px;
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
