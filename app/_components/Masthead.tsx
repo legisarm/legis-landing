@@ -1,6 +1,6 @@
 "use client";
 
-import {useState} from "react";
+import {MouseEvent, useEffect, useMemo, useState} from "react";
 import {useTranslations} from "next-intl";
 import {Link} from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -15,6 +15,90 @@ interface MastheadProps {
 export function Masthead({ nav, ctaHref = "/#waitlist" }: MastheadProps) {
   const t = useTranslations("nav");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSectionId, setActiveSectionId] = useState<string | null>(null);
+
+  const sectionIds = useMemo(
+    () =>
+      nav
+        .map((item) => item.href.split("#")[1] ?? null)
+        .filter((id): id is string => Boolean(id)),
+    [nav],
+  );
+
+  useEffect(() => {
+    if (typeof window === "undefined" || sectionIds.length === 0) return;
+
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => Boolean(el));
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible[0]?.target?.id) {
+          setActiveSectionId(visible[0].target.id);
+        }
+      },
+      {
+        root: null,
+        rootMargin: "-120px 0px -45% 0px",
+        threshold: [0.2, 0.35, 0.6],
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [sectionIds]);
+
+  const smoothScrollTo = (targetId: string) => {
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    const startY = window.scrollY;
+    const targetY = target.getBoundingClientRect().top + startY - 90;
+    const distance = targetY - startY;
+    const duration = 700;
+    const startTime = performance.now();
+
+    const easeInOutCubic = (t: number) =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    const step = (currentTime: number) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeInOutCubic(progress);
+
+      window.scrollTo(0, startY + distance * eased);
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
+    setActiveSectionId(targetId);
+  };
+
+  const handleNavClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    setMenuOpen(false);
+
+    const rawHref = e.currentTarget.getAttribute("href");
+    if (!rawHref || !rawHref.includes("#")) return;
+
+    const url = new URL(rawHref, window.location.href);
+    if (url.pathname !== window.location.pathname || !url.hash) return;
+
+    const targetId = url.hash.replace("#", "");
+    if (!targetId) return;
+
+    e.preventDefault();
+    smoothScrollTo(targetId);
+  };
 
   return (
     <header className="masthead">
@@ -39,8 +123,10 @@ export function Masthead({ nav, ctaHref = "/#waitlist" }: MastheadProps) {
             <Link
               key={item.label}
               href={item.href}
-              className={item.active ? "active" : undefined}
-              onClick={() => setMenuOpen(false)}
+              className={
+                item.active || item.href.split("#")[1] === activeSectionId ? "active" : undefined
+              }
+              onClick={handleNavClick}
             >
               {item.label}
             </Link>

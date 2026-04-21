@@ -294,8 +294,7 @@ export default function LandingPage() {
         <div className="wrap">
           <p className="section-label">{tParity("faqSectionLabelExact")}</p>
           <h2 className="section-title">
-            {tParity("faqTitleMainExact")}<br />
-            <em>{tParity("faqTitleAccentExact")}</em>
+            {tParity("faqTitleMainExact")} <em>{tParity("faqTitleAccentExact")}</em>
           </h2>
           <p className="section-sub">
             {tFaq("descriptionPrefix")} <a href={`mailto:${tFaq("email")}`} style={{ color: "var(--accent)", textDecoration: "none", borderBottom: "1px solid var(--accent)" }}>{tFaq("email")}</a>.
