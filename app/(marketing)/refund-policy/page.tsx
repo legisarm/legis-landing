@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Refund Policy | doLegal",
+  description:
+    "Understand doLegal refund eligibility for subscriptions and top-ups, chargeback handling, and how to submit a refund request.",
+};
+
 export default function RefundPolicyPage() {
   return (
     <main className="section policy-legal">
@@ -7,7 +15,7 @@ export default function RefundPolicyPage() {
           Refund <em>Policy</em>
         </h1>
         <p className="section-sub" style={{ fontWeight: 700 }}>
-          Last updated: April 22, 2026. This policy explains when DoLegal subscription and top-up
+          Last updated: April 22, 2026. This policy explains when doLegal subscription and top-up
           payments may be refunded.
         </p>
 

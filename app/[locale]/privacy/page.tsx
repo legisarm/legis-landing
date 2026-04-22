@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {getTranslations} from "next-intl/server";
 import { Footer } from "../../_components/Footer";
 import { Masthead } from "../../_components/Masthead";
@@ -22,7 +23,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "1. Controller",
         paragraphs: [
-          "DoLegal is operated by [LEGAL ENTITY NAME], registered in the Republic of Armenia, with registered address at [REGISTERED ADDRESS]. Contact: hello@dolegal.am.",
+          "doLegal is operated by [LEGAL ENTITY NAME], registered in the Republic of Armenia, with registered address at [REGISTERED ADDRESS]. Contact: hello@dolegal.am.",
         ],
       },
       {
@@ -83,7 +84,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "10. Children",
         paragraphs: [
-          "DoLegal is not intended for children, and we do not knowingly collect personal data from children where prohibited by law.",
+          "doLegal is not intended for children, and we do not knowingly collect personal data from children where prohibited by law.",
         ],
       },
       {
@@ -101,7 +102,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "1. Оператор персональных данных",
         paragraphs: [
-          "DoLegal управляется [LEGAL ENTITY NAME], зарегистрированной в Республике Армения по адресу [REGISTERED ADDRESS]. Контакт: hello@dolegal.am.",
+          "doLegal управляется [LEGAL ENTITY NAME], зарегистрированной в Республике Армения по адресу [REGISTERED ADDRESS]. Контакт: hello@dolegal.am.",
         ],
       },
       {
@@ -162,7 +163,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "10. Дети",
         paragraphs: [
-          "DoLegal не предназначен для детей, и мы не собираем сознательно персональные данные детей там, где это запрещено законом.",
+          "doLegal не предназначен для детей, и мы не собираем сознательно персональные данные детей там, где это запрещено законом.",
         ],
       },
       {
@@ -180,7 +181,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "1. Տվյալների վերահսկող",
         paragraphs: [
-          "DoLegal-ը կառավարվում է [LEGAL ENTITY NAME]-ի կողմից, որը գրանցված է Հայաստանի Հանրապետությունում՝ [REGISTERED ADDRESS] հասցեում։ Կապ՝ hello@dolegal.am։",
+          "doLegal-ը կառավարվում է [LEGAL ENTITY NAME]-ի կողմից, որը գրանցված է Հայաստանի Հանրապետությունում՝ [REGISTERED ADDRESS] հասցեում։ Կապ՝ hello@dolegal.am։",
         ],
       },
       {
@@ -241,7 +242,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "10. Երեխաներ",
         paragraphs: [
-          "DoLegal-ը նախատեսված չէ երեխաների համար, և մենք գիտակցաբար չենք հավաքում երեխաների անձնական տվյալներ, եթե դա արգելված է օրենքով։",
+          "doLegal-ը նախատեսված չէ երեխաների համար, և մենք գիտակցաբար չենք հավաքում երեխաների անձնական տվյալներ, եթե դա արգելված է օրենքով։",
         ],
       },
       {
@@ -253,6 +254,25 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
     ],
   },
 };
+
+const PRIVACY_DESCRIPTIONS: Record<SupportedLocale, string> = {
+  en: "Review how doLegal collects, uses, stores, and protects personal data for waitlist, product usage, and billing operations.",
+  ru: "Узнайте, как doLegal собирает, использует, хранит и защищает персональные данные для листа ожидания, работы продукта и оплаты.",
+  am: "Ծանոթացեք, թե ինչպես է doLegal-ը հավաքում, օգտագործում, պահպանում և պաշտպանում անձնական տվյալները՝ սպասման ցուցակի, ծառայության և վճարումների համար։",
+};
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]/privacy">): Promise<Metadata> {
+  const {locale} = await params;
+  const key = (locale as SupportedLocale) || "en";
+  const copy = COPY[key] ?? COPY.en;
+
+  return {
+    title: `${copy.title} | doLegal`,
+    description: PRIVACY_DESCRIPTIONS[key] ?? PRIVACY_DESCRIPTIONS.en,
+  };
+}
 
 export default async function LocalizedPrivacyPage({
   params,

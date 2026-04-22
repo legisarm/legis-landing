@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {useTranslations} from "next-intl";
 import {Link} from "@/i18n/navigation";
 import { IssueStrip } from "../_components/IssueStrip";
@@ -5,6 +6,12 @@ import { Masthead } from "../_components/Masthead";
 import { Waitlist } from "../_components/Waitlist";
 import { FAQList } from "./_components/FAQList";
 import { LiveDemo } from "./_components/LiveDemo";
+
+export const metadata: Metadata = {
+  title: "doLegal | Armenian Legal AI Research and Drafting Platform",
+  description:
+    "doLegal helps lawyers, accountants, and founders in Armenia research laws, draft legal documents, and verify citations across Armenian, Russian, and English.",
+};
 
 export default function LandingPage() {
   const tNav = useTranslations("nav");
@@ -277,7 +284,7 @@ export default function LandingPage() {
           <div className="aud-grid">
             {personaCards.map((aud: any) => (
               <div className="aud" key={aud.tag}>
-                <div className="aud-kicker">{aud.tag}</div>
+                <div className="aud-kicker step-num">{aud.tag}</div>
                 <h4>{aud.title}</h4>
                 <p>{aud.description}</p>
                 <ul>

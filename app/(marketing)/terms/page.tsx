@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import {useTranslations} from "next-intl";
 import { Footer } from "../../_components/Footer";
 import { Masthead } from "../../_components/Masthead";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | doLegal",
+  description:
+    "Read doLegal Terms of Service covering subscriptions, acceptable use, billing, refunds, liability, and legal terms for using the platform.",
+};
 
 export default function TermsOfServicePage() {
   const tNav = useTranslations("nav");
@@ -22,16 +29,16 @@ export default function TermsOfServicePage() {
             Terms of <em>Service</em>
           </h1>
           <p className="section-sub" style={{ fontWeight: 700 }}>
-            Last updated: April 22, 2026. These Terms govern access to and use of DoLegal.
+            Last updated: April 22, 2026. These Terms govern access to and use of doLegal.
           </p>
 
         <section style={{ marginTop: 32 }}>
           <h2>1. Operator and acceptance</h2>
           <p>
-            These Terms are between you and <strong>[LEGAL ENTITY NAME]</strong> (DoLegal, we, us,
+            These Terms are between you and <strong>[LEGAL ENTITY NAME]</strong> (doLegal, we, us,
             our), a company registered in <strong>Republic of Armenia</strong> with
             registered address at <strong>[REGISTERED ADDRESS]</strong>. By accessing or using
-            DoLegal, you agree to these Terms. If you use DoLegal on behalf of an organization,
+            doLegal, you agree to these Terms. If you use doLegal on behalf of an organization,
             you confirm you have authority to bind that organization.
           </p>
         </section>
@@ -39,12 +46,12 @@ export default function TermsOfServicePage() {
         <section style={{ marginTop: 24 }}>
           <h2>2. Service description</h2>
           <p>
-            DoLegal is a subscription-based software service for Armenian legal and tax research,
+            doLegal is a subscription-based software service for Armenian legal and tax research,
             document drafting, and related productivity workflows. Features may include AI-assisted
             answers, article-level citations, drafting tools, file upload, and export features.
           </p>
           <p>
-            DoLegal is an information and drafting tool, not a law firm and not a substitute for
+            doLegal is an information and drafting tool, not a law firm and not a substitute for
             professional legal advice. You remain responsible for reviewing outputs and decisions.
           </p>
         </section>
@@ -120,7 +127,7 @@ export default function TermsOfServicePage() {
         <section style={{ marginTop: 24 }}>
           <h2>9. Intellectual property</h2>
           <p>
-            DoLegal, including software, branding, and platform content (excluding your submitted
+            doLegal, including software, branding, and platform content (excluding your submitted
             content and third-party public legal texts), is owned by us or our licensors and
             protected by applicable intellectual property laws.
           </p>
@@ -157,7 +164,7 @@ export default function TermsOfServicePage() {
         <section style={{ marginTop: 24 }}>
           <h2>13. Indemnification</h2>
           <p>
-            You agree to defend, indemnify, and hold harmless DoLegal from claims arising out of
+            You agree to defend, indemnify, and hold harmless doLegal from claims arising out of
             your use of the service, your content, or your breach of these Terms.
           </p>
         </section>

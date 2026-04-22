@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {getTranslations} from "next-intl/server";
 import { Footer } from "../../_components/Footer";
 import { Masthead } from "../../_components/Masthead";
@@ -22,15 +23,15 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "1. Operator and acceptance",
         paragraphs: [
-          "These Terms are between you and [LEGAL ENTITY NAME] (DoLegal, we, us, our), a company registered in the Republic of Armenia, with registered address at [REGISTERED ADDRESS].",
-          "By accessing or using DoLegal, you agree to these Terms. If you use DoLegal on behalf of an organization, you confirm you have authority to bind that organization.",
+          "These Terms are between you and [LEGAL ENTITY NAME] (doLegal, we, us, our), a company registered in the Republic of Armenia, with registered address at [REGISTERED ADDRESS].",
+          "By accessing or using doLegal, you agree to these Terms. If you use doLegal on behalf of an organization, you confirm you have authority to bind that organization.",
         ],
       },
       {
         heading: "2. Service description",
         paragraphs: [
-          "DoLegal is a subscription-based software service for Armenian legal and tax research, document drafting, and related productivity workflows.",
-          "DoLegal is an information and drafting tool, not a law firm and not a substitute for professional legal advice.",
+          "doLegal is a subscription-based software service for Armenian legal and tax research, document drafting, and related productivity workflows.",
+          "doLegal is an information and drafting tool, not a law firm and not a substitute for professional legal advice.",
         ],
       },
       {
@@ -77,7 +78,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "9. Intellectual property",
         paragraphs: [
-          "DoLegal software, branding, and platform content (excluding your submitted content and public legal texts) are owned by us or our licensors.",
+          "doLegal software, branding, and platform content (excluding your submitted content and public legal texts) are owned by us or our licensors.",
         ],
       },
       {
@@ -101,7 +102,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "13. Indemnification",
         paragraphs: [
-          "You agree to indemnify and hold harmless DoLegal from claims arising out of your use of the service, your content, or your breach of these Terms.",
+          "You agree to indemnify and hold harmless doLegal from claims arising out of your use of the service, your content, or your breach of these Terms.",
         ],
       },
       {
@@ -125,15 +126,15 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "1. Оператор и принятие условий",
         paragraphs: [
-          "Настоящие Условия заключаются между вами и [LEGAL ENTITY NAME] (DoLegal, мы, нас, наш), компанией, зарегистрированной в Республике Армения, по адресу [REGISTERED ADDRESS].",
-          "Используя DoLegal, вы соглашаетесь с этими Условиями. Если вы используете сервис от имени организации, вы подтверждаете полномочия связывать эту организацию данными Условиями.",
+          "Настоящие Условия заключаются между вами и [LEGAL ENTITY NAME] (doLegal, мы, нас, наш), компанией, зарегистрированной в Республике Армения, по адресу [REGISTERED ADDRESS].",
+          "Используя doLegal, вы соглашаетесь с этими Условиями. Если вы используете сервис от имени организации, вы подтверждаете полномочия связывать эту организацию данными Условиями.",
         ],
       },
       {
         heading: "2. Описание сервиса",
         paragraphs: [
-          "DoLegal — это подписочный программный сервис для юридических и налоговых исследований по Армении, подготовки документов и связанных рабочих процессов.",
-          "DoLegal — информационный и драфтинг-инструмент, не юридическая фирма и не замена профессиональной юридической консультации.",
+          "doLegal — это подписочный программный сервис для юридических и налоговых исследований по Армении, подготовки документов и связанных рабочих процессов.",
+          "doLegal — информационный и драфтинг-инструмент, не юридическая фирма и не замена профессиональной юридической консультации.",
         ],
       },
       {
@@ -180,7 +181,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "9. Интеллектуальная собственность",
         paragraphs: [
-          "Программное обеспечение DoLegal, бренд и контент платформы (кроме вашего контента и публичных юридических текстов) принадлежат нам или нашим лицензиарам.",
+          "Программное обеспечение doLegal, бренд и контент платформы (кроме вашего контента и публичных юридических текстов) принадлежат нам или нашим лицензиарам.",
         ],
       },
       {
@@ -204,7 +205,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "13. Возмещение убытков",
         paragraphs: [
-          "Вы соглашаетесь возместить убытки и освободить DoLegal от претензий, возникших из-за вашего использования сервиса, вашего контента или нарушения этих Условий.",
+          "Вы соглашаетесь возместить убытки и освободить doLegal от претензий, возникших из-за вашего использования сервиса, вашего контента или нарушения этих Условий.",
         ],
       },
       {
@@ -228,15 +229,15 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "1. Օպերատոր և պայմանների ընդունում",
         paragraphs: [
-          "Սույն պայմանները կնքվում են ձեր և [LEGAL ENTITY NAME]-ի (DoLegal, մենք, մեզ, մեր) միջև, որը գրանցված է Հայաստանի Հանրապետությունում՝ [REGISTERED ADDRESS] հասցեում։",
-          "DoLegal-ից օգտվելով՝ դուք համաձայնում եք սույն պայմաններին։ Եթե ծառայությունից օգտվում եք կազմակերպության անունից, հաստատում եք, որ լիազորված եք պարտավորեցնել այդ կազմակերպությանը։",
+          "Սույն պայմանները կնքվում են ձեր և [LEGAL ENTITY NAME]-ի (doLegal, մենք, մեզ, մեր) միջև, որը գրանցված է Հայաստանի Հանրապետությունում՝ [REGISTERED ADDRESS] հասցեում։",
+          "doLegal-ից օգտվելով՝ դուք համաձայնում եք սույն պայմաններին։ Եթե ծառայությունից օգտվում եք կազմակերպության անունից, հաստատում եք, որ լիազորված եք պարտավորեցնել այդ կազմակերպությանը։",
         ],
       },
       {
         heading: "2. Ծառայության նկարագրություն",
         paragraphs: [
-          "DoLegal-ը բաժանորդագրության հիմքով ծրագրային ծառայություն է՝ ՀՀ իրավական և հարկային հետազոտության, փաստաթղթերի նախագծման և հարակից աշխատանքային հոսքերի համար։",
-          "DoLegal-ը տեղեկատվական և նախագծման գործիք է, ոչ իրավաբանական ընկերություն, և չի փոխարինում մասնագիտական իրավաբանական խորհրդատվությանը։",
+          "doLegal-ը բաժանորդագրության հիմքով ծրագրային ծառայություն է՝ ՀՀ իրավական և հարկային հետազոտության, փաստաթղթերի նախագծման և հարակից աշխատանքային հոսքերի համար։",
+          "doLegal-ը տեղեկատվական և նախագծման գործիք է, ոչ իրավաբանական ընկերություն, և չի փոխարինում մասնագիտական իրավաբանական խորհրդատվությանը։",
         ],
       },
       {
@@ -283,7 +284,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "9. Մտավոր սեփականություն",
         paragraphs: [
-          "DoLegal ծրագրային ապահովումը, բրենդը և հարթակի բովանդակությունը (բացառությամբ ձեր բովանդակության և հանրային իրավական տեքստերի) պատկանում են մեզ կամ մեր լիցենզավորողներին։",
+          "doLegal ծրագրային ապահովումը, բրենդը և հարթակի բովանդակությունը (բացառությամբ ձեր բովանդակության և հանրային իրավական տեքստերի) պատկանում են մեզ կամ մեր լիցենզավորողներին։",
         ],
       },
       {
@@ -307,7 +308,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "13. Փոխհատուցում",
         paragraphs: [
-          "Դուք համաձայնում եք պաշտպանել և փոխհատուցել DoLegal-ին՝ ձեր օգտագործման, ձեր բովանդակության կամ սույն պայմանների խախտման արդյունքում առաջացած պահանջների դեպքում։",
+          "Դուք համաձայնում եք պաշտպանել և փոխհատուցել doLegal-ին՝ ձեր օգտագործման, ձեր բովանդակության կամ սույն պայմանների խախտման արդյունքում առաջացած պահանջների դեպքում։",
         ],
       },
       {
@@ -325,6 +326,25 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
     ],
   },
 };
+
+const TERMS_DESCRIPTIONS: Record<SupportedLocale, string> = {
+  en: "Read the doLegal Terms of Service, including billing, acceptable use, refunds, and legal conditions for using the platform.",
+  ru: "Ознакомьтесь с Условиями использования doLegal: оплата, допустимое использование, возвраты и правовые условия работы с платформой.",
+  am: "Կարդացեք doLegal-ի Օգտագործման պայմանները՝ վճարումներ, թույլատրելի օգտագործում, վերադարձներ և հարթակի իրավական պայմաններ։",
+};
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]/terms">): Promise<Metadata> {
+  const {locale} = await params;
+  const key = (locale as SupportedLocale) || "en";
+  const copy = COPY[key] ?? COPY.en;
+
+  return {
+    title: `${copy.title} | doLegal`,
+    description: TERMS_DESCRIPTIONS[key] ?? TERMS_DESCRIPTIONS.en,
+  };
+}
 
 export default async function LocalizedTermsPage({
   params,

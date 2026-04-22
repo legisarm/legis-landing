@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import {useTranslations} from "next-intl";
 import { Footer } from "../../_components/Footer";
 import { Masthead } from "../../_components/Masthead";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | doLegal",
+  description:
+    "Review how doLegal collects, uses, and protects personal data, including waitlist, technical, and billing-related information.",
+};
 
 export default function PrivacyPolicyPage() {
   const tNav = useTranslations("nav");
@@ -22,14 +29,14 @@ export default function PrivacyPolicyPage() {
             Privacy <em>Policy</em>
           </h1>
           <p className="section-sub" style={{ fontWeight: 700 }}>
-            Last updated: April 22, 2026. This Privacy Policy explains what personal data DoLegal
+            Last updated: April 22, 2026. This Privacy Policy explains what personal data doLegal
             processes and how we use it.
           </p>
 
           <section style={{ marginTop: 32 }}>
             <h2>1. Controller</h2>
             <p>
-              DoLegal is operated by <strong>[LEGAL ENTITY NAME]</strong>, registered in the{" "}
+              doLegal is operated by <strong>[LEGAL ENTITY NAME]</strong>, registered in the{" "}
               <strong>Republic of Armenia</strong>, with registered address at{" "}
               <strong>[REGISTERED ADDRESS]</strong>. Contact:{" "}
               <a href="mailto:hello@dolegal.am">hello@dolegal.am</a>.
@@ -131,7 +138,7 @@ export default function PrivacyPolicyPage() {
           <section style={{ marginTop: 24 }}>
             <h2>10. Children</h2>
             <p>
-              DoLegal is not intended for children. We do not knowingly collect personal data from
+              doLegal is not intended for children. We do not knowingly collect personal data from
               children where prohibited by law.
             </p>
           </section>

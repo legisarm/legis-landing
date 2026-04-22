@@ -720,8 +720,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
   position: relative;
 }
 .aud-kicker {
-  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 18px;
+  margin-bottom: 18px;
 }
 .aud h4 {
   font-family: var(--serif-display);

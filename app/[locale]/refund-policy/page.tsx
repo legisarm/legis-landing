@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {getTranslations} from "next-intl/server";
 import { Footer } from "../../_components/Footer";
 import { Masthead } from "../../_components/Masthead";
@@ -148,6 +149,25 @@ const COPY: Record<SupportedLocale, RefundCopy> = {
     ],
   },
 };
+
+const REFUND_DESCRIPTIONS: Record<SupportedLocale, string> = {
+  en: "Learn doLegal refund rules for subscriptions and top-ups, request windows, and the process for submitting refund requests.",
+  ru: "Узнайте правила возврата doLegal по подпискам и пополнениям, сроки подачи и порядок оформления запроса на возврат.",
+  am: "Ծանոթացեք doLegal-ի վերադարձի կանոններին՝ բաժանորդագրությունների և լիցքավորումների, դիմելու ժամկետների և վերադարձի հարցման ընթացակարգի վերաբերյալ։",
+};
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]/refund-policy">): Promise<Metadata> {
+  const {locale} = await params;
+  const key = (locale as SupportedLocale) || "en";
+  const copy = COPY[key] ?? COPY.en;
+
+  return {
+    title: `${copy.title} | doLegal`,
+    description: REFUND_DESCRIPTIONS[key] ?? REFUND_DESCRIPTIONS.en,
+  };
+}
 
 export default async function LocalizedRefundPolicyPage({
   params,

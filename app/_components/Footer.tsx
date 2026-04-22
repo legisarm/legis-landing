@@ -11,7 +11,7 @@ export function Footer() {
         <div className="foot-grid">
           <div>
             <div className="foot-brand">
-              <img className="brand-logo" src="/doLegal-logo.svg" alt="DoLegal" />
+              <img className="brand-logo" src="/doLegal-logo.svg" alt="doLegal" />
             </div>
             <p className="foot-tag">{t("description")}</p>
           </div>
@@ -20,7 +20,6 @@ export function Footer() {
             <Link href="/#features">{cols[0].links[0]}</Link>
             <Link href="/pricing">{cols[0].links[1]}</Link>
             <Link href="/#how">{cols[0].links[2]}</Link>
-            <Link href="#">{cols[0].links[3]}</Link>
           </div>
           <div className="foot-col">
             <h5>{cols[1].title}</h5>

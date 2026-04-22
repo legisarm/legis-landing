@@ -110,8 +110,8 @@ export function Masthead({ nav, ctaHref = "/#waitlist" }: MastheadProps) {
   return (
     <header className="masthead">
       <div className="wrap masthead-inner">
-        <Link href="/" className="brand" aria-label="DoLegal">
-          <img className="brand-logo" src="/doLegal-logo.svg" alt="DoLegal" />
+        <Link href="/" className="brand" aria-label="doLegal">
+          <img className="brand-logo" src="/doLegal-logo.svg" alt="doLegal" />
         </Link>
         <button
           type="button"

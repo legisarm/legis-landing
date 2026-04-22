@@ -302,7 +302,7 @@ export function ProductWorkspace() {
               </div>
             </div>
 
-            <div className="ans-label">DoLegal · answer</div>
+            <div className="ans-label">doLegal · answer</div>
 
             <div className="product-conclusion">
               <span className="tag">Conclusion</span>VAT registration becomes
@@ -400,7 +400,7 @@ export function ProductWorkspace() {
                   <div className="q">{t.user}</div>
                 </div>
                 <div className="ans-label">
-                  DoLegal · answer
+                  doLegal · answer
                   {t.state === "loading" && (
                     <span className="typing">
                       <i />

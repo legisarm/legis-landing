@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {useTranslations} from "next-intl";
 import {Link} from "@/i18n/navigation";
 import { Fragment } from "react";
@@ -6,6 +7,12 @@ import { Masthead } from "../../_components/Masthead";
 import { Waitlist } from "../../_components/Waitlist";
 import { FAQList } from "../_components/FAQList";
 import { PlansAndBilling } from "./_components/PlansAndBilling";
+
+export const metadata: Metadata = {
+  title: "Pricing | doLegal Armenia",
+  description:
+    "Explore doLegal pricing plans for Armenian legal research and drafting, including token tiers, top-ups, and team options for law and accounting practices.",
+};
 
 const PRICING_FAQ = [
   {
@@ -30,7 +37,7 @@ const PRICING_FAQ = [
   },
   {
     q: "When is pricing actually available?",
-    a: "DoLegal is in early access. Pricing shown is the planned launch pricing. Join the waitlist and we'll invite you in batches as we open access — starting with independent practitioners in Yerevan.",
+    a: "doLegal is in early access. Pricing shown is the planned launch pricing. Join the waitlist and we'll invite you in batches as we open access — starting with independent practitioners in Yerevan.",
   },
 ];
 
@@ -367,7 +374,7 @@ export default function PricingPage() {
               <p className="lead">
                 A token is the unit of AI processing — roughly{" "}
                 <b>0.75 words</b>. Your plan refreshes a fixed allowance
-                monthly; top-ups stack on top. Here is what typical DoLegal work
+                monthly; top-ups stack on top. Here is what typical doLegal work
                 costs.
               </p>
             </div>
@@ -420,7 +427,7 @@ export default function PricingPage() {
         }
         body={
           <>
-            DoLegal is not publicly released. Early-access invitees get the
+            doLegal is not publicly released. Early-access invitees get the
             launch tariff grandfathered for 12 months after general availability.
           </>
         }
