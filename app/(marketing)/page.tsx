@@ -61,7 +61,7 @@ export default function LandingPage() {
                 <Link className="btn-primary" href="#waitlist">
                   {tParity("heroPrimaryCtaExact")}
                 </Link>
-                <Link className="btn-ghost" href="/product">
+                <Link className="btn-ghost" href="/#how">
                   {tParity("heroSecondaryCtaExact")}
                 </Link>
               </div>
@@ -186,21 +186,23 @@ export default function LandingPage() {
                         </pattern>
                       </defs>
                       <rect width="240" height="180" fill="url(#p1)" style={{ color: "var(--ink)" }} />
-                      <g transform="translate(28, 24)" fontFamily="IBM Plex Mono" fontSize="8" fill="var(--ink-2)">
-                        <rect x="0" y="0" width="184" height="36" fill="var(--paper)" stroke="var(--rule)" />
-                        <text x="10" y="14">
+                      <g transform="translate(24, 20)" fontFamily="IBM Plex Mono" fontSize="7" fill="var(--ink-2)">
+                        <rect x="0" y="0" width="192" height="42" fill="var(--paper)" stroke="var(--rule)" />
+                        <text x="10" y="13">
                           <tspan x="10" dy="0">Ե՞րբ է ԱԱՀ գրանցումը</tspan>
-                          <tspan x="10" dy="10">պարտադիր ԱՁ-ի համար</tspan>
+                          <tspan x="10" dy="9">պարտադիր ԱՁ-ի համար</tspan>
                         </text>
-                        <rect x="0" y="44" width="184" height="36" fill="var(--paper)" stroke="var(--rule)" />
-                        <text x="10" y="58" fill="var(--ink-3)">
-                          <tspan x="10" dy="0">When does VAT registration become</tspan>
-                          <tspan x="10" dy="10">mandatory for a sole proprietor</tspan>
+                        <rect x="0" y="50" width="192" height="42" fill="var(--paper)" stroke="var(--rule)" />
+                        <text x="10" y="61" fill="var(--ink-3)">
+                          <tspan x="10" dy="0">When does VAT registration</tspan>
+                          <tspan x="10" dy="9">become mandatory for a sole</tspan>
+                          <tspan x="10" dy="9">proprietor?</tspan>
                         </text>
-                        <rect x="0" y="88" width="184" height="36" fill="var(--paper)" stroke="var(--rule)" />
-                        <text x="10" y="102" fill="var(--ink-3)">
+                        <rect x="0" y="100" width="192" height="42" fill="var(--paper)" stroke="var(--rule)" />
+                        <text x="10" y="113" fill="var(--ink-3)">
                           <tspan x="10" dy="0">Когда регистрация по НДС</tspan>
-                          <tspan x="10" dy="10">становится обязательной для ИП</tspan>
+                          <tspan x="10" dy="9">становится обязательной</tspan>
+                          <tspan x="10" dy="9">для ИП?</tspan>
                         </text>
                       </g>
                     </svg>

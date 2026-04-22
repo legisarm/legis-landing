@@ -9,7 +9,7 @@
   },
   "hero": {
     "joinEarlyAccess": "Join Early Access →",
-    "seeProduct": "See the product ↗"
+    "seeProduct": "See how it works ↗"
   },
   "language": {
     "ariaLabel": "Language"
@@ -573,7 +573,7 @@
           "links": [
             "Terms of Service",
             "Privacy Policy",
-            "Disclaimer",
+            "Refund Policy",
             "Cookie Policy"
           ]
         },
@@ -598,7 +598,7 @@
       "heroLine4": "— multi-language.",
       "heroDescriptionExact": "Forward-thinking lawyers, accountants, and founders use doLegal to research legislation, draft documents, and navigate state compliance — grounded in the actual text of Armenian law.",
       "heroPrimaryCtaExact": "Join Early Access →",
-      "heroSecondaryCtaExact": "See the product ↗",
+      "heroSecondaryCtaExact": "See how it works ↗",
       "heroStat2Value": "20",
       "heroStat2Suffix": "min",
       "heroStat2Label": "Avg. research, per case",

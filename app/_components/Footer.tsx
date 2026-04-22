@@ -24,8 +24,9 @@ export function Footer() {
           </div>
           <div className="foot-col">
             <h5>{cols[1].title}</h5>
-            <Link href="#">{cols[1].links[0]}</Link>
-            <Link href="#">{cols[1].links[1]}</Link>
+            <Link href="/terms">{cols[1].links[0]}</Link>
+            <Link href="/privacy">{cols[1].links[1]}</Link>
+            <Link href="/refund-policy">{cols[1].links[2]}</Link>
           </div>
         </div>
         <div className="foot-bottom">

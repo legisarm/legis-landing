@@ -583,6 +583,10 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
   color: var(--ink-2); max-width: 56ch; margin: 0 0 56px;
 }
 
+.policy-legal h2 {
+  font-weight: 700;
+}
+
 /* ================================================================
    Capabilities
    ================================================================ */
@@ -685,8 +689,9 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 .step-num {
   display: inline-block;
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
-  color: var(--accent);
-  border: 1px solid var(--accent); padding: 3px 8px; border-radius: 2px;
+  color: #fff;
+  background: var(--accent);
+  border: 1px solid var(--accent); padding: 3px 8px; border-radius: 4px;
   margin-bottom: 22px;
 }
 .step h3 {
@@ -838,7 +843,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 }
 .foot-brand .legal { font-style: normal; font-weight: 600; }
 .foot-brand .dot { color: var(--accent); }
-.foot-tag { font-family: var(--serif); color: var(--ink-2); font-size: 15px; max-width: 36ch; }
+.foot-tag { font-family: var(--serif); color: var(--ink-2); font-size: 15px; width: 100%; max-width: 350px; }
 .foot-col h5 {
   font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--ink-3); margin: 0 0 14px;
