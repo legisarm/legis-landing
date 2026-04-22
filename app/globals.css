@@ -465,8 +465,11 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
   display: flex; justify-content: space-between; align-items: center;
 }
 .cite {
+  padding: 8px 0; border-bottom: 1px solid var(--rule-soft);
+}
+.cite-main {
   display: grid; grid-template-columns: 22px 1fr auto;
-  gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--rule-soft);
+  gap: 12px;
   align-items: baseline;
 }
 .cite:last-child { border-bottom: 0; }
@@ -474,11 +477,38 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 .cite-body { font-family: var(--serif); font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
 .cite-body b { color: var(--ink); font-weight: 600; font-family: var(--mono); font-size: 13px; letter-spacing: 0.02em; }
 .cite-link {
-  font-family: var(--mono); font-size: 11px; color: var(--accent);
-  text-transform: uppercase; letter-spacing: 0.12em; text-decoration: none;
-  white-space: nowrap;
+  width: 22px; height: 22px;
+  display: inline-grid; place-items: center;
+  border: 1px solid var(--rule);
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
 }
-.cite-link:hover { text-decoration: underline; }
+.cite-link:hover { border-color: var(--accent); }
+.cite-expand-icon { transition: transform .18s ease; }
+.cite.expanded .cite-expand-icon { transform: rotate(180deg); }
+.cite-detail {
+  margin: 8px 0 2px 34px;
+  padding: 8px 10px;
+  border-left: 2px solid var(--accent);
+  background: var(--paper-3);
+}
+.cite-detail-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 4px;
+}
+.cite-detail p {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 13px;
+  color: var(--ink-2);
+}
 
 .composer {
   position: absolute; bottom: 0; left: 0; right: 0;
@@ -569,12 +599,16 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
   .cap + .cap { padding-left: 0; }
 }
 .cap-num {
-  width: 48px; height: 48px; border-radius: 9999px;
-  display: inline-flex; align-items: center; justify-content: center;
+  display: inline-block;
   font-family: var(--mono);
-  font-size: 18px; font-weight: 500; font-style: normal;
-  color: #fff; background: var(--accent); line-height: 1;
+  font-size: 47px; font-weight: 400; font-style: normal;
+  color: #fff; line-height: 1;
+  letter-spacing: -0.03em;
   margin-bottom: 24px;
+}
+.cap-num::after {
+  content: ".";
+  color: var(--accent);
 }
 .cap h3 {
   font-family: var(--serif-display);

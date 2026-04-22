@@ -13,6 +13,7 @@ interface DemoBody {
 interface DemoCite {
   tag: string;
   label: string;
+  quote: string;
 }
 
 interface Demo {
@@ -42,9 +43,21 @@ function useLiveDemos(t: ReturnType<typeof useTranslations>) {
           { h: t("demoVatBody2H"), p: t("demoVatBody2P") },
         ],
         cites: [
-          { tag: t("demoVatCite1Tag"), label: t("demoVatCite1Label") },
-          { tag: t("demoVatCite2Tag"), label: t("demoVatCite2Label") },
-          { tag: t("demoVatCite3Tag"), label: t("demoVatCite3Label") },
+          {
+            tag: t("demoVatCite1Tag"),
+            label: t("demoVatCite1Label"),
+            quote: t("demoVatCite1Quote"),
+          },
+          {
+            tag: t("demoVatCite2Tag"),
+            label: t("demoVatCite2Label"),
+            quote: t("demoVatCite2Quote"),
+          },
+          {
+            tag: t("demoVatCite3Tag"),
+            label: t("demoVatCite3Label"),
+            quote: t("demoVatCite3Quote"),
+          },
         ],
       },
       draft: {
@@ -65,9 +78,21 @@ function useLiveDemos(t: ReturnType<typeof useTranslations>) {
           },
         ],
         cites: [
-          { tag: t("demoDraftCite1Tag"), label: t("demoDraftCite1Label") },
-          { tag: t("demoDraftCite2Tag"), label: t("demoDraftCite2Label") },
-          { tag: t("demoDraftCite3Tag"), label: t("demoDraftCite3Label") },
+          {
+            tag: t("demoDraftCite1Tag"),
+            label: t("demoDraftCite1Label"),
+            quote: t("demoDraftCite1Quote"),
+          },
+          {
+            tag: t("demoDraftCite2Tag"),
+            label: t("demoDraftCite2Label"),
+            quote: t("demoDraftCite2Quote"),
+          },
+          {
+            tag: t("demoDraftCite3Tag"),
+            label: t("demoDraftCite3Label"),
+            quote: t("demoDraftCite3Quote"),
+          },
         ],
       },
       deadline: {
@@ -76,8 +101,16 @@ function useLiveDemos(t: ReturnType<typeof useTranslations>) {
         conclusion: t("demoDeadlineAnswer"),
         body: [{ h: t("demoDeadlineBody1H"), p: t("demoDeadlineBody1P") }],
         cites: [
-          { tag: t("demoDeadlineCite1Tag"), label: t("demoDeadlineCite1Label") },
-          { tag: t("demoDeadlineCite2Tag"), label: t("demoDeadlineCite2Label") },
+          {
+            tag: t("demoDeadlineCite1Tag"),
+            label: t("demoDeadlineCite1Label"),
+            quote: t("demoDeadlineCite1Quote"),
+          },
+          {
+            tag: t("demoDeadlineCite2Tag"),
+            label: t("demoDeadlineCite2Label"),
+            quote: t("demoDeadlineCite2Quote"),
+          },
         ],
       },
     };
@@ -89,6 +122,7 @@ export function LiveDemo() {
   const demos = useLiveDemos(t);
 
   const [active, setActive] = useState<DemoKey>("vat");
+  const [expandedCite, setExpandedCite] = useState<string | null>(null);
   const [typed, setTyped] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -96,6 +130,7 @@ export function LiveDemo() {
   const demo = demos[active];
 
   useEffect(() => {
+    setExpandedCite(null);
     setTyped("");
     setIsTyping(true);
 
@@ -192,19 +227,51 @@ export function LiveDemo() {
                             {t("demoSourcesVerified")}
                           </span>
                         </div>
-                        {demo.cites.map((c, i) => (
-                          <div className="cite" key={c.tag}>
-                            <div className="cite-num">
-                              [{String(i + 1).padStart(2, "0")}]
+                        {demo.cites.map((c, i) => {
+                          const citeId = `${active}-${c.tag}`;
+                          const isExpanded = expandedCite === citeId;
+
+                          return (
+                          <div className={`cite${isExpanded ? " expanded" : ""}`} key={c.tag}>
+                            <div className="cite-main">
+                              <div className="cite-num">
+                                [{String(i + 1).padStart(2, "0")}]
+                              </div>
+                              <div className="cite-body">
+                                <b>{c.tag}</b> — {c.label}
+                              </div>
+                              <button
+                                className="cite-link"
+                                type="button"
+                                aria-expanded={isExpanded}
+                                onClick={() => setExpandedCite(isExpanded ? null : citeId)}
+                              >
+                                <svg
+                                  className="cite-expand-icon"
+                                  width="12"
+                                  height="12"
+                                  viewBox="0 0 12 12"
+                                  fill="none"
+                                  aria-hidden="true"
+                                >
+                                  <path
+                                    d="M3 4.5 6 7.5 9 4.5"
+                                    stroke="currentColor"
+                                    strokeWidth="1.2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  />
+                                </svg>
+                              </button>
                             </div>
-                            <div className="cite-body">
-                              <b>{c.tag}</b> — {c.label}
-                            </div>
-                            <a className="cite-link" href="#">
-                              {t("demoViewSource")}
-                            </a>
+                            {isExpanded ? (
+                              <div className="cite-detail">
+                                <span className="cite-detail-label">Quote from legislation</span>
+                                <p>{c.quote}</p>
+                              </div>
+                            ) : null}
                           </div>
-                        ))}
+                        )})}
                       </div>
                     </>
                   )}

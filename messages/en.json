@@ -41,7 +41,7 @@
       "titleMain": "Legal AI-assistant",
       "titleFor": "Exponential efficiency",
       "titleAudienceRotating": [],
-      "description": "Forward-thinking founders, top lawyers, accountants, clerks, and other professionals simplify and speed up their daily work with DoLegal.",
+      "description": "Forward-thinking founders, top lawyers, accountants, clerks, and other professionals simplify and speed up their daily work with doLegal.",
       "primaryCta": "Join Early Access",
       "secondaryCta": "See how it works",
       "onlineStatus": "Online",
@@ -231,7 +231,7 @@
       "titleAccent": "stuck in 2005",
       "description": "The official sources exist, but the tools to use them efficiently do not. Until now.",
       "oldWayBadge": "The old way",
-      "withDoLegalBadge": "With DoLegal",
+      "withDoLegalBadge": "With doLegal",
       "oldWayItems": [
         "Manual keyword search across legal sources with no semantic understanding",
         "No way to check if you found the current version of a law or an outdated amendment",
@@ -251,7 +251,7 @@
       "sectionLabel": "Core capabilities",
       "titleMain": "Three tools.",
       "titleAccent": "One interface.",
-      "description": "DoLegal combines legal research, document drafting, and legal assistant guidance - all powered by RAG retrieval over authoritative Armenian legal corpora.",
+      "description": "doLegal combines legal research, document drafting, and legal assistant guidance - all powered by authoritative legal corpora.",
       "cards": [
         {
           "number": "01",
@@ -302,7 +302,7 @@
         },
         {
           "title": "AI retrieves the law",
-          "description": "DoLegal searches its indexed corpus of Armenian legislation and case law, retrieves the most relevant articles, and generates a grounded answer."
+          "description": "doLegal searches its indexed corpus of Armenian legislation and case law, retrieves the most relevant articles, and generates a grounded answer."
         },
         {
           "title": "Verify every citation",
@@ -311,7 +311,7 @@
       ]
     },
     "personas": {
-      "sectionLabel": "Who uses DoLegal",
+      "sectionLabel": "Who uses doLegal",
       "titleMain": "Built for legal and accounting professionals",
       "titleAccent": "and ambitious founders",
       "cards": [
@@ -516,14 +516,14 @@
       "items": [
         {
           "question": "Is this legal counsel?",
-          "answer": "No. DoLegal is a legal research and drafting tool - not a lawyer. All responses include a disclaimer and should be reviewed by a qualified legal professional before taking action."
+          "answer": "No. doLegal is a legal research and drafting tool - not a lawyer. All responses include a disclaimer and should be reviewed by a qualified legal professional before taking action."
         },
         {
           "question": "How accurate are the citations?",
           "answer": "Every response is grounded in retrieved text from official government legislation sources. We target high citation alignment on monthly sample audits."
         },
         {
-          "question": "What languages does DoLegal support?",
+          "question": "What languages does doLegal support?",
           "answer": "You can ask questions and receive answers in Armenian, Russian, or English. The legal corpus is primarily Armenian with cross-language retrieval."
         },
         {
@@ -543,7 +543,7 @@
     "earlyAccess": {
       "sectionLabel": "Coming soon",
       "titleMain": "Join the early access",
-      "titleAccent": "for DoLegal",
+      "titleAccent": "for doLegal",
       "description": "The product is not publicly released yet. Join the waitlist and get invited as soon as we open access.",
       "emailLabel": "Email Address",
       "emailPlaceholder": "you@company.com",
@@ -557,7 +557,7 @@
     },
     "footer": {
       "description": "AI-powered legal research and drafting for the Armenian market. Built on official Armenian government legislation sources.",
-      "copyright": "© 2026 DoLegal. All rights reserved.",
+      "copyright": "© 2026 doLegal. All rights reserved.",
       "columns": [
         {
           "title": "Product",
@@ -596,7 +596,7 @@
       "heroLine3Prefix": "&",
       "heroLine3Rest": "save the afternoon.",
       "heroLine4": "— multi-language.",
-      "heroDescriptionExact": "Forward-thinking lawyers, accountants, and founders use DoLegal to research legislation, draft documents, and navigate state compliance — grounded in the actual text of Armenian law.",
+      "heroDescriptionExact": "Forward-thinking lawyers, accountants, and founders use doLegal to research legislation, draft documents, and navigate state compliance — grounded in the actual text of Armenian law.",
       "heroPrimaryCtaExact": "Join Early Access →",
       "heroSecondaryCtaExact": "See the product ↗",
       "heroStat2Value": "20",
@@ -609,7 +609,7 @@
       "demoTab3": "Reg. deadline",
       "demoQueryLabel": "Query · EN",
       "demoQuestion": "When must I register for VAT as an individual entrepreneur in Armenia?",
-      "demoAssistantLabel": "DoLegal",
+      "demoAssistantLabel": "doLegal",
       "demoAnswer": "VAT registration becomes mandatory once turnover crosses the statutory threshold in any rolling 12-month period.",
       "demoSourcesVerified": "verified ↗",
       "demoSource1": "[01] RA TC · Art. 267",
@@ -617,7 +617,7 @@
       "demoSource3": "[03] SRC Ord. N-148",
       "demoInputPlaceholder": "Ask a question in Armenian, Russian, or English…",
       "demoCitationsTitle": "Legal sources",
-      "demoChromeMiddle": "dolegal.am / research",
+      "demoChromeMiddle": "doLegal / research",
       "demoNote": "↑ Live preview · switch questions above",
       "demoComposerLang": "EN",
       "demoUserShort": "ME",
@@ -628,10 +628,13 @@
       "demoVatBody2P": "Register with the State Revenue Committee, switch your invoicing to e-invoices with the required VAT attributes, and begin monthly VAT returns.",
       "demoVatCite1Tag": "RA TC · Art. 267",
       "demoVatCite1Label": "VAT registration threshold",
+      "demoVatCite1Quote": "A taxable person whose aggregate turnover exceeds the statutory threshold in any twelve consecutive months is recognized as a VAT payer from the moment prescribed by the Tax Code.",
       "demoVatCite2Tag": "RA TC · Arts. 268–271",
       "demoVatCite2Label": "VAT payer obligations",
+      "demoVatCite2Quote": "A registered VAT payer must issue VAT invoices, maintain VAT records, and submit VAT returns within the procedure and deadlines established by the Code.",
       "demoVatCite3Tag": "SRC Ord. N-148",
       "demoVatCite3Label": "E-invoicing requirements",
+      "demoVatCite3Quote": "Electronic invoices must contain mandatory tax fields and be submitted through the SRC electronic system in the approved format.",
       "demoDraftQueryLabel": "Query · EN",
       "demoDraftQuestion": "Draft a service agreement for my company.",
       "demoDraftAnswer": "Service agreement prepared. Draft aligns with the RA Civil Code — pricing, payment terms, liability caps, and termination — with headings mapped to mandatory notice and defect-remedy rules.",
@@ -641,10 +644,13 @@
       "demoDraftDownloadSuffix": "— ready to edit",
       "demoDraftCite1Tag": "RA CC · Arts. 435–447",
       "demoDraftCite1Label": "Service & work contracts",
+      "demoDraftCite1Quote": "Under the Civil Code provisions on services and works, the contractor undertakes to perform agreed work, and the customer undertakes to accept the result and pay the agreed fee.",
       "demoDraftCite2Tag": "RA CC · Arts. 314–318",
       "demoDraftCite2Label": "Price, payment, interest",
+      "demoDraftCite2Quote": "Monetary obligations are performed in the agreed amount and term; in case of delay, statutory interest may be charged as provided by law.",
       "demoDraftCite3Tag": "RA CC · Art. 467",
       "demoDraftCite3Label": "Defect remedies",
+      "demoDraftCite3Quote": "If defects are discovered in the performed work, the customer may request free remediation, proportional price reduction, or reimbursement of remediation costs.",
       "demoDeadlineQueryLabel": "Query · EN",
       "demoDeadlineQuestion": "What is the deadline to register an employee after starting operations?",
       "demoDeadlineAnswer": "You must register the employee within 3 working days after the employment relationship begins. The same window applies for social-security and personal-income-tax enrolment with the SRC.",
@@ -652,8 +658,10 @@
       "demoDeadlineBody1P": "The Labour Code requires the employer to register the employment relationship at its formal commencement. Implementing regulations specify a 3-working-day registration window for both labour and tax-administration purposes.",
       "demoDeadlineCite1Tag": "RA LC · Art. 88",
       "demoDeadlineCite1Label": "Employer registration duties",
+      "demoDeadlineCite1Quote": "The employer is required to ensure registration of the employment relationship in accordance with the procedure and timelines established by Armenian law.",
       "demoDeadlineCite2Tag": "Gov.Dec. 23-N · §§ 2–3",
       "demoDeadlineCite2Label": "Employee registration procedure",
+      "demoDeadlineCite2Quote": "Employee registration data must be filed within three working days from the start date of employment through the prescribed state reporting procedure.",
       "featuresSectionLabelExact": "Core capabilities",
       "featuresTitleMainExact": "Three instruments.",
       "featuresTitleAccentExact": "One chamber.",
