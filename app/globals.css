@@ -1,5 +1,85 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Source Sans 4";
+  src: url("/fonts/source-sans-3-latin-300-normal.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 4";
+  src: url("/fonts/source-sans-3-latin-300-italic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 4";
+  src: url("/fonts/source-sans-3-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 4";
+  src: url("/fonts/source-sans-3-latin-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 4";
+  src: url("/fonts/source-sans-3-latin-500-normal.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 4";
+  src: url("/fonts/source-sans-3-latin-500-italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 4";
+  src: url("/fonts/source-sans-3-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 4";
+  src: url("/fonts/source-sans-3-latin-600-italic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 4";
+  src: url("/fonts/source-sans-3-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 4";
+  src: url("/fonts/source-sans-3-latin-700-italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ================================================================
    Tokens
    ================================================================ */
@@ -20,10 +100,10 @@
   --highlight: oklch(0.92 0.08 95);
   --ok: oklch(0.55 0.12 150);
 
-  --serif: var(--font-source-serif), "Source Serif 4", "Newsreader", Georgia, serif;
-  --serif-display: var(--font-source-serif), "Source Serif 4", "Newsreader", Georgia, serif;
-  --sans: var(--font-inter-tight), "Inter Tight Fallback", "Inter Tight", var(--font-plex-sans), "IBM Plex Sans Fallback", "IBM Plex Sans", system-ui, sans-serif;
-  --mono: var(--font-plex-mono), "IBM Plex Mono", ui-monospace, monospace;
+  --serif: "Source Sans 4", "Source Sans 3", system-ui, sans-serif;
+  --serif-display: "Source Sans 4", "Source Sans 3", system-ui, sans-serif;
+  --sans: "Source Sans 4", "Source Sans 3", system-ui, sans-serif;
+  --mono: "Source Sans 4", "Source Sans 3", system-ui, sans-serif;
 
   --r: 2px;
   --r-lg: 6px;
@@ -50,7 +130,7 @@ html[data-theme="dark"] {
 }
 
 html[data-display="sans"] {
-  --serif-display: var(--font-inter-tight), "Inter Tight Fallback", "Inter Tight", var(--font-plex-sans), "IBM Plex Sans Fallback", "IBM Plex Sans", system-ui, sans-serif;
+  --serif-display: "Source Sans 4", "Source Sans 3", system-ui, sans-serif;
 }
 html[data-accent="ink"] {
   --accent: var(--ink);
@@ -355,7 +435,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 .cta-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
 .btn-primary {
   background: var(--ink); color: var(--paper); border: 0;
-  font-family: "IBM Plex Sans"; font-size: 14px; font-weight: 500;
+  font-family: var(--sans); font-size: 14px; font-weight: 500;
   padding: 14px 22px; cursor: pointer; border-radius: 8px; letter-spacing: 0.01em;
   transition: background .2s, transform .2s;
   text-decoration: none; display: inline-block;

@@ -193,7 +193,7 @@ export default function LandingPage() {
                         </pattern>
                       </defs>
                       <rect width="240" height="180" fill="url(#p1)" style={{ color: "var(--ink)" }} />
-                      <g transform="translate(24, 20)" fontFamily="IBM Plex Mono" fontSize="7" fill="var(--ink-2)">
+                      <g transform="translate(24, 20)" fontFamily="var(--mono)" fontSize="7" fill="var(--ink-2)">
                         <rect x="0" y="0" width="192" height="42" fill="var(--paper)" stroke="var(--rule)" />
                         <text x="10" y="13">
                           <tspan x="10" dy="0">Ե՞րբ է ԱԱՀ գրանցումը</tspan>
@@ -218,7 +218,7 @@ export default function LandingPage() {
                 {i === 1 && (
                   <div className="step-illus">
                     <svg width="100%" height="100%" viewBox="0 0 240 180" preserveAspectRatio="xMidYMid meet" style={{ display: "block" }}>
-                      <g transform="translate(20, 20)" fontFamily="IBM Plex Mono" fontSize="9">
+                      <g transform="translate(20, 20)" fontFamily="var(--mono)" fontSize="9">
                         <g fontSize="8" fill="var(--ink-3)">
                           <text x="0" y="0">RA CC</text>
                           <line x1="40" y1="-3" x2="200" y2="-3" stroke="var(--rule)" />
@@ -248,17 +248,17 @@ export default function LandingPage() {
                 {i === 2 && (
                   <div className="step-illus">
                     <svg width="100%" height="100%" viewBox="0 0 240 180" preserveAspectRatio="xMidYMid meet" style={{ display: "block" }}>
-                      <g transform="translate(20, 20)" fontFamily="IBM Plex Mono" fontSize="9" fill="var(--ink-2)">
+                      <g transform="translate(20, 20)" fontFamily="var(--mono)" fontSize="9" fill="var(--ink-2)">
                         <line x1="0" y1="10" x2="200" y2="10" stroke="var(--rule)" />
                         <text x="0" y="7" fontSize="7" fill="var(--ink-3)">SOURCES</text>
                         <text x="170" y="7" fontSize="7" fill="var(--accent)">VERIFIED</text>
-                        <g fontFamily="IBM Plex Mono">
+                        <g fontFamily="var(--mono)">
                           <text x="0" y="28">[01]</text><text x="22" y="28">RA CC · Art. 267</text><text x="165" y="28" fill="var(--accent)">↗</text><line x1="0" y1="34" x2="200" y2="34" stroke="var(--rule-soft)" />
                           <text x="0" y="52">[02]</text><text x="22" y="52">RA CC · Arts. 268–271</text><text x="165" y="52" fill="var(--accent)">↗</text><line x1="0" y1="58" x2="200" y2="58" stroke="var(--rule-soft)" />
                           <text x="0" y="76">[03]</text><text x="22" y="76">RA LC · Art. 88</text><text x="165" y="76" fill="var(--accent)">↗</text><line x1="0" y1="82" x2="200" y2="82" stroke="var(--rule-soft)" />
                           <text x="0" y="100">[04]</text><text x="22" y="100">Gov.Dec. 23-N · §§ 2–3</text><text x="165" y="100" fill="var(--accent)">↗</text><line x1="0" y1="106" x2="200" y2="106" stroke="var(--rule-soft)" />
                         </g>
-                        <text x="0" y="130" fontFamily="Source Serif 4" fontStyle="italic" fill="var(--ink-3)" fontSize="10">Every claim, traceable.</text>
+                        <text x="0" y="130" fontFamily="var(--serif)" fontStyle="italic" fill="var(--ink-3)" fontSize="10">Every claim, traceable.</text>
                       </g>
                     </svg>
                   </div>
