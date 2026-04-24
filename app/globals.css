@@ -1037,7 +1037,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 .plan .desc {
   font-family: var(--serif); color: var(--ink-2);
   font-size: 14px; line-height: 1.55; margin: 0 0 24px;
-  min-height: 3.1em;
+  min-height: 9.3em;
 }
 .plan .price {
   display: flex; align-items: baseline; gap: 6px;
