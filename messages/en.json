@@ -308,7 +308,22 @@
           "title": "Verify every citation",
           "description": "Each answer includes article codes, law names, dates, and the responsible body. Every legal claim is traceable back to its source."
         }
-      ]
+      ],
+      "illustrations": {
+        "lawSources": ["RA CC", "RA TC", "RA LC", "GOV.DEC", "SRC ORD", "COURT"],
+        "answerLabel": "ANSWER",
+        "citations": {
+          "sources": "SOURCES",
+          "verified": "VERIFIED",
+          "items": [
+            "RA CC · Art. 267",
+            "RA CC · Arts. 268–271",
+            "RA LC · Art. 88",
+            "Gov.Dec. 23-N · §§ 2–3"
+          ],
+          "tagline": "Every claim, traceable."
+        }
+      }
     },
     "personas": {
       "sectionLabel": "Who uses doLegal",

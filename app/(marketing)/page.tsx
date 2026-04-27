@@ -41,6 +41,14 @@ export default function LandingPage() {
   const doLegalItems = tProblem.raw("doLegalItems");
   const featureCards = [0, 1, 2].map((i) => tFeatures.raw(`cards.${i}`));
   const howSteps = [0, 1, 2].map((i) => tHow.raw(`steps.${i}`));
+  const howLawSources = tHow.raw("illustrations.lawSources") as string[];
+  const howAnswerLabel = tHow("illustrations.answerLabel");
+  const howCitations = tHow.raw("illustrations.citations") as {
+    sources: string;
+    verified: string;
+    tagline: string;
+    items: string[];
+  };
   const personaCards = [0, 1, 2].map((i) => tPersonas.raw(`cards.${i}`));
   const faqs = [0, 1, 2, 3, 4, 5].map((i) => tFaq.raw(`items.${i}`));
 
@@ -223,17 +231,17 @@ export default function LandingPage() {
                     <svg width="100%" height="100%" viewBox="0 0 240 180" preserveAspectRatio="xMidYMid meet" style={{ display: "block" }}>
                       <g transform="translate(20, 20)" fontFamily="var(--mono)" fontSize="9">
                         <g fontSize="8" fill="var(--ink-3)">
-                          <text x="0" y="0">RA CC</text>
+                          <text x="0" y="0">{howLawSources[0]}</text>
                           <line x1="40" y1="-3" x2="200" y2="-3" stroke="var(--rule)" />
-                          <text x="0" y="18">RA TC</text>
+                          <text x="0" y="18">{howLawSources[1]}</text>
                           <line x1="40" y1="15" x2="200" y2="15" stroke="var(--rule)" />
-                          <text x="0" y="36">RA LC</text>
+                          <text x="0" y="36">{howLawSources[2]}</text>
                           <line x1="40" y1="33" x2="200" y2="33" stroke="var(--rule)" />
-                          <text x="0" y="54">GOV.DEC</text>
+                          <text x="0" y="54">{howLawSources[3]}</text>
                           <line x1="55" y1="51" x2="200" y2="51" stroke="var(--rule)" />
-                          <text x="0" y="72">SRC ORD</text>
+                          <text x="0" y="72">{howLawSources[4]}</text>
                           <line x1="55" y1="69" x2="200" y2="69" stroke="var(--rule)" />
-                          <text x="0" y="90">COURT</text>
+                          <text x="0" y="90">{howLawSources[5]}</text>
                           <line x1="55" y1="87" x2="200" y2="87" stroke="var(--rule)" />
                         </g>
                         <circle cx="90" cy="15" r="3" fill="var(--accent)" />
@@ -243,7 +251,7 @@ export default function LandingPage() {
                         <path d="M90 15 Q 120 60 140 120 L 170 120" stroke="var(--accent)" fill="none" strokeWidth="0.8" strokeDasharray="2 2" />
                         <path d="M160 33 Q 150 70 170 120" stroke="var(--accent)" fill="none" strokeWidth="0.8" strokeDasharray="2 2" />
                         <rect x="155" y="115" width="60" height="22" fill="var(--paper)" stroke="var(--accent)" />
-                        <text x="185" y="129" textAnchor="middle" fill="var(--accent)" fontSize="8">ANSWER</text>
+                        <text x="185" y="129" textAnchor="middle" fill="var(--accent)" fontSize="8">{howAnswerLabel}</text>
                       </g>
                     </svg>
                   </div>
@@ -253,15 +261,14 @@ export default function LandingPage() {
                     <svg width="100%" height="100%" viewBox="0 0 240 180" preserveAspectRatio="xMidYMid meet" style={{ display: "block" }}>
                       <g transform="translate(20, 20)" fontFamily="var(--mono)" fontSize="9" fill="var(--ink-2)">
                         <line x1="0" y1="10" x2="200" y2="10" stroke="var(--rule)" />
-                        <text x="0" y="7" fontSize="7" fill="var(--ink-3)">SOURCES</text>
-                        <text x="170" y="7" fontSize="7" fill="var(--accent)">VERIFIED</text>
+                        <text x="0" y="7" fontSize="7" fill="var(--accent)">{howCitations.sources}</text>
                         <g fontFamily="var(--mono)">
-                          <text x="0" y="28">[01]</text><text x="22" y="28">RA CC · Art. 267</text><text x="165" y="28" fill="var(--accent)">↗</text><line x1="0" y1="34" x2="200" y2="34" stroke="var(--rule-soft)" />
-                          <text x="0" y="52">[02]</text><text x="22" y="52">RA CC · Arts. 268–271</text><text x="165" y="52" fill="var(--accent)">↗</text><line x1="0" y1="58" x2="200" y2="58" stroke="var(--rule-soft)" />
-                          <text x="0" y="76">[03]</text><text x="22" y="76">RA LC · Art. 88</text><text x="165" y="76" fill="var(--accent)">↗</text><line x1="0" y1="82" x2="200" y2="82" stroke="var(--rule-soft)" />
-                          <text x="0" y="100">[04]</text><text x="22" y="100">Gov.Dec. 23-N · §§ 2–3</text><text x="165" y="100" fill="var(--accent)">↗</text><line x1="0" y1="106" x2="200" y2="106" stroke="var(--rule-soft)" />
+                          <text x="0" y="28">[01]</text><text x="22" y="28">{howCitations.items[0]}</text><text x="165" y="28" fill="var(--accent)">✓</text><line x1="0" y1="34" x2="200" y2="34" stroke="var(--rule-soft)" />
+                          <text x="0" y="52">[02]</text><text x="22" y="52">{howCitations.items[1]}</text><text x="165" y="52" fill="var(--accent)">✓</text><line x1="0" y1="58" x2="200" y2="58" stroke="var(--rule-soft)" />
+                          <text x="0" y="76">[03]</text><text x="22" y="76">{howCitations.items[2]}</text><text x="165" y="76" fill="var(--accent)">✓</text><line x1="0" y1="82" x2="200" y2="82" stroke="var(--rule-soft)" />
+                          <text x="0" y="100">[04]</text><text x="22" y="100">{howCitations.items[3]}</text><text x="165" y="100" fill="var(--accent)">✓</text><line x1="0" y1="106" x2="200" y2="106" stroke="var(--rule-soft)" />
                         </g>
-                        <text x="0" y="130" fontFamily="var(--serif)" fontStyle="italic" fill="var(--ink-3)" fontSize="10">Every claim, traceable.</text>
+                        <text x="0" y="130" fontFamily="var(--serif)" fontStyle="italic" fill="var(--ink-3)" fontSize="8">{howCitations.tagline}</text>
                       </g>
                     </svg>
                   </div>
