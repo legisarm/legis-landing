@@ -179,7 +179,10 @@ export default function LandingPage() {
           <div className="steps">
             {howSteps.map((step: any, i: number) => (
               <div className="step" key={step.title}>
-                <span className="step-num">STEP 0{i + 1}</span>
+                <span className="step-num">
+                  <span className="step-num-label">STEP</span>{" "}
+                  <span className="step-num-index">0{i + 1}</span>
+                </span>
                 <h3>{step.title}</h3>
                 <p>{step.description}</p>
                 {/* keeping original SVGs inside would require custom mapping,

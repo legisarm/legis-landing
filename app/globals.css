@@ -80,6 +80,86 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3-latin-300-normal.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3-latin-300-italic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3-latin-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3-latin-500-normal.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3-latin-500-italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3-latin-600-italic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3-latin-700-italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ================================================================
    Tokens
    ================================================================ */
@@ -497,7 +577,9 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 }
 .demo-chrome .dots { display: flex; gap: 6px; }
 .demo-chrome .dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--rule); display: inline-block; }
-.demo-body { padding: 26px 28px 28px; min-height: 500px; position: relative; }
+.demo-body {
+  padding: 26px 28px 28px; min-height: 500px; position: relative;
+}
 
 .msg-user {
   display: flex; gap: 12px; align-items: flex-start; margin-bottom: 22px;
@@ -553,7 +635,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
   align-items: baseline;
 }
 .cite:last-child { border-bottom: 0; }
-.cite-num { font-family: var(--mono); font-size: 11px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.cite-num { font-family: var(--mono); font-size: 11px; color: var(--accent); font-variant-numeric: tabular-nums; }
 .cite-body { font-family: var(--serif); font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
 .cite-body b { color: var(--ink); font-weight: 600; font-family: var(--mono); font-size: 13px; letter-spacing: 0.02em; }
 .cite-link {
@@ -766,6 +848,20 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
   .step { border-right: 0; border-bottom: 1px solid var(--rule-soft); padding-right: 0; }
   .step + .step { padding-left: 0; }
 }
+.steps .step-num {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
+  color: var(--ink-2);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 22px;
+}
+.steps .step-num-label { color: var(--ink-2); }
+.steps .step-num-index { color: var(--accent); }
 .step-num {
   display: inline-block;
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;

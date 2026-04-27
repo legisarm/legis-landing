@@ -241,10 +241,10 @@
       ],
       "doLegalItems": [
         "Ask in Armenian, Russian, or English - get answers grounded in the actual law",
-        "Every answer cites the exact article, law code, and source - verify in one click",
+        "Every answer cites the exact article, law code, and source",
         "Generate NDAs, employment contracts, legal letters, and reporting drafts from prompts",
         "Cut research and reporting prep time from 2 hours to under 20 minutes per case",
-        "Built specifically for Armenian law - updated every week from official sources"
+        "Built specifically for local law - updated regularly from official sources"
       ]
     },
     "features": {
@@ -312,7 +312,7 @@
     },
     "personas": {
       "sectionLabel": "Who uses doLegal",
-      "titleMain": "Built for legal and accounting professionals",
+      "titleMain": "Built for legal and accounting professionals, ambitious founders",
       "titleAccent": "and ambitious founders",
       "cards": [
         {
@@ -708,7 +708,7 @@
       "footnote": "Early access list only - Invitations sent in batches"
     },
     "footer": {
-      "description": "AI-powered legal research and drafting for the Armenian market. Built on official Armenian government legislation sources.",
+      "description": "AI-powered legal research and drafting for professionals. Built on official government legislation sources.",
       "copyright": "© 2026 doLegal. All rights reserved.",
       "columns": [
         {
@@ -740,14 +740,14 @@
       ]
     },
     "parity": {
-      "heroEyebrow": "A Legal AI-Assistant for Armenia",
+      "heroEyebrow": "Legal AI-Assistant",
       "heroLine1": "Read the law.",
       "heroLine2Prefix": "Draft the",
       "heroLine2Emphasis": "contract.",
       "heroLine3Prefix": "&",
       "heroLine3Rest": "save the afternoon.",
-      "heroLine4": "— multi-language.",
-      "heroDescriptionExact": "Forward-thinking lawyers, accountants, and founders use doLegal to research legislation, draft documents, and navigate state compliance — grounded in the actual text of Armenian law.",
+      "heroLine4": "— work multi-language.",
+      "heroDescriptionExact": "Forward-thinking lawyers, accountants, and founders use doLegal to research legislation, draft documents, and navigate state compliance — grounded in the actual text of law.",
       "heroPrimaryCtaExact": "Join Early Access →",
       "heroSecondaryCtaExact": "See how it works ↗",
       "heroStat2Value": "20",
@@ -820,8 +820,8 @@
       "howTitleMainExact": "From question to",
       "howTitleAccentExact": "verified answer.",
       "whoSectionLabelExact": "Who it's for",
-      "whoTitleMainExact": "Built for legal and",
-      "whoTitleAccentExact": "accounting professionals.",
+      "whoTitleMainExact": "Built for legal and accounting professionals,",
+      "whoTitleAccentExact": "ambitious founders.",
       "faqSectionLabelExact": "Frequently asked",
       "faqTitleMainExact": "Common",
       "faqTitleAccentExact": "questions.",
