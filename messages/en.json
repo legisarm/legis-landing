@@ -221,7 +221,7 @@
         "label": "AM · RU · EN"
       },
       {
-        "value": "Weekly",
+        "value": "Monthly",
         "label": "Database updates"
       }
     ],
@@ -337,7 +337,7 @@
           "wins": [
             "Research time: 2 hours -> 20 minutes per case",
             "Draft standard contracts in minutes, not hours",
-            "Track tax and reporting rule updates with weekly refreshes",
+            "Track tax and reporting rule updates with monthly refreshes",
             "Starts at 8,000 AMD/month"
           ]
         },
@@ -465,7 +465,7 @@
           "head": "§ Research",
           "retrieval": "Retrieval over Armenian legal corpora",
           "articleCitations": "Article-level citations",
-          "weeklyRefresh": "Weekly corpus refresh",
+          "weeklyRefresh": "Monthly corpus refresh",
           "priorityResponse": "Priority AI response"
         },
         "drafting": {
@@ -698,12 +698,8 @@
           "answer": "A token is a unit of AI processing - roughly 0.75 words. Typical legal questions use 500-1,500 tokens, while full drafts use more."
         },
         {
-          "question": "Can I cancel or change plans anytime?",
-          "answer": "Yes. Upgrades apply immediately with prorated billing, downgrades apply in the next billing cycle, and you can cancel any time."
-        },
-        {
           "question": "How fresh is the legal database?",
-          "answer": "The corpus is updated weekly from official Armenian government legislation sources."
+          "answer": "The corpus is updated monthly from official Armenian government legislation sources."
         }
       ]
     },
@@ -768,7 +764,7 @@
       "heroStat2Value": "20",
       "heroStat2Suffix": "min",
       "heroStat2Label": "Avg. research, per case",
-      "heroStat3Value": "Weekly",
+      "heroStat3Value": "Monthly",
       "heroStat3Label": "Corpus refresh",
       "demoTab1": "VAT threshold",
       "demoTab2": "Draft a contract",

@@ -50,7 +50,7 @@ export default function LandingPage() {
     items: string[];
   };
   const personaCards = [0, 1, 2].map((i) => tPersonas.raw(`cards.${i}`));
-  const faqs = [0, 1, 2, 3, 4, 5].map((i) => tFaq.raw(`items.${i}`));
+  const faqs = tFaq.raw("items") as { question: string; answer: string }[];
 
   return (
     <>
