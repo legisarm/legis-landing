@@ -31,8 +31,11 @@ function useLiveDemos(t: ReturnType<typeof useTranslations>) {
       fontFamily: "var(--mono)",
       fontSize: 13,
       color: "var(--accent)",
+      border: "1px solid color-mix(in oklab, var(--accent) 30%, transparent)",
+      borderRadius: 6,
+      padding: "2px 6px",
     } as const;
-    const suffixStyle = { color: "var(--ink-3)", fontSize: 14 } as const;
+    const suffixStyle = { color: "var(--ink-3)", fontSize: 12.6 } as const;
 
     return {
       vat: {
@@ -123,6 +126,14 @@ export function LiveDemo() {
   const demos = useLiveDemos(t);
   const sourcesVerifiedLabel = t("demoSourcesVerified");
   const sourcesVerifiedText = sourcesVerifiedLabel.replace(/\s*✓\s*$/, "").trim();
+  const uploadCodeStyle = {
+    fontFamily: "var(--mono)",
+    fontSize: 13,
+    color: "var(--accent)",
+    border: "1px solid color-mix(in oklab, var(--accent) 30%, transparent)",
+    borderRadius: 6,
+    padding: "2px 6px",
+  } as const;
 
   const [active, setActive] = useState<DemoKey>("vat");
   const [expandedCite, setExpandedCite] = useState<string | null>(null);
@@ -131,6 +142,7 @@ export function LiveDemo() {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const demo = demos[active];
+  const isDraftFlow = active === "draft";
 
   useEffect(() => {
     setExpandedCite(null);
@@ -205,6 +217,35 @@ export function LiveDemo() {
               </div>
             </div>
 
+            {isDraftFlow ? (
+              <>
+                <div className="msg-user msg-ai fade-in">
+                  <div className="avatar ai">DL</div>
+                  <div className="msg-content">
+                    <div className="msg-label">{t("demoAssistantLabel")}</div>
+                    <div className="msg-text">
+                      <div className="conclusion">
+                        {brandText(t("demoDraftClarifyPrompt"))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="msg-user fade-in">
+                  <div className="avatar">{t("demoUserShort")}</div>
+                  <div className="msg-content">
+                    <div className="msg-label">{t("demoDraftClarifyReplyLabel")}</div>
+                    <div className="msg-text" style={{ color: "var(--ink)" }}>
+                      <p>{brandText(t("demoDraftClarifyReply"))}</p>
+                      <p style={{ marginTop: 14 }}>
+                        <code style={uploadCodeStyle}>⬆ {t("demoDraftUploadedDocName")}</code>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </>
+            ) : null}
+
             <div className="msg-user msg-ai fade-in">
               <div className="avatar ai">DL</div>
               <div className="msg-content">
@@ -216,10 +257,12 @@ export function LiveDemo() {
 
                   {!isTyping && (
                     <>
-                      {demo.body.map((b) => (
+                      {demo.body.map((b, idx) => (
                         <div key={b.h}>
                           <h4>{b.h}</h4>
-                          <p>{typeof b.p === "string" ? brandText(b.p) : b.p}</p>
+                          <p style={isDraftFlow && idx === 1 ? { marginTop: 12 } : undefined}>
+                            {typeof b.p === "string" ? brandText(b.p) : b.p}
+                          </p>
                         </div>
                       ))}
 

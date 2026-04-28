@@ -70,7 +70,7 @@
             "Summarizes laws, regulations, and court decisions",
             "Identifies relevant clauses and legal precedents",
             "Cross-references official government legislation sources",
-            "Structured output: Conclusion -> Reasoning -> References",
+            "Structured output: Conclusion > Reasoning > References",
             "Upload a document for context-aware Q&A"
           ]
         },
@@ -83,7 +83,7 @@
             "Statutory letters, claims, and formal notices",
             "Template-based or freeform document generation",
             "Export to DOCX for final editing",
-            "Document comparison (Pro and above)"
+            "Document comparison"
           ]
         },
         {
@@ -152,9 +152,9 @@
           ]
         },
         {
-          "tag": "2-10 person practice",
+          "tag": "Teams",
           "title": "Law & Accounting Firms",
-          "description": "Teams that need consistent legal and tax document quality plus shared access to official legislation knowledge.",
+          "description": "Small teams that need consistent legal and tax document quality plus shared access to official legislation knowledge.",
           "wins": [
             "Shared token pool for the whole team",
             "Standardized document templates across staff",
@@ -163,8 +163,8 @@
           ]
         },
         {
-          "tag": "Business teams",
-          "title": "SME Founders & In-house Accountants",
+          "tag": "Business runners",
+          "title": "SME Founders & Record keepers",
           "description": "Business owners and in-house accountants who need to handle tax accounting responsibilities, submit reports, draft agreements, and navigate state compliance.",
           "wins": [
             "Understand reporting cycles, tax duties, and filing requirements",
@@ -549,7 +549,7 @@
       "heroPrimaryCtaExact": "Join Early Access →",
       "heroSecondaryCtaExact": "See how it works ↗",
       "heroStat2Value": "20",
-      "heroStat2Suffix": "min",
+      "heroStat2Suffix": " minutes",
       "heroStat2Label": "Avg. research, per case",
       "heroStat3Value": "Monthly",
       "heroStat3Label": "Corpus refresh",
@@ -569,7 +569,7 @@
       "demoUserShort": "ME",
       "demoVatBody1H": "Reasoning",
       "demoVatBody1P": "Armenia's Tax Code sets a turnover-based VAT threshold measured across any 12 consecutive months, not a calendar year. On crossing it, the taxpayer becomes a VAT payer from the next transaction onward and takes on the full package of invoicing, reporting, and e-filing duties.",
-      "demoVatBody2H": "What to do next",
+      "demoVatBody2H": "What's next",
       "demoVatBody2P": "Register with the State Revenue Committee, switch your invoicing to e-invoices with the required VAT attributes, and begin monthly VAT returns.",
       "demoVatCite1Tag": "RA TC · Art. 267",
       "demoVatCite1Label": "VAT registration threshold",
@@ -582,6 +582,10 @@
       "demoVatCite3Quote": "Electronic invoices must contain mandatory tax fields and be submitted through the SRC electronic system in the approved format.",
       "demoDraftQueryLabel": "Query · EN",
       "demoDraftQuestion": "Draft a service agreement for my company.",
+      "demoDraftClarifyPrompt": "Before I draft, drop a relevant document or add details about the counterparty.",
+      "demoDraftClarifyReplyLabel": "Upload · EN",
+      "demoDraftClarifyReply": "Term is 12 months, monthly payments, Yerevan jurisdiction.",
+      "demoDraftUploadedDocName": "ararat.pdf",
       "demoDraftAnswer": "Service agreement prepared. Draft aligns with the RA Civil Code — pricing, payment terms, liability caps, and termination — with headings mapped to mandatory notice and defect-remedy rules.",
       "demoDraftBody1H": "Document outline",
       "demoDraftBody1P": "1. Parties & Scope · 2. Price & Payment · 3. Performance & Delivery · 4. Warranties & Liability · 5. Termination & Notice · 6. Governing Law · 7. Signatures.",
@@ -608,7 +612,7 @@
       "demoDeadlineCite2Label": "Employee registration procedure",
       "demoDeadlineCite2Quote": "Employee registration data must be filed within three working days from the start date of employment through the prescribed state reporting procedure.",
       "featuresSectionLabelExact": "Core capabilities",
-      "featuresTitleMainExact": "Three instruments.",
+      "featuresTitleMainExact": "Many instruments.",
       "featuresTitleAccentExact": "One chamber.",
       "howSectionLabelExact": "Mechanism",
       "howTitleMainExact": "From question to",

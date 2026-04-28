@@ -601,7 +601,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 .msg-ai .msg-text h4 {
   font-family: var(--serif-display);
   font-weight: 500; font-size: calc(15px * 0.7);
-  margin: 18px 0 6px; color: var(--ink);
+  margin: 18px 0 6px; color: var(--accent);
   font-variation-settings: "opsz" 16;
 }
 .msg-ai .msg-text h4:first-child { margin-top: 0; }
