@@ -353,7 +353,7 @@
         {
           "name": "Free",
           "kicker": "Trial",
-          "desc": "Try the research interface with a registered account. For kicking the tyres, not for production work.",
+          "desc": "Try the AI-assistant’s capabilities with a registered account and save the result for future use.",
           "price": "0",
           "period": "Planned launch tier",
           "priceNote": "Planned launch tier",
@@ -389,7 +389,7 @@
         {
           "name": "Basic",
           "kicker": "Solo · individual",
-          "desc": "For an independent lawyer or accountant handling 10–20 active matters who needs drafting plus research in one place.",
+          "desc": "For independent lawyers and professionals who run 5-10 active cases and need both drafting and research results within a single ecosystem.",
           "price": "8,000",
           "period": "per month",
           "priceNote": "per month, per seat",
@@ -425,7 +425,7 @@
         {
           "name": "Pro",
           "kicker": "Busy practice",
-          "desc": "For working professionals who draft and research daily, compare documents, and need faster model responses with full history.",
+          "desc": "You are an entrepreneur or professional for whom it is important to maintain high productivity and quickly navigate bureaucratic processes.",
           "price": "15,000",
           "period": "per month",
           "priceNote": "per month, per seat",
@@ -461,7 +461,7 @@
         {
           "name": "Rocket",
           "kicker": "Firm & team",
-          "desc": "For 2–10 person practices that share one knowledge chamber — shared tokens, unlimited pinned chats, dedicated support.",
+          "desc": "For teams or companies where it is important to enable collaboration within a unified work ecosystem.",
           "price": "25,000",
           "period": "per month",
           "priceNote": "per month, per team",
