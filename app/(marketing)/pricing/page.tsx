@@ -37,63 +37,25 @@ interface CompareGroup {
   rows: CompareRow[];
 }
 
+type CompareMatrixRow = { label: string; cells: [string, string, string, string] };
+type CompareMatrixGroup = { head: string; rows: CompareMatrixRow[] };
+
+function cellFromMatrixValue(s: string): Cell {
+  const v = s.trim();
+  if (v === "Yes" || v === "Այո" || v === "Да") return check;
+  if (v === "No" || v === "Ոչ" || v === "Нет") return dash;
+  return txt(v);
+}
+
 function getCompareGroups(tPricing: ReturnType<typeof useTranslations>): CompareGroup[] {
-  return [
-    {
-      head: tPricing("compare.usage.head"),
-      rows: [
-        {
-          label: tPricing("compare.usage.monthlyTokens"),
-          values: [txt("1,400"), txt("40,000"), txt("250,000"), txt("1,000,000")],
-        },
-        { label: tPricing("compare.usage.guestTrialQueries"), values: [txt("8"), dash, dash, dash] },
-        {
-          label: tPricing("compare.usage.fileUploadSize"),
-          values: [dash, txt("5 MB"), txt("10 MB"), txt("25 MB")],
-        },
-        {
-          label: tPricing("compare.usage.pinnedConversations"),
-          values: [txt("1"), txt("3"), txt("5"), txt(tPricing("compare.values.unlimited"))],
-        },
-        {
-          label: tPricing("compare.usage.fullChatHistory"),
-          values: [dash, dash, check, check],
-        },
-      ],
-    },
-    {
-      head: tPricing("compare.research.head"),
-      rows: [
-        {
-          label: tPricing("compare.research.retrieval"),
-          values: [check, check, check, check],
-        },
-        { label: tPricing("compare.research.articleCitations"), values: [check, check, check, check] },
-        { label: tPricing("compare.research.monthlyRefresh"), values: [check, check, check, check] },
-        { label: tPricing("compare.research.priorityResponse"), values: [dash, dash, check, check] },
-      ],
-    },
-    {
-      head: tPricing("compare.drafting.head"),
-      rows: [
-        { label: tPricing("compare.drafting.documentDrafting"), values: [dash, check, check, check] },
-        { label: tPricing("compare.drafting.docxExport"), values: [dash, check, check, check] },
-        { label: tPricing("compare.drafting.documentComparison"), values: [dash, dash, check, check] },
-        { label: tPricing("compare.drafting.ocr"), values: [dash, check, check, check] },
-      ],
-    },
-    {
-      head: tPricing("compare.team.head"),
-      rows: [
-        { label: tPricing("compare.team.sharedPool"), values: [dash, dash, dash, check] },
-        { label: tPricing("compare.team.dedicatedSupport"), values: [dash, dash, dash, check] },
-        {
-          label: tPricing("compare.team.onboarding"),
-          values: [dash, dash, txt(tPricing("compare.values.group")), txt(tPricing("compare.values.oneOnOne"))],
-        },
-      ],
-    },
-  ];
+  const raw = tPricing.raw("compare.matrix") as { groups: CompareMatrixGroup[] };
+  return raw.groups.map((g) => ({
+    head: g.head,
+    rows: g.rows.map((r) => ({
+      label: r.label,
+      values: r.cells.map(cellFromMatrixValue) as [Cell, Cell, Cell, Cell],
+    })),
+  }));
 }
 
 const FEATURED_COL = 2; // Pro
@@ -133,7 +95,7 @@ export default function PricingPage() {
   const tPricing = useTranslations("landing.pricing");
   const compareGroups = getCompareGroups(tPricing);
   const pricingFaq = [0, 1, 2, 3, 4, 5].map((i) => tPricing.raw(`faq.${i}`));
-  const topups = [0, 1, 2].map((i) => tPricing.raw(`topupsDetailed.${i}`));
+  const topups = [0, 1].map((i) => tPricing.raw(`topupsDetailed.${i}`));
   const planNames = [0, 1, 2, 3].map((i) => tPricing.raw(`plans.${i}.name`)) as string[];
   const NAV = [
     { href: "/#features", label: tNav("features") },
@@ -208,9 +170,6 @@ export default function PricingPage() {
                   <span className="price">
                     AMD&nbsp;<b>{t.price}</b>
                   </span>
-                  <Link className="topup-cta" href="/#waitlist">
-                    {brandText(t.cta)}
-                  </Link>
                 </div>
               ))}
             </div>

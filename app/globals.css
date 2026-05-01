@@ -1227,7 +1227,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 
 .topup-table { border-top: 1px solid var(--rule); }
 .topup-row {
-  display: grid; grid-template-columns: 56px 1.4fr 1fr 1.1fr auto;
+  display: grid; grid-template-columns: 56px 1.4fr 1fr 1.1fr;
   gap: 20px; padding: 22px 0;
   align-items: baseline;
   border-bottom: 1px solid var(--rule);
@@ -1245,21 +1245,12 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
 }
 .topup-row .tok em { font-style: italic; color: var(--ink-3); font-size: 14px; letter-spacing: 0; margin-left: 6px; font-family: var(--serif); }
 .topup-row .eff { font-family: var(--serif); color: var(--ink-2); font-style: italic; font-size: 14px; }
-.topup-row .price { font-family: var(--mono); font-size: 15px; letter-spacing: 0.04em; color: var(--ink); }
+.topup-row .price { font-family: var(--mono); font-size: 15px; letter-spacing: 0.04em; color: var(--ink); justify-self: end; }
 .topup-row .price b { font-weight: 500; }
-.topup-row .topup-cta {
-  justify-self: end;
-  font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--rule);
-  padding-bottom: 2px;
-}
-.topup-row .topup-cta:hover { color: var(--accent); border-bottom-color: var(--accent); }
 @media (max-width: 720px) {
   .topup-row { grid-template-columns: 1fr auto; gap: 4px 16px; }
   .topup-row .num { display: none; }
   .topup-row .eff { grid-column: 1 / -1; }
-  .topup-row .topup-cta { grid-column: 2; grid-row: 1; }
 }
 
 /* Pricing — compare table */

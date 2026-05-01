@@ -203,57 +203,138 @@
           "num": "1",
           "tokens": "10,000",
           "note": "≈ 7,500 words of research output",
-          "price": "4,000",
-          "cta": "Add top-up →"
+          "price": "3,900"
         },
         {
           "num": "2",
-          "tokens": "15,000",
-          "note": "≈ 11,000 words · good for one long drafting session",
-          "price": "6,000",
-          "cta": "Add top-up →"
-        },
-        {
-          "num": "3",
-          "tokens": "25,000",
-          "note": "≈ 18,500 words · covers a week of heavy use",
-          "price": "10,000",
-          "cta": "Add top-up →"
+          "tokens": "20,000",
+          "note": "≈ 15,000 words · heavier drafting or multi-session use",
+          "price": "7,900"
         }
       ],
       "compare": {
-        "values": {
-          "unlimited": "Unlimited",
-          "group": "Group",
-          "oneOnOne": "1-on-1"
-        },
-        "usage": {
-          "head": "§ Usage",
-          "monthlyTokens": "Monthly tokens",
-          "guestTrialQueries": "Guest trial queries",
-          "fileUploadSize": "File upload size",
-          "pinnedConversations": "Pinned conversations",
-          "fullChatHistory": "Full chat history"
-        },
-        "research": {
-          "head": "§ Research",
-          "retrieval": "Retrieval over Armenian legal corpora",
-          "articleCitations": "Article-level citations",
-          "monthlyRefresh": "Monthly corpus refresh",
-          "priorityResponse": "Priority AI response"
-        },
-        "drafting": {
-          "head": "§ Drafting",
-          "documentDrafting": "Document drafting",
-          "docxExport": "DOCX export",
-          "documentComparison": "Document comparison",
-          "ocr": "OCR of scanned documents"
-        },
-        "team": {
-          "head": "§ Team & support",
-          "sharedPool": "Shared token pool",
-          "dedicatedSupport": "Dedicated support",
-          "onboarding": "Onboarding session"
+        "matrix": {
+          "groups": [
+            {
+              "head": "§ Usage & capacity",
+              "rows": [
+                {
+                  "label": "Monthly tokens",
+                  "cells": ["5k", "25k", "150k", "Configurable"]
+                },
+                {
+                  "label": "Storage space",
+                  "cells": ["0 GB", "1 GB", "10 GB", "100 GB shared"]
+                },
+                {
+                  "label": "File upload size",
+                  "cells": ["No uploads", "Up to 5 MB", "Up to 10 MB", "Up to 25 MB"]
+                }
+              ]
+            },
+            {
+              "head": "§ Research",
+              "rows": [
+                {
+                  "label": "Article-level citations",
+                  "cells": ["Yes", "Yes", "Yes", "Yes"]
+                },
+                {
+                  "label": "Multilingual Q&A",
+                  "cells": ["AM/RU/EN", "AM/RU/EN", "AM/RU/EN", "AM/RU/EN"]
+                }
+              ]
+            },
+            {
+              "head": "§ Drafting",
+              "rows": [
+                {
+                  "label": "Basic drafting",
+                  "cells": ["Yes", "Template-based drafting only", "Included", "Included"]
+                },
+                {
+                  "label": "Advanced drafting",
+                  "cells": ["No", "No", "Context-aware + clause editing + multi-step drafting", "Context-aware + clause editing + multi-step drafting"]
+                },
+                {
+                  "label": "DOCX export",
+                  "cells": ["No", "Yes", "Yes", "Yes"]
+                },
+                {
+                  "label": "Personal templates",
+                  "cells": ["No", "No", "Save and reuse own templates", "Save and reuse own templates"]
+                },
+                {
+                  "label": "Team templates",
+                  "cells": ["No", "No", "No", "Shared organization template library"]
+                }
+              ]
+            },
+            {
+              "head": "§ Document intelligence",
+              "rows": [
+                {
+                  "label": "Document analysis",
+                  "cells": ["No", "Basic analysis", "Advanced analysis", "Advanced analysis"]
+                },
+                {
+                  "label": "Document comparison",
+                  "cells": ["No", "No", "Redlining + clause mapping", "Redlining + clause mapping"]
+                }
+              ]
+            },
+            {
+              "head": "§ Workspace",
+              "rows": [
+                {
+                  "label": "Chat history",
+                  "cells": ["1 saved chat", "Full history", "Full history", "Full history"]
+                },
+                {
+                  "label": "Pinned chats",
+                  "cells": ["0", "3", "5", "Unlimited"]
+                },
+                {
+                  "label": "Chat search",
+                  "cells": ["No", "Yes", "Yes", "Team-wide chat + document search"]
+                },
+                {
+                  "label": "Document search",
+                  "cells": ["No", "No", "Yes", "Team-wide chat + document search"]
+                }
+              ]
+            },
+            {
+              "head": "§ Team & admin",
+              "rows": [
+                {
+                  "label": "Shared workspace",
+                  "cells": ["No", "No", "No", "Shared chats and documents"]
+                },
+                {
+                  "label": "Role-based access",
+                  "cells": ["No", "No", "No", "Admin / editor / viewer"]
+                },
+                {
+                  "label": "Usage analytics",
+                  "cells": ["No", "No", "No", "Per-user usage tracking"]
+                }
+              ]
+            },
+            {
+              "head": "§ Support",
+              "rows": [
+                {
+                  "label": "Onboarding session",
+                  "cells": ["No", "No", "No", "Yes"]
+                },
+                {
+                  "label": "Support level",
+                  "cells": ["No", "Email support", "Email support", "Dedicated channel, <6h"]
+                }
+              ]
+            }
+          ]
         }
       },
       "faq": [
@@ -263,7 +344,7 @@
         },
         {
           "q": "What happens if I run out of tokens?",
-          "a": "You can add a one-time top-up (10k / 15k / 25k) to your current cycle without changing plans, or upgrade to a higher tier. Unused top-up tokens roll over for 30 days."
+          "a": "You can add a one-time top-up (10k / 20k tokens) to your current cycle without changing plans, or upgrade to a higher tier. Unused top-up tokens roll over for 30 days."
         },
         {
           "q": "Do unused tokens roll over?",
@@ -325,27 +406,27 @@
           "cta": "Join waitlist",
           "features": [
             {
-              "text": "8 trial queries (guest)",
+              "text": "5k monthly tokens",
               "enabled": true
             },
             {
-              "text": "1,400 tokens/month (registered)",
+              "text": "1 saved chat · multilingual Q&A (AM/RU/EN)",
               "enabled": true
             },
             {
-              "text": "1 saved conversation",
+              "text": "Article-level citations & basic drafting",
               "enabled": true
             },
             {
-              "text": "No file upload",
+              "text": "No file uploads",
               "enabled": false
             },
             {
-              "text": "No document drafting",
+              "text": "No pinned chats or chat search",
               "enabled": false
             },
             {
-              "text": "No pinned chats",
+              "text": "No DOCX export or document comparison",
               "enabled": false
             }
           ]
@@ -361,27 +442,27 @@
           "cta": "Join waitlist",
           "features": [
             {
-              "text": "40,000 tokens/month",
+              "text": "25k monthly tokens",
               "enabled": true
             },
             {
-              "text": "File upload up to 5 MB",
+              "text": "1 GB storage · uploads up to 5 MB",
               "enabled": true
             },
             {
-              "text": "Document drafting",
+              "text": "Full chat history · 3 pinned chats · chat search",
               "enabled": true
             },
             {
-              "text": "3 pinned conversations",
+              "text": "Template-based drafting · DOCX export",
               "enabled": true
             },
             {
-              "text": "DOCX export",
+              "text": "Basic document analysis · email support",
               "enabled": true
             },
             {
-              "text": "No document comparison",
+              "text": "No document comparison or document search",
               "enabled": false
             }
           ]
@@ -397,27 +478,27 @@
           "cta": "Join waitlist",
           "features": [
             {
-              "text": "250,000 tokens/month",
+              "text": "150k monthly tokens",
               "enabled": true
             },
             {
-              "text": "File upload up to 10 MB",
+              "text": "10 GB storage · uploads up to 10 MB",
               "enabled": true
             },
             {
-              "text": "Document comparison",
+              "text": "Advanced drafting · comparison · personal templates",
               "enabled": true
             },
             {
-              "text": "5 pinned conversations",
+              "text": "Advanced analysis · chat & document search",
               "enabled": true
             },
             {
-              "text": "Priority AI response",
+              "text": "Full history · 5 pinned chats",
               "enabled": true
             },
             {
-              "text": "Full chat history",
+              "text": "Email support",
               "enabled": true
             }
           ]
@@ -433,27 +514,27 @@
           "cta": "Contact us",
           "features": [
             {
-              "text": "1,000,000 tokens/month",
+              "text": "Configurable monthly tokens · 100 GB shared storage",
               "enabled": true
             },
             {
-              "text": "File upload up to 25 MB",
+              "text": "Uploads up to 25 MB · team templates",
               "enabled": true
             },
             {
-              "text": "Everything in Pro",
+              "text": "Shared workspace · roles · usage analytics",
               "enabled": true
             },
             {
-              "text": "Unlimited pinned chats",
+              "text": "Team-wide chat & document search",
               "enabled": true
             },
             {
-              "text": "Dedicated support",
+              "text": "Onboarding session · dedicated support (<6h)",
               "enabled": true
             },
             {
-              "text": "Team usage (shared tokens)",
+              "text": "Shared chats & documents · everything in Pro",
               "enabled": true
             }
           ]
