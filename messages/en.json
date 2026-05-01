@@ -186,6 +186,8 @@
       "billingAriaLabel": "Billing period",
       "monthlyShort": "/mo",
       "tokensUnit": "tokens",
+      "vatNote": "All listed prices include VAT. Amounts are shown in AMD.",
+      "vatShort": "Incl. VAT",
       "meta": {
         "currencyLabel": "Currency",
         "currencyValue": "AMD",
@@ -269,7 +271,7 @@
         },
         {
           "q": "Is VAT included in the quoted prices?",
-          "a": "Prices shown are in AMD and exclusive of VAT. For entities registered in Armenia, VAT is added per the RA Tax Code at checkout."
+          "a": "Yes. Prices are listed in AMD and include VAT."
         },
         {
           "q": "How does the Rocket team plan work?",

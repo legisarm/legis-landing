@@ -44,7 +44,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "4. Plans, billing, and taxes",
         paragraphs: [
-          "Paid access is offered on recurring subscription plans and optional top-ups as shown on the pricing page.",
+          "Paid access is offered on recurring subscription plans and optional top-ups as shown on the pricing page. Prices are listed in AMD and include VAT.",
           "We use Paddle as merchant of record for checkout, payment processing, tax handling, and invoicing.",
           "Certain features are metered in tokens. A token is a unit of AI processing — roughly 0.75 words of typical text. Your subscription refreshes a fixed token allowance each billing cycle; optional top-ups increase your balance without changing your plan tier.",
           "Illustrative token ranges for typical doLegal workflows (non-binding estimates; actual usage depends on prompts, attachments, and model behavior):",
@@ -156,7 +156,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "4. Тарифы, оплата и налоги",
         paragraphs: [
-          "Платный доступ предоставляется по подписке и через дополнительные топ-апы, указанные на странице тарифов.",
+          "Платный доступ предоставляется по подписке и через дополнительные топ-апы, указанные на странице тарифов. Цены указаны в AMD и включают НДС.",
           "Мы используем Paddle как merchant of record для checkout, обработки платежей, налогов и выставления счетов.",
           "Учёт использования части функций ведётся в токенах. Токен — единица AI-обработки, примерно 0,75 слова типичного текста. Подписка обновляет фиксированный пакет токенов каждый расчётный период; дополнительные топ-апы увеличивают баланс без смены уровня тарифа.",
           "Ориентировочные диапазоны для типовых сценариев doLegal (примерные значения; фактическое потребление зависит от запросов, вложений и поведения модели):",
@@ -268,7 +268,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "4. Սակագներ, վճարումներ և հարկեր",
         paragraphs: [
-          "Վճարովի մուտքը տրամադրվում է պարբերական բաժանորդագրությամբ և լրացուցիչ top-up-երով՝ ըստ գնացուցակի էջի։",
+          "Վճարովի մուտքը տրամադրվում է պարբերական բաժանորդագրությամբ և լրացուցիչ top-up-երով՝ ըստ գնացուցակի էջի։ Գները նշված են AMD-ով և ներառում են ԱԱՀ-ն։",
           "Մենք օգտագործում ենք Paddle-ը որպես merchant of record checkout-ի, վճարումների, հարկերի և հաշիվների մշակման համար։",
           "Որոշ գործառույթների օգտագործումը հաշվարկվում է թոքեններով։ Թոքենը AI մշակման միավոր է՝ մոտավորապես 0.75 բառ տիպիկ տեքստում։ Բաժանորդագրությունը յուրաքանչյուր վճարման ցիկլում թարմացնում է թոքենների սահմանաչափը, իսկ լրացուցիչ լիցքավորումները մեծացնում են մնացորդը՝ առանց փաթեթի մակարդակը փոխելու։",
           "doLegal-ում տիպիկ աշխատանքների թոքենների կողմնորոշչական միջակայքեր (չեն կարող համարվել պարտավորեցնող, փաստացի սպառումը կախված է հարցումներից, կցված ֆայլերից և մոդելի վարքից)՝",

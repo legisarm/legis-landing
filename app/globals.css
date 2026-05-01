@@ -1136,7 +1136,7 @@ body.product-body { height: 100vh; overflow: hidden; font-size: 15px; }
   min-height: 9.3em;
 }
 .plan .price-stack {
-  min-height: 98px;
+  min-height: 142px;
 }
 .plan .price {
   display: flex; align-items: baseline; gap: 6px;
@@ -1293,8 +1293,14 @@ table.compare thead th.plan-head .sub {
   letter-spacing: 0.14em; color: var(--ink-3); text-transform: uppercase;
   font-weight: 400; margin-top: 6px;
 }
+table.compare thead th.plan-head .vat-hint {
+  display: block; font-family: var(--mono); font-size: 9px;
+  letter-spacing: 0.12em; color: var(--ink-3); text-transform: uppercase;
+  font-weight: 400; margin-top: 4px; line-height: 1.3;
+}
 table.compare thead th.plan-head.feat { background: var(--paper-2); border-top: 3px solid var(--accent); }
 table.compare thead th.plan-head.feat .sub { color: var(--accent); }
+table.compare thead th.plan-head.feat .vat-hint { color: var(--ink-3); }
 table.compare tbody td.group-head {
   font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em;
   text-transform: uppercase; color: var(--ink-3);

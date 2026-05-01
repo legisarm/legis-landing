@@ -72,8 +72,8 @@ export default function TermsOfServicePage() {
           <h2>4. Plans, billing, and taxes</h2>
           <p>
             Paid access is offered on recurring subscription plans and optional one-time top-ups as
-            shown on our pricing page. Prices are listed in AMD unless otherwise stated and are
-            exclusive of applicable taxes, including VAT, unless expressly stated otherwise.
+            shown on our pricing page. Prices are listed in AMD unless otherwise stated and include
+            VAT.
           </p>
           <p>
             We use Paddle as our merchant of record for payments, billing, and tax handling at

@@ -247,19 +247,26 @@ export default function PricingPage() {
                 <tr>
                   <th />
                   <th className="plan-head">
-                    {planNames[0]}<span className="sub">AMD 0</span>
+                    {planNames[0]}
+                    <span className="sub">AMD 0</span>
+                    <span className="vat-hint">{tPricing("vatShort")}</span>
                   </th>
                   <th className="plan-head">
-                    {planNames[1]}<span className="sub">AMD 8,000</span>
+                    {planNames[1]}
+                    <span className="sub">AMD 8,000</span>
+                    <span className="vat-hint">{tPricing("vatShort")}</span>
                   </th>
                   <th className="plan-head feat">
-                    {planNames[2]}<span className="sub">AMD 15,000</span>
+                    {planNames[2]}
+                    <span className="sub">AMD 15,000</span>
+                    <span className="vat-hint">{tPricing("vatShort")}</span>
                   </th>
                   <th className="plan-head">
                     {planNames[3]}
                     <Link className="sub" href="#contact-sales">
                       {tPricing("contactSales.tableCta")}
                     </Link>
+                    <span className="vat-hint">{tPricing("vatShort")}</span>
                   </th>
                 </tr>
               </thead>

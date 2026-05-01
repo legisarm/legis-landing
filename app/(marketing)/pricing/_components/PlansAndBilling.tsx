@@ -129,6 +129,7 @@ export function PlansAndBilling() {
                     </div>
                   </>
                 )}
+                <p className="price-note">{brandText(tPricing("vatNote"))}</p>
               </div>
               <Link
                 className={`plan-cta${isFeat ? "" : " ghost"}`}
