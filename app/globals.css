@@ -1317,37 +1317,6 @@ table.compare tbody td.val .check { color: var(--accent); font-size: 14px; }
 table.compare tbody td.val .dash { color: var(--ink-3); }
 table.compare tbody tr td.feat-cell { background: var(--paper-2); }
 
-/* Pricing — how tokens */
-.howtokens { padding: 72px 0; border-bottom: 1px solid var(--rule); background: var(--paper-2); }
-.howtokens-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start; }
-@media (max-width: 900px) { .howtokens-grid { grid-template-columns: 1fr; } }
-.howtokens h2 {
-  font-family: var(--serif-display); font-weight: 400;
-  font-size: clamp(30px, 3.6vw, 46px); line-height: 1.2; letter-spacing: -0.02em;
-  margin: 0 0 14px;
-}
-.howtokens h2 em { font-style: normal; color: var(--ink-2); font-weight: 400; }
-.howtokens p.lead { font-family: var(--serif); color: var(--ink-2); font-size: 16px; max-width: 40ch; }
-.token-examples { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--rule); }
-.token-ex {
-  display: grid; grid-template-columns: 80px 1fr 120px;
-  gap: 20px; padding: 20px 0;
-  border-bottom: 1px solid var(--rule);
-  align-items: baseline;
-}
-.token-ex:last-child { border-bottom: 0; }
-.token-ex .n {
-  width: 48px; height: 48px; border-radius: 9999px;
-  display: inline-flex; align-items: center; justify-content: center;
-  font-family: var(--mono); font-size: 18px; font-weight: 500;
-  letter-spacing: 0; color: #fff; background: var(--accent);
-  text-transform: none;
-}
-.token-ex .what { font-family: var(--serif); color: var(--ink); font-size: 16px; }
-.token-ex .what em { font-style: italic; color: var(--ink-3); display: block; font-size: 13px; margin-top: 4px; }
-.token-ex .cost { font-family: var(--mono); font-size: 14px; text-align: right; color: var(--ink); }
-.token-ex .cost em { font-style: italic; color: var(--ink-3); font-size: 11px; letter-spacing: 0.1em; display: block; text-transform: uppercase; margin-top: 2px; font-family: var(--mono); }
-
 /* Pricing — contact sales */
 .contact-sales-section { padding: 88px 0; border-bottom: 1px solid var(--rule); background: var(--paper-2); scroll-margin-top: 100px; }
 .contact-sales-shell { display: grid; grid-template-columns: 1fr 1.2fr; gap: 52px; align-items: start; }

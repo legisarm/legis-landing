@@ -219,44 +219,6 @@
           "cta": "Add top-up →"
         }
       ],
-      "tokenSection": {
-        "eyebrow": "Unit economics",
-        "titleMain": "A token,",
-        "titleAccent": "loosely speaking.",
-        "description": "A token is the unit of AI processing — roughly 0.75 words. Your plan refreshes a fixed allowance monthly; top-ups stack on top. Here is what typical doLegal work costs."
-      },
-      "tokenExamples": [
-        {
-          "n": "1",
-          "what": "A short legal question with a short answer.",
-          "note": "When is VAT registration mandatory?",
-          "cost": "≈ 500–1,500"
-        },
-        {
-          "n": "2",
-          "what": "A longer answer with extensive citations.",
-          "note": "Tax filing calendar, cross-referenced",
-          "cost": "≈ 2,000–4,000"
-        },
-        {
-          "n": "3",
-          "what": "Contract draft from a prompt.",
-          "note": "NDA, employment, service agreement",
-          "cost": "≈ 6,000–12,000"
-        },
-        {
-          "n": "4",
-          "what": "Document comparison (upload two PDFs).",
-          "note": "Redline with article mapping",
-          "cost": "≈ 10,000–20,000"
-        },
-        {
-          "n": "5",
-          "what": "Full case review (upload + Q&A thread).",
-          "note": "Uploaded judgment + 5–10 questions",
-          "cost": "≈ 15,000–35,000"
-        }
-      ],
       "compare": {
         "values": {
           "unlimited": "Unlimited",

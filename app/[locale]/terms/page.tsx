@@ -46,6 +46,15 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
         paragraphs: [
           "Paid access is offered on recurring subscription plans and optional top-ups as shown on the pricing page.",
           "We use Paddle as merchant of record for checkout, payment processing, tax handling, and invoicing.",
+          "Certain features are metered in tokens. A token is a unit of AI processing — roughly 0.75 words of typical text. Your subscription refreshes a fixed token allowance each billing cycle; optional top-ups increase your balance without changing your plan tier.",
+          "Illustrative token ranges for typical doLegal workflows (non-binding estimates; actual usage depends on prompts, attachments, and model behavior):",
+        ],
+        bullets: [
+          "Short legal question and concise answer (e.g. when VAT registration is mandatory): approximately 500–1,500 tokens.",
+          "Longer answer with extensive citations (e.g. tax filing calendar, cross-referenced): approximately 2,000–4,000 tokens.",
+          "Contract draft from a prompt (NDA, employment, service agreement): approximately 6,000–12,000 tokens.",
+          "Document comparison from two PDF uploads, with redline and article mapping: approximately 10,000–20,000 tokens.",
+          "Full case-style review (uploaded judgment plus a thread of about 5–10 questions): approximately 15,000–35,000 tokens.",
         ],
       },
       {
@@ -149,6 +158,15 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
         paragraphs: [
           "Платный доступ предоставляется по подписке и через дополнительные топ-апы, указанные на странице тарифов.",
           "Мы используем Paddle как merchant of record для checkout, обработки платежей, налогов и выставления счетов.",
+          "Учёт использования части функций ведётся в токенах. Токен — единица AI-обработки, примерно 0,75 слова типичного текста. Подписка обновляет фиксированный пакет токенов каждый расчётный период; дополнительные топ-апы увеличивают баланс без смены уровня тарифа.",
+          "Ориентировочные диапазоны для типовых сценариев doLegal (примерные значения; фактическое потребление зависит от запросов, вложений и поведения модели):",
+        ],
+        bullets: [
+          "Короткий юридический вопрос и краткий ответ (например, когда обязательна регистрация НДС): примерно 500–1 500 токенов.",
+          "Развёрнутый ответ с обширными ссылками (например, налоговый календарь с перекрёстными ссылками): примерно 2 000–4 000 токенов.",
+          "Черновик договора по промпту (NDA, трудовой, сервисный): примерно 6 000–12 000 токенов.",
+          "Сравнение документов по двум PDF с редлайном и привязкой к статьям: примерно 10 000–20 000 токенов.",
+          "Полный разбор кейса (загруженный судебный акт и тред из примерно 5–10 вопросов): примерно 15 000–35 000 токенов.",
         ],
       },
       {
@@ -252,6 +270,15 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
         paragraphs: [
           "Վճարովի մուտքը տրամադրվում է պարբերական բաժանորդագրությամբ և լրացուցիչ top-up-երով՝ ըստ գնացուցակի էջի։",
           "Մենք օգտագործում ենք Paddle-ը որպես merchant of record checkout-ի, վճարումների, հարկերի և հաշիվների մշակման համար։",
+          "Որոշ գործառույթների օգտագործումը հաշվարկվում է թոքեններով։ Թոքենը AI մշակման միավոր է՝ մոտավորապես 0.75 բառ տիպիկ տեքստում։ Բաժանորդագրությունը յուրաքանչյուր վճարման ցիկլում թարմացնում է թոքենների սահմանաչափը, իսկ լրացուցիչ լիցքավորումները մեծացնում են մնացորդը՝ առանց փաթեթի մակարդակը փոխելու։",
+          "doLegal-ում տիպիկ աշխատանքների թոքենների կողմնորոշչական միջակայքեր (չեն կարող համարվել պարտավորեցնող, փաստացի սպառումը կախված է հարցումներից, կցված ֆայլերից և մոդելի վարքից)՝",
+        ],
+        bullets: [
+          "Կարճ իրավական հարց և կարճ պատասխան (օր. երբ ԱԱՀ գրանցումը պարտադիր է)՝ մոտավորապես 500–1,500 թոքեն։",
+          "Ավելի երկար պատասխան՝ լայն հղումներով (օր. հարկային օրացույց՝ խաչաձև հղումներ)՝ մոտավորապես 2,000–4,000 թոքեն։",
+          "Պայմանագրի սևագիր prompt-ով (NDA, աշխատանքային, ծառայությունների)՝ մոտավորապես 6,000–12,000 թոքեն։",
+          "Փաստաթղթերի համեմատում՝ երկու PDF, redline և հոդվածների համապատասխանեցում՝ մոտավորապես 10,000–20,000 թոքեն։",
+          "Գործի ամբողջական վերանայում (վճիռ + մոտ 5–10 հարցի թրեդ)՝ մոտավորապես 15,000–35,000 թոքեն։",
         ],
       },
       {

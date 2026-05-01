@@ -134,7 +134,6 @@ export default function PricingPage() {
   const compareGroups = getCompareGroups(tPricing);
   const pricingFaq = [0, 1, 2, 3, 4, 5].map((i) => tPricing.raw(`faq.${i}`));
   const topups = [0, 1, 2].map((i) => tPricing.raw(`topupsDetailed.${i}`));
-  const tokenExamples = [0, 1, 2, 3, 4].map((i) => tPricing.raw(`tokenExamples.${i}`));
   const planNames = [0, 1, 2, 3].map((i) => tPricing.raw(`plans.${i}.name`)) as string[];
   const NAV = [
     { href: "/#features", label: tNav("features") },
@@ -284,44 +283,6 @@ export default function PricingPage() {
                 ))}
               </tbody>
             </table>
-          </div>
-        </div>
-      </section>
-
-      {/* HOW TOKENS WORK */}
-      <section className="howtokens">
-        <div className="wrap">
-          <div className="howtokens-grid">
-            <div>
-              <p className="eyebrow">{tPricing("tokenSection.eyebrow")}</p>
-              <h2>
-                {tPricing("tokenSection.titleMain")} <em>{tPricing("tokenSection.titleAccent")}</em>
-              </h2>
-              <p className="lead">
-                {brandText(tPricing("tokenSection.description"))}
-              </p>
-            </div>
-            <div className="token-examples">
-              {tokenExamples.map((t: any, i) => (
-                <div
-                  className="token-ex"
-                  key={t.n}
-                  style={
-                    i === tokenExamples.length - 1 ? { borderBottom: 0 } : undefined
-                  }
-                >
-                  <span className="n">{t.n}</span>
-                  <span className="what">
-                    {brandText(t.what)}
-                    <em>{brandText(t.note)}</em>
-                  </span>
-                  <span className="cost">
-                    <b>{t.cost}</b>
-                    <em>{tPricing("tokensUnit")}</em>
-                  </span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

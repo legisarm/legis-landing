@@ -80,6 +80,38 @@ export default function TermsOfServicePage() {
             checkout. By purchasing, you also agree to Paddle&apos;s buyer terms as presented during
             checkout.
           </p>
+          <p>
+            {brandText(
+              "Certain features are metered in tokens. A token is a unit of AI processing — roughly 0.75 words of typical text. Your subscription refreshes a fixed token allowance each billing cycle; optional top-ups increase your balance without changing your plan tier.",
+            )}
+          </p>
+          <p>
+            {brandText(
+              "Illustrative token ranges for typical doLegal workflows (non-binding estimates; actual usage depends on prompts, attachments, and model behavior):",
+            )}
+          </p>
+          <ul>
+            <li>
+              Short legal question and concise answer (e.g. when VAT registration is mandatory):
+              approximately 500–1,500 tokens.
+            </li>
+            <li>
+              Longer answer with extensive citations (e.g. tax filing calendar, cross-referenced):
+              approximately 2,000–4,000 tokens.
+            </li>
+            <li>
+              Contract draft from a prompt (NDA, employment, service agreement): approximately
+              6,000–12,000 tokens.
+            </li>
+            <li>
+              Document comparison from two PDF uploads, with redline and article mapping:
+              approximately 10,000–20,000 tokens.
+            </li>
+            <li>
+              Full case-style review (uploaded judgment plus a thread of about 5–10 questions):
+              approximately 15,000–35,000 tokens.
+            </li>
+          </ul>
         </section>
 
         <section style={{ marginTop: 24 }}>
