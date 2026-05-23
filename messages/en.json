@@ -1,181 +1,49 @@
 {
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "audience": "Audience",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "earlyAccess": "Join Early Access →"
+  },
+  "language": {
+    "ariaLabel": "Language"
+  },
   "landing": {
-    "navigationLinks": [
-      { "href": "#features", "label": "Features" },
-      { "href": "#how", "label": "How it works" },
-      { "href": "/pricing", "label": "Pricing" },
-      { "href": "#faq", "label": "FAQ" }
-    ],
     "hero": {
-      "titleMain": "Legal AI-assistant",
-      "titleFor": "Exponential efficiency",
-      "titleAudienceRotating": [],
-      "description": "Forward-thinking founders, top lawyers, accountants, clerks, and other professionals simplify and speed up their daily work with DoLegal.",
-      "primaryCta": "Join Early Access",
-      "secondaryCta": "See how it works",
-      "onlineStatus": "Online",
-      "previewBadge": "Example",
-      "previewQuestionLabel": "Question",
-      "previewAnswerLabel": "Answer",
-      "previewDocumentLabel": "Document",
-      "previewAttachmentLabel": "Context",
-      "previewAttachmentIdle": "Add PDF or Word — we read it alongside your question",
-      "previewDropzoneIdle": "Drop PDF or DOCX to analyze",
-      "previewDropzoneFormats": "PDF · DOCX · up to 10 MB",
-      "previewAnalyzing": "Analyzing…",
-      "previewAnalyzeDetail": "Checking clauses against RA law",
-      "previewAnalyzedFile": "employment_contract.pdf",
-      "previewExportLabel": "Download",
-      "previewExportPdfName": "service_agreement.pdf",
-      "previewExportDocxName": "service_agreement.docx",
-      "previewSend": "Send",
-      "previewSourcesLabel": "Legal sources",
-      "previewWaitingQuestion": "Your question appears once context is ready…",
-      "askPlaceholder": "Ask about Armenian law...",
       "previewUseCases": [
         {
-          "withAttachment": true,
-          "question": "What is the deadline to register an employee in the tax system after starting operations?",
-          "answerTitle": "Conclusion",
-          "answerBody": "You should register the employee within 3 working days after the employment relationship starts. The same window applies for social-security and personal-income-tax enrolment with the SRC.",
-          "citations": [
-            {
-              "instrument": "RA LC",
-              "locator": "Art. 88 · employer registration duties",
-              "note": "Three working days from the start of employment; tied to tax and social-payment obligations."
-            },
-            {
-              "instrument": "RA Gov.Dec. 23-N",
-              "locator": "§§ 2–3 · employee registration procedure",
-              "note": "Forms and deadlines for notifying the State Revenue Committee."
-            },
-            {
-              "instrument": "RA TC",
-              "locator": "Arts. 65–66 · registration of taxpayers",
-              "note": "Personal income tax registration for employees and related filing hooks."
-            }
-          ],
-          "tags": ["RA Labor Code", "SRC registration", "Gov. 23-N"]
+          "withAttachment": true
         },
         {
-          "withExport": true,
-          "question": "Draft a service agreement for my company",
-          "answerTitle": "Service agreement ready",
-          "answerBody": "Generating a service agreement aligned with the RA Civil Code — including pricing, payment terms, liability caps, and termination — with headings mapped to mandatory notice and defect-remedy rules.",
-          "citations": [
-            {
-              "instrument": "RA CC",
-              "locator": "Arts. 435–447 · service / work contracts",
-              "note": "Core obligations, acceptance, and remedies for non-conforming performance."
-            },
-            {
-              "instrument": "RA CC",
-              "locator": "Arts. 314–318 · price, payment, interest",
-              "note": "Price determination, due dates, and late-payment context."
-            },
-            {
-              "instrument": "RA CC",
-              "locator": "Arts. 476–477 · limitation of liability",
-              "note": "Permissible scope of liability clauses in B2B service deals."
-            }
-          ],
-          "exportPdfName": "service_agreement.pdf",
-          "exportDocxName": "service_agreement.docx"
+          "withExport": true
         },
         {
-          "question": "When must I register for VAT as an individual entrepreneur in Armenia?",
-          "answerTitle": "Summary",
-          "answerBody": "VAT registration is required once turnover crosses the statutory threshold in any rolling 12-month period; invoicing and filing then follow the RA Tax Code and e-invoicing rules.",
-          "citations": [
-            {
-              "instrument": "RA TC",
-              "locator": "Art. 267 · VAT registration threshold",
-              "note": "Mandatory registration after the turnover test; voluntary below threshold in permitted cases."
-            },
-            {
-              "instrument": "RA TC",
-              "locator": "Arts. 268–271 · VAT payer obligations",
-              "note": "Invoices, rates, and reporting periods once registered."
-            },
-            {
-              "instrument": "RA Gov. (e-invoicing)",
-              "locator": "Annex · electronic invoice format",
-              "note": "Technical rules for VAT invoices in the national system."
-            }
-          ],
-          "tags": ["RA Tax Code", "VAT", "e-invoicing"]
-        },
-        {
-          "withExport": true,
-          "question": "Draft a commercial lease for office space in Yerevan",
-          "answerTitle": "Lease draft ready",
-          "answerBody": "Generating a commercial lease with rent indexation, OPEX/CAM allocation, permitted use, subletting rules, and handover condition — structured under the Civil Code lease chapter.",
-          "citations": [
-            {
-              "instrument": "RA CC",
-              "locator": "Arts. 583–618 · lease of buildings and premises",
-              "note": "Rent, maintenance, repairs, and return condition."
-            },
-            {
-              "instrument": "RA CC",
-              "locator": "Arts. 401–405 · term, renewal, termination",
-              "note": "Notice and exit mechanics for fixed and rolling terms."
-            },
-            {
-              "instrument": "RA CC",
-              "locator": "Art. 418 · transfer of risk",
-              "note": "Useful for insurance and damage allocation in office leases."
-            }
-          ],
-          "exportPdfName": "commercial_lease.pdf",
-          "exportDocxName": "commercial_lease.docx"
-        },
-        {
-          "question": "What notice period applies when terminating an indefinite-term employment contract?",
-          "answerTitle": "Conclusion",
-          "answerBody": "Notice periods depend on who initiates and on valid grounds: the Labor Code sets minimum notice for employer-initiated ordinary dismissals and shorter paths for serious misconduct, probation expiry, or mutual consent.",
-          "citations": [
-            {
-              "instrument": "RA LC",
-              "locator": "Art. 113 · notice on termination by employer",
-              "note": "Minimum calendar-day notice unless a separate ground applies."
-            },
-            {
-              "instrument": "RA LC",
-              "locator": "Arts. 81, 84 · immediate dismissal grounds",
-              "note": "No notice when misconduct or certain statutory breaches are proven under procedure."
-            },
-            {
-              "instrument": "RA LC",
-              "locator": "Art. 120 · employee resignation",
-              "note": "Employee’s notice when leaving on ordinary resignation."
-            }
-          ],
-          "tags": ["RA Labor Code", "Notice", "Termination"]
+          "withExport": true
         }
-      ],
-      "chat": {
-        "userQuestion1": "What is the deadline to register an employee in the tax system after starting operations?",
-        "assistantConclusionText": "You should register the employee within 3 working days after the employment relationship starts.",
-        "assistantConclusionTitle": "Conclusion",
-        "assistantConclusionTags": ["RA Labor Code, Art. 88", "Official registry", "RA Gov. Decree 23-N"],
-        "userQuestion2": "Draft a service agreement for my company",
-        "assistantDraftTitle": "Service agreement ready",
-        "assistantDraftText": "Generating a service agreement aligned with the RA Civil Code — including pricing, payment terms, liability, and termination clauses..."
-      }
+      ]
     },
     "heroStats": [
-      { "value": "100,000+", "label": "Laws indexed" },
-      { "value": "3 languages", "label": "AM · RU · EN" },
-      { "value": "Weekly", "label": "Database updates" }
+      {
+        "value": "100,000+",
+        "label": "Laws indexed"
+      },
+      {
+        "value": "3 languages",
+        "label": "AM · RU · EN"
+      },
+      {
+        "value": "Monthly",
+        "label": "Database updates"
+      }
     ],
     "problem": {
       "sectionLabel": "The problem",
       "titleMain": "Legal research in Armenia",
       "titleAccent": "stuck in 2005",
-      "description": "The official sources exist, but the tools to use them efficiently do not. Until now.",
       "oldWayBadge": "The old way",
-      "withDoLegalBadge": "With DoLegal",
+      "withDoLegalBadge": "With doLegal",
       "oldWayItems": [
         "Manual keyword search across legal sources with no semantic understanding",
         "No way to check if you found the current version of a law or an outdated amendment",
@@ -185,17 +53,14 @@
       ],
       "doLegalItems": [
         "Ask in Armenian, Russian, or English - get answers grounded in the actual law",
-        "Every answer cites the exact article, law code, and source - verify in one click",
+        "Every answer cites the exact article, law code, and source",
         "Generate NDAs, employment contracts, legal letters, and reporting drafts from prompts",
         "Cut research and reporting prep time from 2 hours to under 20 minutes per case",
-        "Built specifically for Armenian law - updated every week from official sources"
+        "Built specifically for local law - updated regularly from official sources"
       ]
     },
     "features": {
-      "sectionLabel": "Core capabilities",
-      "titleMain": "Three tools.",
-      "titleAccent": "One interface.",
-      "description": "DoLegal combines legal research, document drafting, and legal assistant guidance - all powered by RAG retrieval over authoritative Armenian legal corpora.",
+      "description": "doLegal combines legal research, document drafting, and legal assistant guidance - all powered by authoritative legal corpora.",
       "cards": [
         {
           "number": "01",
@@ -204,8 +69,8 @@
           "items": [
             "Summarizes laws, regulations, and court decisions",
             "Identifies relevant clauses and legal precedents",
-            "Cross-references official Armenian government legislation sources",
-            "Structured output: Conclusion -> Reasoning -> References",
+            "Cross-references official government legislation sources",
+            "Structured output: Conclusion > Reasoning > References",
             "Upload a document for context-aware Q&A"
           ]
         },
@@ -218,7 +83,7 @@
             "Statutory letters, claims, and formal notices",
             "Template-based or freeform document generation",
             "Export to DOCX for final editing",
-            "Document comparison (Pro and above)"
+            "Document comparison"
           ]
         },
         {
@@ -236,9 +101,6 @@
       ]
     },
     "howItWorks": {
-      "sectionLabel": "How it works",
-      "titleMain": "From questions to",
-      "titleAccent": "verified answers",
       "steps": [
         {
           "title": "Ask in your language",
@@ -246,18 +108,37 @@
         },
         {
           "title": "AI retrieves the law",
-          "description": "DoLegal searches its indexed corpus of Armenian legislation and case law, retrieves the most relevant articles, and generates a grounded answer."
+          "description": "doLegal searches its indexed corpus of legislation and case law, retrieves the most relevant articles, and generates a grounded answer."
         },
         {
           "title": "Verify every citation",
           "description": "Each answer includes article codes, law names, dates, and the responsible body. Every legal claim is traceable back to its source."
         }
-      ]
+      ],
+      "illustrations": {
+        "lawSources": [
+          "RA CC",
+          "RA TC",
+          "RA LC",
+          "GOV.DEC",
+          "SRC ORD",
+          "COURT"
+        ],
+        "answerLabel": "ANSWER",
+        "citations": {
+          "sources": "SOURCES",
+          "verified": "VERIFIED",
+          "items": [
+            "RA CC · Art. 267",
+            "RA CC · Arts. 268–271",
+            "RA LC · Art. 88",
+            "Gov.Dec. 23-N · §§ 2–3"
+          ],
+          "tagline": "Every claim, traceable."
+        }
+      }
     },
     "personas": {
-      "sectionLabel": "Who uses DoLegal",
-      "titleMain": "Built for legal and accounting professionals",
-      "titleAccent": "and ambitious founders",
       "cards": [
         {
           "tag": "Solo practitioners",
@@ -266,14 +147,14 @@
           "wins": [
             "Research time: 2 hours -> 20 minutes per case",
             "Draft standard contracts in minutes, not hours",
-            "Track tax and reporting rule updates with weekly refreshes",
+            "Track tax and reporting rule updates with monthly refreshes",
             "Starts at 8,000 AMD/month"
           ]
         },
         {
-          "tag": "2-10 person practice",
+          "tag": "Teams",
           "title": "Law & Accounting Firms",
-          "description": "Teams that need consistent legal and tax document quality plus shared access to official legislation knowledge.",
+          "description": "Small teams that need consistent legal and tax document quality plus shared access to official legislation knowledge.",
           "wins": [
             "Shared token pool for the whole team",
             "Standardized document templates across staff",
@@ -282,8 +163,8 @@
           ]
         },
         {
-          "tag": "Business teams",
-          "title": "SME Founders & In-house Accountants",
+          "tag": "Business runners",
+          "title": "SME Founders & Record keepers",
           "description": "Business owners and in-house accountants who need to handle tax accounting responsibilities, submit reports, draft agreements, and navigate state compliance.",
           "wins": [
             "Understand reporting cycles, tax duties, and filing requirements",
@@ -298,95 +179,575 @@
       "sectionLabel": "Pricing",
       "titleMain": "Transparent pricing.",
       "titleAccent": "No hidden fees.",
-      "description": "Planned launch pricing. Join early access now and we will notify you when subscriptions go live.",
+      "description": "Join early access now and we will notify you when subscriptions go live.",
       "mostPopular": "Most popular",
       "needsMoreTokensTitle": "Need more tokens mid-month?",
       "needsMoreTokensDescription": "Top up your balance without changing your plan.",
+      "billingAriaLabel": "Billing period",
+      "monthlyShort": "/mo",
+      "tokensUnit": "tokens",
+      "vatNote": "Price includes VAT.",
+      "vatShort": "Incl. VAT",
+      "meta": {
+        "currencyLabel": "Currency",
+        "currencyValue": "AMD",
+        "billingLabel": "Billing",
+        "billingValue": "Monthly or Yearly",
+        "tokensResetLabel": "Tokens reset",
+        "tokensResetValue": "Every 30 days",
+        "earlyAccessLabel": "Early-access",
+        "earlyAccessValue": "Waitlist only"
+      },
+      "topupsDetailed": [
+        {
+          "num": "1",
+          "tokens": "10,000",
+          "note": "≈ 7,500 words of research output",
+          "price": "3,900"
+        },
+        {
+          "num": "2",
+          "tokens": "20,000",
+          "note": "≈ 15,000 words · heavier drafting or multi-session use",
+          "price": "7,900"
+        }
+      ],
+      "compare": {
+        "matrix": {
+          "groups": [
+            {
+              "head": "§ Usage & capacity",
+              "rows": [
+                {
+                  "label": "Monthly tokens",
+                  "cells": [
+                    "5k",
+                    "25k",
+                    "150k",
+                    "Configurable"
+                  ]
+                },
+                {
+                  "label": "Storage space",
+                  "cells": [
+                    "0 GB",
+                    "1 GB",
+                    "10 GB",
+                    "100 GB shared"
+                  ]
+                },
+                {
+                  "label": "File upload size",
+                  "cells": [
+                    "No uploads",
+                    "Up to 5 MB",
+                    "Up to 10 MB",
+                    "Up to 25 MB"
+                  ]
+                }
+              ]
+            },
+            {
+              "head": "§ Research",
+              "rows": [
+                {
+                  "label": "Article-level citations",
+                  "cells": [
+                    "Yes",
+                    "Yes",
+                    "Yes",
+                    "Yes"
+                  ]
+                },
+                {
+                  "label": "Multilingual Q&A",
+                  "cells": [
+                    "AM/RU/EN",
+                    "AM/RU/EN",
+                    "AM/RU/EN",
+                    "AM/RU/EN"
+                  ]
+                }
+              ]
+            },
+            {
+              "head": "§ Drafting",
+              "rows": [
+                {
+                  "label": "Basic drafting",
+                  "cells": [
+                    "Yes",
+                    "Template-based drafting only",
+                    "Included",
+                    "Included"
+                  ]
+                },
+                {
+                  "label": "Advanced drafting",
+                  "cells": [
+                    "No",
+                    "No",
+                    "Context-aware + clause editing + multi-step drafting",
+                    "Context-aware + clause editing + multi-step drafting"
+                  ]
+                },
+                {
+                  "label": "DOCX export",
+                  "cells": [
+                    "No",
+                    "Yes",
+                    "Yes",
+                    "Yes"
+                  ]
+                },
+                {
+                  "label": "Personal templates",
+                  "cells": [
+                    "No",
+                    "No",
+                    "Save and reuse own templates",
+                    "Save and reuse own templates"
+                  ]
+                },
+                {
+                  "label": "Team templates",
+                  "cells": [
+                    "No",
+                    "No",
+                    "No",
+                    "Shared organization template library"
+                  ]
+                }
+              ]
+            },
+            {
+              "head": "§ Document intelligence",
+              "rows": [
+                {
+                  "label": "Document analysis",
+                  "cells": [
+                    "No",
+                    "Basic analysis",
+                    "Advanced analysis",
+                    "Advanced analysis"
+                  ]
+                },
+                {
+                  "label": "Document comparison",
+                  "cells": [
+                    "No",
+                    "No",
+                    "Redlining + clause mapping",
+                    "Redlining + clause mapping"
+                  ]
+                }
+              ]
+            },
+            {
+              "head": "§ Workspace",
+              "rows": [
+                {
+                  "label": "Chat history",
+                  "cells": [
+                    "1 saved chat",
+                    "Full history",
+                    "Full history",
+                    "Full history"
+                  ]
+                },
+                {
+                  "label": "Pinned chats",
+                  "cells": [
+                    "0",
+                    "3",
+                    "5",
+                    "Unlimited"
+                  ]
+                },
+                {
+                  "label": "Chat search",
+                  "cells": [
+                    "No",
+                    "Yes",
+                    "Yes",
+                    "Team-wide chat + document search"
+                  ]
+                },
+                {
+                  "label": "Document search",
+                  "cells": [
+                    "No",
+                    "No",
+                    "Yes",
+                    "Team-wide chat + document search"
+                  ]
+                }
+              ]
+            },
+            {
+              "head": "§ Team & admin",
+              "rows": [
+                {
+                  "label": "Shared workspace",
+                  "cells": [
+                    "No",
+                    "No",
+                    "No",
+                    "Shared chats and documents"
+                  ]
+                },
+                {
+                  "label": "Role-based access",
+                  "cells": [
+                    "No",
+                    "No",
+                    "No",
+                    "Admin / editor / viewer"
+                  ]
+                },
+                {
+                  "label": "Usage analytics",
+                  "cells": [
+                    "No",
+                    "No",
+                    "No",
+                    "Per-user usage tracking"
+                  ]
+                }
+              ]
+            },
+            {
+              "head": "§ Support",
+              "rows": [
+                {
+                  "label": "Onboarding session",
+                  "cells": [
+                    "No",
+                    "No",
+                    "No",
+                    "Yes"
+                  ]
+                },
+                {
+                  "label": "Support level",
+                  "cells": [
+                    "No",
+                    "Email support",
+                    "Email support",
+                    "Dedicated channel, <6h"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "faq": [
+        {
+          "q": "Can I cancel or change plans anytime?",
+          "a": "Yes. Upgrades apply immediately with prorated billing, downgrades apply in the next billing cycle, and you can cancel any time. No contracts, no hidden fees."
+        },
+        {
+          "q": "What happens if I run out of tokens?",
+          "a": "You can add a one-time top-up (10k / 20k tokens) to your current cycle without changing plans, or upgrade to a higher tier. Unused top-up tokens roll over for 30 days."
+        },
+        {
+          "q": "Do unused tokens roll over?",
+          "a": "Plan tokens reset each cycle. Top-up tokens roll over for 30 days from purchase, so a bad week doesn't cost you the balance you've already paid for."
+        },
+        {
+          "q": "Is VAT included in the quoted prices?",
+          "a": "Yes. Prices are listed in AMD and include VAT."
+        },
+        {
+          "q": "How does the Rocket team plan work?",
+          "a": "Rocket gives a 2–10 person practice a shared 1,000,000 token pool, seat-based admin, and dedicated support. Larger firms should contact us for a custom plan."
+        },
+        {
+          "q": "When is pricing actually available?",
+          "a": "doLegal is in early access. Pricing shown is the planned launch pricing. Join the waitlist and we'll invite you in batches as we open access — starting with independent practitioners in Yerevan."
+        }
+      ],
+      "waitlist": {
+        "headingMain": "Join the waitlist.",
+        "headingAccent": "Lock in launch pricing.",
+        "body": "doLegal is not publicly released. Early-access invitees get the launch tariff grandfathered for 12 months after general availability."
+      },
+      "contactSales": {
+        "sectionLabel": "Enterprise intake",
+        "titleMain": "Talk to sales",
+        "titleAccent": "about Rocket.",
+        "description": "Rocket pricing depends on team structure, onboarding depth, and support workflow. Share your details and we will tailor a plan for your practice.",
+        "planPriceCopy": "Contact sales for details",
+        "tableCta": "Contact us",
+        "submitCta": "Send request",
+        "submittingCta": "Sending...",
+        "success": "Thanks. Our team will reach out shortly.",
+        "error": "Unable to submit right now. Please try again.",
+        "fields": {
+          "fullName": "Full Name",
+          "email": "Email",
+          "companyName": "Company Name",
+          "companySize": "Company size",
+          "message": "Message"
+        },
+        "sizeOptions": [
+          "1-5 employees",
+          "6-10 employees",
+          "11-25 employees",
+          "26-50 employees",
+          "50+ employees"
+        ]
+      },
       "plans": [
         {
           "name": "Free",
+          "kicker": "Trial",
+          "desc": "Try the AI-assistant’s capabilities with a registered account and save the result for future use.",
           "price": "0",
           "period": "Planned launch tier",
+          "priceNote": "Planned launch tier",
           "featured": false,
           "cta": "Join waitlist",
           "features": [
-            { "text": "8 trial queries (guest)", "enabled": true },
-            { "text": "1,400 tokens/month (registered)", "enabled": true },
-            { "text": "1 saved conversation", "enabled": true },
-            { "text": "No file upload", "enabled": false },
-            { "text": "No document drafting", "enabled": false },
-            { "text": "No pinned chats", "enabled": false }
+            {
+              "text": "5k monthly tokens",
+              "enabled": true
+            },
+            {
+              "text": "1 saved chat",
+              "enabled": true
+            },
+            {
+              "text": "Multilingual Q&A",
+              "enabled": true
+            },
+            {
+              "text": "Article-level citations",
+              "enabled": true
+            },
+            {
+              "text": "Basic drafting",
+              "enabled": true
+            },
+            {
+              "text": "No file uploads",
+              "enabled": false
+            },
+            {
+              "text": "No pinned chats",
+              "enabled": false
+            },
+            {
+              "text": "No chat search",
+              "enabled": false
+            },
+            {
+              "text": "No DOCX export",
+              "enabled": false
+            },
+            {
+              "text": "No document comparison",
+              "enabled": false
+            }
           ]
         },
         {
           "name": "Basic",
+          "kicker": "Solo · individual",
+          "desc": "For independent lawyers and professionals who run 5-10 active cases and need both drafting and research results within a single ecosystem.",
           "price": "8,000",
           "period": "per month",
+          "priceNote": "per month, per seat",
           "featured": false,
           "cta": "Join waitlist",
           "features": [
-            { "text": "40,000 tokens/month", "enabled": true },
-            { "text": "File upload up to 5 MB", "enabled": true },
-            { "text": "Document drafting", "enabled": true },
-            { "text": "3 pinned conversations", "enabled": true },
-            { "text": "DOCX export", "enabled": true },
-            { "text": "No document comparison", "enabled": false }
+            {
+              "text": "25k monthly tokens",
+              "enabled": true
+            },
+            {
+              "text": "1 GB storage",
+              "enabled": true
+            },
+            {
+              "text": "Uploads up to 5 MB",
+              "enabled": true
+            },
+            {
+              "text": "Full chat history",
+              "enabled": true
+            },
+            {
+              "text": "3 pinned chats",
+              "enabled": true
+            },
+            {
+              "text": "Chat search",
+              "enabled": true
+            },
+            {
+              "text": "Template-based drafting",
+              "enabled": true
+            },
+            {
+              "text": "DOCX export",
+              "enabled": true
+            },
+            {
+              "text": "Basic document analysis",
+              "enabled": true
+            },
+            {
+              "text": "Email support",
+              "enabled": true
+            },
+            {
+              "text": "No document comparison",
+              "enabled": false
+            },
+            {
+              "text": "No document search",
+              "enabled": false
+            }
           ]
         },
         {
           "name": "Pro",
+          "kicker": "Busy practice",
+          "desc": "You are an entrepreneur or professional for whom it is important to maintain high productivity and quickly navigate bureaucratic processes.",
           "price": "15,000",
           "period": "per month",
+          "priceNote": "per month, per seat",
           "featured": true,
           "cta": "Join waitlist",
           "features": [
-            { "text": "250,000 tokens/month", "enabled": true },
-            { "text": "File upload up to 10 MB", "enabled": true },
-            { "text": "Document comparison", "enabled": true },
-            { "text": "5 pinned conversations", "enabled": true },
-            { "text": "Priority AI response", "enabled": true },
-            { "text": "Full chat history", "enabled": true }
+            {
+              "text": "150k monthly tokens",
+              "enabled": true
+            },
+            {
+              "text": "10 GB storage",
+              "enabled": true
+            },
+            {
+              "text": "Uploads up to 10 MB",
+              "enabled": true
+            },
+            {
+              "text": "Advanced drafting",
+              "enabled": true
+            },
+            {
+              "text": "Document comparison and personal templates",
+              "enabled": true
+            },
+            {
+              "text": "Advanced analysis",
+              "enabled": true
+            },
+            {
+              "text": "Chat search",
+              "enabled": true
+            },
+            {
+              "text": "Document search",
+              "enabled": true
+            },
+            {
+              "text": "Full history",
+              "enabled": true
+            },
+            {
+              "text": "5 pinned chats",
+              "enabled": true
+            },
+            {
+              "text": "Email support",
+              "enabled": true
+            }
           ]
         },
         {
           "name": "Rocket",
+          "kicker": "Firm & team",
+          "desc": "For teams or companies where it is important to enable collaboration within a unified work ecosystem.",
           "price": "25,000",
           "period": "per month",
+          "priceNote": "per month, per team",
           "featured": false,
-          "cta": "Join waitlist",
+          "cta": "Contact us",
           "features": [
-            { "text": "1,000,000 tokens/month", "enabled": true },
-            { "text": "File upload up to 25 MB", "enabled": true },
-            { "text": "Everything in Pro", "enabled": true },
-            { "text": "Unlimited pinned chats", "enabled": true },
-            { "text": "Dedicated support", "enabled": true },
-            { "text": "Team usage (shared tokens)", "enabled": true }
+            {
+              "text": "Configurable monthly tokens",
+              "enabled": true
+            },
+            {
+              "text": "100 GB shared storage",
+              "enabled": true
+            },
+            {
+              "text": "Uploads up to 25 MB",
+              "enabled": true
+            },
+            {
+              "text": "Team templates",
+              "enabled": true
+            },
+            {
+              "text": "Shared workspace",
+              "enabled": true
+            },
+            {
+              "text": "Roles",
+              "enabled": true
+            },
+            {
+              "text": "Usage analytics",
+              "enabled": true
+            },
+            {
+              "text": "Team chat search",
+              "enabled": true
+            },
+            {
+              "text": "Team document search",
+              "enabled": true
+            },
+            {
+              "text": "Onboarding session",
+              "enabled": true
+            },
+            {
+              "text": "Dedicated support (<6h)",
+              "enabled": true
+            },
+            {
+              "text": "Shared chats and documents",
+              "enabled": true
+            },
+            {
+              "text": "Everything in Pro",
+              "enabled": true
+            }
           ]
         }
-      ],
-      "topups": [
-        { "tokens": "10,000 tokens", "price": "AMD 4,000" },
-        { "tokens": "15,000 tokens", "price": "AMD 6,000" },
-        { "tokens": "25,000 tokens", "price": "AMD 10,000" }
       ]
     },
     "faq": {
-      "sectionLabel": "FAQ",
-      "titleMain": "Common",
-      "titleAccent": "questions",
       "descriptionPrefix": "Still have questions? Write to us at",
       "email": "hello@dolegal.am",
       "items": [
         {
           "question": "Is this legal counsel?",
-          "answer": "No. DoLegal is a legal research and drafting tool - not a lawyer. All responses include a disclaimer and should be reviewed by a qualified legal professional before taking action."
+          "answer": "No. doLegal is a legal research and drafting tool - not a lawyer. All responses include a disclaimer and should be reviewed by a qualified legal professional before taking action."
         },
         {
           "question": "How accurate are the citations?",
-          "answer": "Every response is grounded in retrieved text from official government legislation sources. We target high citation alignment on monthly sample audits."
+          "answer": "Every response is grounded in text retrieved from official legislation sources. We aim for maximum citation accuracy based on regular updates."
         },
         {
-          "question": "What languages does DoLegal support?",
+          "question": "What languages does doLegal support?",
           "answer": "You can ask questions and receive answers in Armenian, Russian, or English. The legal corpus is primarily Armenian with cross-language retrieval."
         },
         {
@@ -394,38 +755,154 @@
           "answer": "A token is a unit of AI processing - roughly 0.75 words. Typical legal questions use 500-1,500 tokens, while full drafts use more."
         },
         {
-          "question": "Can I cancel or change plans anytime?",
-          "answer": "Yes. Upgrades apply immediately with prorated billing, downgrades apply in the next billing cycle, and you can cancel any time."
-        },
-        {
           "question": "How fresh is the legal database?",
-          "answer": "The corpus is updated weekly from official Armenian government legislation sources."
+          "answer": "The corpus is updated monthly from official Armenian government legislation sources."
         }
       ]
     },
     "earlyAccess": {
       "sectionLabel": "Coming soon",
       "titleMain": "Join the early access",
-      "titleAccent": "for DoLegal",
+      "titleAccent": "for doLegal",
       "description": "The product is not publicly released yet. Join the waitlist and get invited as soon as we open access.",
-      "emailLabel": "Email Address",
       "emailPlaceholder": "you@company.com",
       "buttonLabel": "Join Early Access",
-      "submittingButtonLabel": "Submitting...",
-      "submittingMessage": "Submitting your request...",
-      "successMessage": "Thanks! You have been added to the early access list.",
-      "duplicateMessage": "This email is already on the early access list.",
-      "errorMessage": "We could not submit your request. Please try again in a moment.",
       "footnote": "Early access list only - Invitations sent in batches"
     },
     "footer": {
-      "description": "AI-powered legal research and drafting for the Armenian market. Built on official Armenian government legislation sources.",
-      "copyright": "© 2026 DoLegal. All rights reserved.",
+      "description": "AI-powered legal research and drafting for professionals. Built on official government legislation sources.",
+      "copyright": "© 2026 doLegal. All rights reserved.",
       "columns": [
-        { "title": "Product", "links": ["Features", "Pricing", "How it works", "Changelog"] },
-        { "title": "Legal", "links": ["Terms of Service", "Privacy Policy", "Disclaimer", "Cookie Policy"] },
-        { "title": "Company", "links": ["About", "Blog", "Contact", "hello@dolegal.am"] }
+        {
+          "title": "Product",
+          "links": [
+            "Features",
+            "Pricing",
+            "How it works"
+          ]
+        },
+        {
+          "title": "Legal",
+          "links": [
+            "Terms of Service",
+            "Privacy Policy",
+            "Refund Policy",
+            "Cookie Policy"
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            "About",
+            "Blog",
+            "Contact",
+            "hello@dolegal.am"
+          ]
+        }
       ]
+    },
+    "parity": {
+      "heroEyebrow": "Legal AI-Assistant",
+      "heroLine1": "Read the law.",
+      "heroLine2Prefix": "Draft the",
+      "heroLine2Emphasis": "contract.",
+      "heroLine3Prefix": "&",
+      "heroLine3Rest": "save the afternoon.",
+      "heroLine4": "— work multi-language.",
+      "heroDescriptionExact": "Forward-thinking lawyers, accountants, and founders use doLegal to research legislation, draft documents, and navigate state compliance — grounded in the actual text of law.",
+      "heroPrimaryCtaExact": "Join Early Access →",
+      "heroSecondaryCtaExact": "See how it works ↗",
+      "heroStat2Value": "20",
+      "heroStat2Suffix": " minutes",
+      "heroStat2Label": "Avg. research, per case",
+      "heroStat3Value": "Monthly",
+      "heroStat3Label": "Corpus refresh",
+      "demoTab1": "VAT threshold",
+      "demoTab2": "Draft a contract",
+      "demoTab3": "Reg. deadline",
+      "demoQueryLabel": "Query · EN",
+      "demoQuestion": "When must I register for VAT as an individual entrepreneur in Armenia?",
+      "demoAssistantLabel": "doLegal",
+      "demoAnswer": "VAT registration becomes mandatory once turnover crosses the statutory threshold in any rolling 12-month period.",
+      "demoSourcesVerified": "verified ✓",
+      "demoInputPlaceholder": "Ask a question in Armenian, Russian, or English…",
+      "demoCitationsTitle": "Legal sources",
+      "demoChromeMiddle": "doLegal / research",
+      "demoNote": "↑ Live preview · switch questions above",
+      "demoComposerLang": "EN",
+      "demoUserShort": "ME",
+      "demoVatBody1H": "Reasoning",
+      "demoVatBody1P": "Armenia's Tax Code sets a turnover-based VAT threshold measured across any 12 consecutive months, not a calendar year. On crossing it, the taxpayer becomes a VAT payer from the next transaction onward and takes on the full package of invoicing, reporting, and e-filing duties.",
+      "demoVatBody2H": "What's next",
+      "demoVatBody2P": "Register with the State Revenue Committee, switch your invoicing to e-invoices with the required VAT attributes, and begin monthly VAT returns.",
+      "demoVatCite1Tag": "RA TC · Art. 267",
+      "demoVatCite1Label": "VAT registration threshold",
+      "demoVatCite1Quote": "A taxable person whose aggregate turnover exceeds the statutory threshold in any twelve consecutive months is recognized as a VAT payer from the moment prescribed by the Tax Code.",
+      "demoVatCite2Tag": "RA TC · Arts. 268–271",
+      "demoVatCite2Label": "VAT payer obligations",
+      "demoVatCite2Quote": "A registered VAT payer must issue VAT invoices, maintain VAT records, and submit VAT returns within the procedure and deadlines established by the Code.",
+      "demoVatCite3Tag": "SRC Ord. N-148",
+      "demoVatCite3Label": "E-invoicing requirements",
+      "demoVatCite3Quote": "Electronic invoices must contain mandatory tax fields and be submitted through the SRC electronic system in the approved format.",
+      "demoDraftQueryLabel": "Query · EN",
+      "demoDraftQuestion": "Draft a service agreement for my company.",
+      "demoDraftClarifyPrompt": "Before I draft, drop a relevant document or add details about the counterparty.",
+      "demoDraftClarifyReplyLabel": "Upload · EN",
+      "demoDraftClarifyReply": "Term is 12 months, monthly payments, Yerevan jurisdiction.",
+      "demoDraftUploadedDocName": "ararat.pdf",
+      "demoDraftAnswer": "Service agreement prepared. Draft aligns with the RA Civil Code — pricing, payment terms, liability caps, and termination — with headings mapped to mandatory notice and defect-remedy rules.",
+      "demoDraftBody1H": "Document outline",
+      "demoDraftBody1P": "1. Parties & Scope · 2. Price & Payment · 3. Performance & Delivery · 4. Warranties & Liability · 5. Termination & Notice · 6. Governing Law · 7. Signatures.",
+      "demoDraftBody2H": "Download",
+      "demoDraftDownloadSuffix": "— ready to edit",
+      "demoDraftCite1Tag": "RA CC · Arts. 435–447",
+      "demoDraftCite1Label": "Service & work contracts",
+      "demoDraftCite1Quote": "Under the Civil Code provisions on services and works, the contractor undertakes to perform agreed work, and the customer undertakes to accept the result and pay the agreed fee.",
+      "demoDraftCite2Tag": "RA CC · Arts. 314–318",
+      "demoDraftCite2Label": "Price, payment, interest",
+      "demoDraftCite2Quote": "Monetary obligations are performed in the agreed amount and term; in case of delay, statutory interest may be charged as provided by law.",
+      "demoDraftCite3Tag": "RA CC · Art. 467",
+      "demoDraftCite3Label": "Defect remedies",
+      "demoDraftCite3Quote": "If defects are discovered in the performed work, the customer may request free remediation, proportional price reduction, or reimbursement of remediation costs.",
+      "demoDeadlineQueryLabel": "Query · EN",
+      "demoDeadlineQuestion": "What is the deadline to register an employee after starting operations?",
+      "demoDeadlineAnswer": "You must register the employee within 3 working days after the employment relationship begins. The same window applies for social-security and personal-income-tax enrolment with the SRC.",
+      "demoDeadlineBody1H": "Reasoning",
+      "demoDeadlineBody1P": "The Labour Code requires the employer to register the employment relationship at its formal commencement. Implementing regulations specify a 3-working-day registration window for both labour and tax-administration purposes.",
+      "demoDeadlineCite1Tag": "RA LC · Art. 88",
+      "demoDeadlineCite1Label": "Employer registration duties",
+      "demoDeadlineCite1Quote": "The employer is required to ensure registration of the employment relationship in accordance with the procedure and timelines established by Armenian law.",
+      "demoDeadlineCite2Tag": "Gov.Dec. 23-N · §§ 2–3",
+      "demoDeadlineCite2Label": "Employee registration procedure",
+      "demoDeadlineCite2Quote": "Employee registration data must be filed within three working days from the start date of employment through the prescribed state reporting procedure.",
+      "featuresSectionLabelExact": "Core capabilities",
+      "featuresTitleMainExact": "Many instruments.",
+      "featuresTitleAccentExact": "One chamber.",
+      "howSectionLabelExact": "Mechanism",
+      "howTitleMainExact": "From question to",
+      "howTitleAccentExact": "verified answer.",
+      "whoSectionLabelExact": "Who it's for",
+      "whoTitleMainExact": "Built for legal and accounting professionals,",
+      "whoTitleAccentExact": "ambitious founders.",
+      "faqSectionLabelExact": "Frequently asked",
+      "faqTitleMainExact": "Common",
+      "faqTitleAccentExact": "questions.",
+      "issueLastSynced": "Data last synced — 4 days ago",
+      "issueStats": "100,324 laws indexed · 3 languages · 17 codes"
+    },
+    "pricingParity": {
+      "monthly": "Monthly",
+      "annual": "Annual -15%",
+      "annualHintActive": "Billed annually - two months free",
+      "annualHintIdle": "Annual billing saves two months",
+      "billedYearly": "/mo - billed yearly",
+      "oneTimeTopup": "One-time top-up",
+      "comparisonLabel": "Full comparison",
+      "comparisonTitleMain": "What you get",
+      "comparisonTitleAccent": "in each chamber.",
+      "questionsLabel": "Pricing questions",
+      "questionsTitleMain": "Before you",
+      "questionsTitleAccent": "pick a tier."
     }
   }
 }
