@@ -25,7 +25,7 @@ const COPY: Record<SupportedLocale, RefundCopy> = {
       {
         heading: "1. Merchant of record",
         paragraphs: [
-          "doLegal is operated by Sergey Torosyan, an individual in the Republic of Armenia, with address at Tsarav Aghbyur 55/20.",
+          "Legis is operated by Sergey Torosyan, an individual in the Republic of Armenia, with address at Tsarav Aghbyur 55/20.",
           "Payments are processed by Paddle, our merchant of record. Paddle may handle payment operations, tax, and chargeback workflows according to its platform rules.",
         ],
       },
@@ -57,7 +57,7 @@ const COPY: Record<SupportedLocale, RefundCopy> = {
       {
         heading: "6. How to request a refund",
         paragraphs: [
-          "Email hello@dolegal.am with your account email, Paddle transaction ID or receipt, and reason for request. We typically review requests within 5 business days.",
+          "Email hello@legis.am with your account email, Paddle transaction ID or receipt, and reason for request. We typically review requests within 5 business days.",
         ],
       },
     ],
@@ -70,7 +70,7 @@ const COPY: Record<SupportedLocale, RefundCopy> = {
       {
         heading: "1. Платежный посредник",
         paragraphs: [
-          "doLegal управляется Sergey Torosyan, физическим лицом в Республике Армения, по адресу Tsarav Aghbyur 55/20.",
+          "Legis управляется Sergey Torosyan, физическим лицом в Республике Армения, по адресу Tsarav Aghbyur 55/20.",
           "Платежи обрабатываются через Paddle — нашего платежного посредника. Paddle может администрировать платежные операции, налоги и процедуры оспаривания платежей в соответствии с правилами своей платформы.",
         ],
       },
@@ -102,7 +102,7 @@ const COPY: Record<SupportedLocale, RefundCopy> = {
       {
         heading: "6. Как запросить возврат",
         paragraphs: [
-          "Напишите на hello@dolegal.am, указав email аккаунта, ID транзакции Paddle или чек, а также причину запроса. Обычно мы рассматриваем запросы в течение 5 рабочих дней.",
+          "Напишите на hello@legis.am, указав email аккаунта, ID транзакции Paddle или чек, а также причину запроса. Обычно мы рассматриваем запросы в течение 5 рабочих дней.",
         ],
       },
     ],
@@ -115,7 +115,7 @@ const COPY: Record<SupportedLocale, RefundCopy> = {
       {
         heading: "1. Վճարումների միջնորդ",
         paragraphs: [
-          "doLegal-ը կառավարվում է Sergey Torosyan-ի կողմից, որը գործում է Հայաստանի Հանրապետությունում՝ Tsarav Aghbyur 55/20 հասցեում։",
+          "Legis-ը կառավարվում է Sergey Torosyan-ի կողմից, որը գործում է Հայաստանի Հանրապետությունում՝ Tsarav Aghbyur 55/20 հասցեում։",
           "Վճարումները մշակվում են Paddle-ի միջոցով՝ որպես մեր վճարումների միջնորդ։ Paddle-ը կարող է իրականացնել վճարային գործառնությունների, հարկերի և վճարումների բողոքարկման ընթացակարգերի կառավարումը՝ իր հարթակի կանոններին համապատասխան։",
         ],
       },
@@ -147,7 +147,7 @@ const COPY: Record<SupportedLocale, RefundCopy> = {
       {
         heading: "6. Ինչպես պահանջել վերադարձ",
         paragraphs: [
-          "Գրեք hello@dolegal.am հասցեին՝ նշելով ձեր հաշվեհասցեն, Paddle գործարքի ID-ն կամ կտրոնը, և դիմումի պատճառը։ Սովորաբար դիմումները դիտարկվում են 5 աշխատանքային օրվա ընթացքում։",
+          "Գրեք hello@legis.am հասցեին՝ նշելով ձեր հաշվեհասցեն, Paddle գործարքի ID-ն կամ կտրոնը, և դիմումի պատճառը։ Սովորաբար դիմումները դիտարկվում են 5 աշխատանքային օրվա ընթացքում։",
         ],
       },
     ],
@@ -155,9 +155,9 @@ const COPY: Record<SupportedLocale, RefundCopy> = {
 };
 
 const REFUND_DESCRIPTIONS: Record<SupportedLocale, string> = {
-  en: "Learn doLegal refund rules for subscriptions and top-ups, request windows, and the process for submitting refund requests.",
-  ru: "Узнайте правила возврата doLegal по подпискам и пополнениям, сроки подачи и порядок оформления запроса на возврат.",
-  am: "Ծանոթացեք doLegal-ի վերադարձի կանոններին՝ բաժանորդագրությունների և լիցքավորումների, դիմելու ժամկետների և վերադարձի հարցման ընթացակարգի վերաբերյալ։",
+  en: "Learn Legis refund rules for subscriptions and top-ups, request windows, and the process for submitting refund requests.",
+  ru: "Узнайте правила возврата Legis по подпискам и пополнениям, сроки подачи и порядок оформления запроса на возврат.",
+  am: "Ծանոթացեք Legis-ի վերադարձի կանոններին՝ բաժանորդագրությունների և լիցքավորումների, դիմելու ժամկետների և վերադարձի հարցման ընթացակարգի վերաբերյալ։",
 };
 
 export async function generateMetadata({
@@ -168,7 +168,7 @@ export async function generateMetadata({
   const copy = COPY[key] ?? COPY.en;
 
   return {
-    title: `${copy.title} | doLegal`,
+    title: `${copy.title} | Legis`,
     description: REFUND_DESCRIPTIONS[key] ?? REFUND_DESCRIPTIONS.en,
   };
 }

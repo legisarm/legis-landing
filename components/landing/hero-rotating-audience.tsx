@@ -25,7 +25,7 @@ export function HeroRotatingAudience({ items }: { items: string[] }) {
   if (!mounted || reduceMotion) {
     const text = reduceMotion ? items.join(", ") : items[0] ?? "";
     return (
-      <span className="font-semibold not-italic text-purple-900 [font-family:inherit] [font-size:inherit] [line-height:inherit]">
+      <span className="font-semibold not-italic text-[var(--brand-blue)] [font-family:inherit] [font-size:inherit] [line-height:inherit]">
         {text}
       </span>
     );
@@ -37,7 +37,7 @@ export function HeroRotatingAudience({ items }: { items: string[] }) {
         key={index}
         aria-live="polite"
         aria-atomic="true"
-        className="hero-audience-slide-up inline-block align-baseline text-purple-900"
+        className="hero-audience-slide-up inline-block align-baseline text-[var(--brand-blue)]"
       >
         {items[index]}
       </span>

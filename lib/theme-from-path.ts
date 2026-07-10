@@ -8,7 +8,7 @@ export function themeAttrsFromPathname(pathname: string): ThemeAttrs {
   const isProduct = pathname.includes("/product");
 
   return {
-    theme: isProduct ? "light" : "dark",
+    theme: "light",
     display: "sans",
     accent: isProduct ? "oxblood" : "cobalt",
   };

@@ -4,6 +4,7 @@ import {useEffect, useMemo, useState} from "react";
 import {useTranslations} from "next-intl";
 import {Link} from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { BrandLogo } from "./BrandLogo";
 
 type NavItem = { href: string; label: string; active?: boolean };
 
@@ -110,9 +111,9 @@ export function Masthead({ nav, ctaHref = "/#waitlist" }: MastheadProps) {
   return (
     <header className="masthead">
       <div className="wrap masthead-inner">
-        <Link href="/" className="brand" aria-label="doLegal">
-          <img className="brand-logo" src="/doLegal-logo.svg" alt="doLegal" />
-        </Link>
+          <Link href="/" className="brand" aria-label="Legis">
+            <BrandLogo />
+          </Link>
         <button
           type="button"
           className={`menu-toggle ${menuOpen ? "open" : ""}`}

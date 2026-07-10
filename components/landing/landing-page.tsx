@@ -193,7 +193,7 @@ export function LandingPage() {
             <div className="mt-16 md:mt-20">
               <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-2">
                 <ComparisonCard badge={content.problem.oldWayBadge} negative items={content.problem.oldWayItems} />
-                <ComparisonCard badge={content.problem.withDoLegalBadge} items={content.problem.doLegalItems} />
+                <ComparisonCard badge={content.problem.withLegisBadge} items={content.problem.legisItems} />
               </div>
             </div>
           </div>
@@ -275,7 +275,7 @@ export function LandingPage() {
               </h2>
               <p className="mt-4 text-sm leading-7 text-black/60">
                 {content.faq.descriptionPrefix}{" "}
-                <a className="border-b border-black/20 text-black" href="mailto:hello@dolegal.am">
+                <a className="border-b border-black/20 text-black" href="mailto:hello@legis.am">
                   {content.faq.email}
                 </a>
               </p>

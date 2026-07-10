@@ -28,9 +28,9 @@ export type LandingContent = {
     titleAccent: string;
     description: string;
     oldWayBadge: string;
-    withDoLegalBadge: string;
+    withLegisBadge: string;
     oldWayItems: string[];
-    doLegalItems: string[];
+    legisItems: string[];
   };
   features: {
     sectionLabel: string;

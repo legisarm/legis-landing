@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLocale } from "next-intl";
 import { useTranslations } from "next-intl";
 import { Fraunces, JetBrains_Mono, Manrope, Noto_Sans_Armenian } from "next/font/google";
-import { DoLegalWordmark } from "./dolegal-wordmark";
+import { BrandLogo } from "@/app/_components/BrandLogo";
 import { DocxFileIcon, PdfFileIcon } from "./hero-document-icons";
 
 /**
@@ -422,7 +422,7 @@ export function HeroDoodleCanvas() {
         className={`hero-preview-card-idle flex h-[555px] w-full flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-slate-100 p-6 shadow-[0_1px_0_rgba(15,23,42,0.06),0_22px_60px_rgba(15,23,42,0.11)] ring-1 ring-white/75 md:p-8 ${cardFontClass}`}
       >
         <div className="mb-4 flex shrink-0 items-center justify-between gap-4">
-          <DoLegalWordmark className="[font-family:var(--font-hero-preview-brand)] text-xl font-semibold tracking-tight text-slate-800 md:text-2xl" />
+          <BrandLogo className="brand-logo !h-7 w-auto md:!h-8" />
           <span className="shrink-0 rounded-full border border-slate-200/80 bg-white/85 px-3 py-1.5 text-[11px] font-medium tracking-wide text-slate-500">
             {t("hero.previewBadge")}
           </span>
@@ -537,7 +537,7 @@ export function HeroDoodleCanvas() {
               type="button"
               onClick={() => submitQuestion(composerText || s.question)}
               disabled={!contextReady || chatPhase !== "compose" || questionSent}
-              className="min-h-[42px] shrink-0 rounded-full bg-sky-200 px-6 text-[12px] font-medium tracking-wide text-sky-950 transition hover:bg-sky-300 active:translate-y-px disabled:cursor-not-allowed disabled:opacity-45 disabled:hover:bg-sky-200"
+              className="min-h-[42px] shrink-0 rounded-full bg-[var(--brand-blue)] px-6 text-[12px] font-medium tracking-wide text-white transition hover:bg-[var(--accent-2)] active:translate-y-px disabled:cursor-not-allowed disabled:opacity-45 disabled:hover:bg-[var(--brand-blue)]"
             >
               {t("hero.previewSend")}
             </button>

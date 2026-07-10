@@ -34,7 +34,7 @@ async function resendRequest(
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
-      "User-Agent": "dolegal-landing/1.0",
+      "User-Agent": "legis-landing/1.0",
       ...(options.headers || {}),
     },
     cache: "no-store",

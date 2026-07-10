@@ -24,7 +24,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "1. Controller",
         paragraphs: [
-          "doLegal is operated by Sergey Torosyan, an individual in the Republic of Armenia, with address at Tsarav Aghbyur 55/20. Contact: hello@dolegal.am.",
+          "Legis is operated by Sergey Torosyan, an individual in the Republic of Armenia, with address at Tsarav Aghbyur 55/20. Contact: hello@legis.am.",
         ],
       },
       {
@@ -79,13 +79,13 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "9. Your rights",
         paragraphs: [
-          "Subject to applicable law, you may request access, correction, deletion, restriction, objection, or data portability by contacting hello@dolegal.am.",
+          "Subject to applicable law, you may request access, correction, deletion, restriction, objection, or data portability by contacting hello@legis.am.",
         ],
       },
       {
         heading: "10. Children",
         paragraphs: [
-          "doLegal is not intended for children, and we do not knowingly collect personal data from children where prohibited by law.",
+          "Legis is not intended for children, and we do not knowingly collect personal data from children where prohibited by law.",
         ],
       },
       {
@@ -103,7 +103,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "1. Оператор персональных данных",
         paragraphs: [
-          "doLegal управляется Sergey Torosyan, физическим лицом в Республике Армения, по адресу Tsarav Aghbyur 55/20. Контакт: hello@dolegal.am.",
+          "Legis управляется Sergey Torosyan, физическим лицом в Республике Армения, по адресу Tsarav Aghbyur 55/20. Контакт: hello@legis.am.",
         ],
       },
       {
@@ -158,13 +158,13 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "9. Ваши права",
         paragraphs: [
-          "С учетом применимого права вы можете запросить доступ, исправление, удаление, ограничение, возражение или переносимость данных по адресу hello@dolegal.am.",
+          "С учетом применимого права вы можете запросить доступ, исправление, удаление, ограничение, возражение или переносимость данных по адресу hello@legis.am.",
         ],
       },
       {
         heading: "10. Дети",
         paragraphs: [
-          "doLegal не предназначен для детей, и мы не собираем сознательно персональные данные детей там, где это запрещено законом.",
+          "Legis не предназначен для детей, и мы не собираем сознательно персональные данные детей там, где это запрещено законом.",
         ],
       },
       {
@@ -182,7 +182,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "1. Տվյալների վերահսկող",
         paragraphs: [
-          "doLegal-ը կառավարվում է Sergey Torosyan-ի կողմից, որը գործում է Հայաստանի Հանրապետությունում՝ Tsarav Aghbyur 55/20 հասցեում։ Կապ՝ hello@dolegal.am։",
+          "Legis-ը կառավարվում է Sergey Torosyan-ի կողմից, որը գործում է Հայաստանի Հանրապետությունում՝ Tsarav Aghbyur 55/20 հասցեում։ Կապ՝ hello@legis.am։",
         ],
       },
       {
@@ -237,13 +237,13 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "9. Ձեր իրավունքները",
         paragraphs: [
-          "Կիրառելի օրենքով նախատեսված դեպքերում դուք կարող եք պահանջել հասանելիություն, ուղղում, ջնջում, սահմանափակում, առարկություն կամ տվյալների տեղափոխելիություն՝ hello@dolegal.am հասցեով։",
+          "Կիրառելի օրենքով նախատեսված դեպքերում դուք կարող եք պահանջել հասանելիություն, ուղղում, ջնջում, սահմանափակում, առարկություն կամ տվյալների տեղափոխելիություն՝ hello@legis.am հասցեով։",
         ],
       },
       {
         heading: "10. Երեխաներ",
         paragraphs: [
-          "doLegal-ը նախատեսված չէ երեխաների համար, և մենք գիտակցաբար չենք հավաքում երեխաների անձնական տվյալներ, եթե դա արգելված է օրենքով։",
+          "Legis-ը նախատեսված չէ երեխաների համար, և մենք գիտակցաբար չենք հավաքում երեխաների անձնական տվյալներ, եթե դա արգելված է օրենքով։",
         ],
       },
       {
@@ -257,9 +257,9 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
 };
 
 const PRIVACY_DESCRIPTIONS: Record<SupportedLocale, string> = {
-  en: "Review how doLegal collects, uses, stores, and protects personal data for waitlist, product usage, and billing operations.",
-  ru: "Узнайте, как doLegal собирает, использует, хранит и защищает персональные данные для листа ожидания, работы продукта и оплаты.",
-  am: "Ծանոթացեք, թե ինչպես է doLegal-ը հավաքում, օգտագործում, պահպանում և պաշտպանում անձնական տվյալները՝ սպասման ցուցակի, ծառայության և վճարումների համար։",
+  en: "Review how Legis collects, uses, stores, and protects personal data for waitlist, product usage, and billing operations.",
+  ru: "Узнайте, как Legis собирает, использует, хранит и защищает персональные данные для листа ожидания, работы продукта и оплаты.",
+  am: "Ծանոթացեք, թե ինչպես է Legis-ը հավաքում, օգտագործում, պահպանում և պաշտպանում անձնական տվյալները՝ սպասման ցուցակի, ծառայության և վճարումների համար։",
 };
 
 export async function generateMetadata({
@@ -270,7 +270,7 @@ export async function generateMetadata({
   const copy = COPY[key] ?? COPY.en;
 
   return {
-    title: `${copy.title} | doLegal`,
+    title: `${copy.title} | Legis`,
     description: PRIVACY_DESCRIPTIONS[key] ?? PRIVACY_DESCRIPTIONS.en,
   };
 }

@@ -7,7 +7,7 @@ import {routing} from "@/i18n/routing";
 import {themeAttrsFromPathname} from "@/lib/theme-from-path";
 
 export const metadata: Metadata = {
-  title: "doLegal — Legal AI-assistant for Armenia",
+  title: "Legis — Legal AI-assistant for Armenia",
   description:
     "AI-powered legal research and drafting for Armenia. Grounded, cited, multilingual — built on official government legislation sources.",
 };

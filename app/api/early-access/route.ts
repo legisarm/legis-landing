@@ -14,7 +14,7 @@ async function addContactToSegment(apiKey: string, email: string, segmentId: str
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
-      "User-Agent": "dolegal-landing/1.0",
+      "User-Agent": "legis-landing/1.0",
     },
   });
 
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
-      "User-Agent": "dolegal-landing/1.0",
+      "User-Agent": "legis-landing/1.0",
     },
     body: JSON.stringify({
       email,

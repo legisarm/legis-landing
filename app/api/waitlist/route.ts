@@ -32,7 +32,7 @@ export async function POST(req: Request) {
         headers: {
           Authorization: `Bearer ${apiKey}`,
           "Content-Type": "application/json",
-          "User-Agent": "dolegal-landing/1.0",
+          "User-Agent": "legis-landing/1.0",
         },
         body: JSON.stringify({ email: normalizedEmail }),
         cache: "no-store",

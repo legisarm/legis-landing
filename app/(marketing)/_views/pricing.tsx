@@ -12,9 +12,9 @@ import { ContactSalesForm } from "../pricing/_components/ContactSalesForm";
 import { PlansAndBilling } from "../pricing/_components/PlansAndBilling";
 
 export const metadata: Metadata = {
-  title: "Pricing | doLegal Armenia",
+  title: "Pricing | Legis Armenia",
   description:
-    "Explore doLegal pricing plans for Armenian legal research and drafting, including token tiers, top-ups, and team options for law and accounting practices.",
+    "Explore Legis pricing plans for Armenian legal research and drafting, including token tiers, top-ups, and team options for law and accounting practices.",
 };
 
 /* ============ Compare table data ============ */

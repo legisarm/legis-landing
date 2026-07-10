@@ -4,6 +4,7 @@ import {Link} from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { brandText } from "@/lib/brand-text";
 import {getDataSyncDaysAgo} from "@/lib/data-sync-days";
+import { BrandLogo } from "@/app/_components/BrandLogo";
 import {
   Fragment,
   KeyboardEvent as ReactKeyboardEvent,
@@ -184,8 +185,8 @@ export function ProductWorkspace() {
           <Link href="/" className="back-link">
             ← Landing
           </Link>
-          <Link href="/" className="brand" aria-label="doLegal">
-            <img className="brand-logo" src="/doLegal-logo.svg" alt="doLegal" />
+          <Link href="/" className="brand" aria-label="Legis">
+            <BrandLogo />
           </Link>
         </div>
         <div className="top-center">
@@ -310,7 +311,7 @@ export function ProductWorkspace() {
             >
               <div className="avatar ai" aria-hidden>DL</div>
               <div className="ans-label" style={{ marginBottom: 0, flex: 1, minWidth: 0 }}>
-                {brandText("doLegal · answer")}
+                {brandText("Legis · answer")}
               </div>
             </div>
 
@@ -415,7 +416,7 @@ export function ProductWorkspace() {
                 >
                   <div className="avatar ai" aria-hidden>DL</div>
                   <div className="ans-label" style={{ marginBottom: 0, flex: 1, minWidth: 0 }}>
-                    {brandText("doLegal · answer")}
+                    {brandText("Legis · answer")}
                     {t.state === "loading" && (
                       <span className="typing">
                         <i />

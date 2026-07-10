@@ -6,19 +6,19 @@ type SupportedLocale = "en" | "ru" | "am";
 
 const HOME_META: Record<SupportedLocale, Metadata> = {
   en: {
-    title: "doLegal | Armenian Legal AI Research and Drafting Platform",
+    title: "Legis | Armenian Legal AI Research and Drafting Platform",
     description:
-      "doLegal helps lawyers, accountants, and founders in Armenia research laws, draft legal documents, and verify citations across Armenian, Russian, and English.",
+      "Legis helps lawyers, accountants, and founders in Armenia research laws, draft legal documents, and verify citations across Armenian, Russian, and English.",
   },
   ru: {
-    title: "doLegal | AI-платформа для юридических исследований в Армении",
+    title: "Legis | AI-платформа для юридических исследований в Армении",
     description:
-      "doLegal помогает юристам, бухгалтерам и основателям в Армении исследовать законодательство, готовить документы и проверять ссылки на нормы права.",
+      "Legis помогает юристам, бухгалтерам и основателям в Армении исследовать законодательство, готовить документы и проверять ссылки на нормы права.",
   },
   am: {
-    title: "doLegal | Իրավական AI հարթակ Հայաստանի համար",
+    title: "Legis | Իրավական AI հարթակ Հայաստանի համար",
     description:
-      "doLegal-ը օգնում է իրավաբաններին, հաշվապահներին և հիմնադիրներին ուսումնասիրել ՀՀ օրենսդրությունը, կազմել փաստաթղթեր և ստուգել իրավական հղումները։",
+      "Legis-ը օգնում է իրավաբաններին, հաշվապահներին և հիմնադիրներին ուսումնասիրել ՀՀ օրենսդրությունը, կազմել փաստաթղթեր և ստուգել իրավական հղումները։",
   },
 };
 

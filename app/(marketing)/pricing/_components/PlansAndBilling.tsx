@@ -107,19 +107,19 @@ export function PlansAndBilling() {
               className={`plan${isFeat ? " feat" : ""}`}
             >
               {isFeat && <span className="plan-ribbon">{tPricing("mostPopular")}</span>}
-              <div className="plan-kicker">
-                <span className="num">{p.num}</span>
-                <span>{lp.kicker}</span>
-              </div>
-              <h3>{lp.name}</h3>
-              <p className="desc">{brandText(lp.desc)}</p>
-              <div className="price-stack">
-                {p.id === "rocket" ? (
-                  <div className="price enterprise">
-                    <span className="enterprise-copy">{tPricing("contactSales.planPriceCopy")}</span>
-                  </div>
-                ) : (
-                  <>
+              <div className="plan-top">
+                <div className="plan-kicker">
+                  <span className="num">{p.num}</span>
+                  <span>{lp.kicker}</span>
+                </div>
+                <h3>{lp.name}</h3>
+                <p className="desc">{brandText(lp.desc)}</p>
+                <div className="price-stack">
+                  {p.id === "rocket" ? (
+                    <div className="price enterprise">
+                      <span className="enterprise-copy">{tPricing("contactSales.planPriceCopy")}</span>
+                    </div>
+                  ) : (
                     <div className="price">
                       <span className="cur">AMD</span>
                       <span className="amt">{amounts[i]}</span>
@@ -127,9 +127,9 @@ export function PlansAndBilling() {
                         {period === "annual" ? tP("billedYearly") : tPricing("monthlyShort")}
                       </span>
                     </div>
-                  </>
-                )}
-                <p className="price-note">{brandText(tPricing("vatNote"))}</p>
+                  )}
+                  <p className="price-note">{brandText(tPricing("vatNote"))}</p>
+                </div>
               </div>
               <Link
                 className={`plan-cta${isFeat ? "" : " ghost"}`}

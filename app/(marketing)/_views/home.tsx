@@ -9,9 +9,9 @@ import { FAQList } from "../_components/FAQList";
 import { LiveDemo } from "../_components/LiveDemo";
 
 export const metadata: Metadata = {
-  title: "doLegal | Armenian Legal AI Research and Drafting Platform",
+  title: "Legis | Armenian Legal AI Research and Drafting Platform",
   description:
-    "doLegal helps lawyers, accountants, and founders in Armenia research laws, draft legal documents, and verify citations across Armenian, Russian, and English.",
+    "Legis helps lawyers, accountants, and founders in Armenia research laws, draft legal documents, and verify citations across Armenian, Russian, and English.",
 };
 
 export default function LandingPage() {
@@ -38,7 +38,7 @@ export default function LandingPage() {
   
   const stats = [0, 1, 2].map((i) => tStats.raw(`${i}`));
   const oldWayItems = tProblem.raw("oldWayItems");
-  const doLegalItems = tProblem.raw("doLegalItems");
+  const legisItems = tProblem.raw("legisItems");
   const featureCards = [0, 1, 2].map((i) => tFeatures.raw(`cards.${i}`));
   const howSteps = [0, 1, 2].map((i) => tHow.raw(`steps.${i}`));
   const howLawSources = tHow.raw("illustrations.lawSources") as string[];
@@ -66,7 +66,7 @@ export default function LandingPage() {
               <h1 className="h-display">
                 {tParity("heroLine1")}<br />
                 {tParity("heroLine2Prefix")} <em>{tParity("heroLine2Emphasis")}</em><br />
-                <span className="amp" style={{ color: "#fff" }}>{tParity("heroLine3Prefix")}</span> {tParity("heroLine3Rest")}
+                <span className="amp">{tParity("heroLine3Prefix")}</span> {tParity("heroLine3Rest")}
                 <span className="small">{tParity("heroLine4")}</span>
               </h1>
               <p className="lede">
@@ -159,9 +159,9 @@ export default function LandingPage() {
             </div>
             <div className="col-new">
               <div className="col-head">
-                {tProblem("withDoLegalBadge")}
+                {tProblem("withLegisBadge")}
               </div>
-              {doLegalItems.map((t: string) => (
+              {legisItems.map((t: string) => (
                 <div className="compare-item" key={t}>
                   <span className="mark">✦</span>
                   <span>{brandText(t)}</span>

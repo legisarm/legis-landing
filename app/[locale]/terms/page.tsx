@@ -24,15 +24,15 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "1. Operator and acceptance",
         paragraphs: [
-          "These Terms are between you and Sergey Torosyan (doLegal, we, us, our), an individual operating in the Republic of Armenia, with address at Tsarav Aghbyur 55/20.",
-          "By accessing or using doLegal, you agree to these Terms. If you use doLegal on behalf of an organization, you confirm you have authority to bind that organization.",
+          "These Terms are between you and Sergey Torosyan (Legis, we, us, our), an individual operating in the Republic of Armenia, with address at Tsarav Aghbyur 55/20.",
+          "By accessing or using Legis, you agree to these Terms. If you use Legis on behalf of an organization, you confirm you have authority to bind that organization.",
         ],
       },
       {
         heading: "2. Service description",
         paragraphs: [
-          "doLegal is a subscription-based software service for Armenian legal and tax research, document drafting, and related productivity workflows.",
-          "doLegal is an information and drafting tool, not a law firm and not a substitute for professional legal advice.",
+          "Legis is a subscription-based software service for Armenian legal and tax research, document drafting, and related productivity workflows.",
+          "Legis is an information and drafting tool, not a law firm and not a substitute for professional legal advice.",
         ],
       },
       {
@@ -47,7 +47,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
           "Paid access is offered on recurring subscription plans and optional top-ups as shown on the pricing page. Prices are listed in AMD and include VAT.",
           "We use Paddle as merchant of record for checkout, payment processing, tax handling, and invoicing.",
           "Certain features are metered in tokens. A token is a unit of AI processing — roughly 0.75 words of typical text. Your subscription refreshes a fixed token allowance each billing cycle; optional top-ups increase your balance without changing your plan tier.",
-          "Illustrative token ranges for typical doLegal workflows (non-binding estimates; actual usage depends on prompts, attachments, and model behavior):",
+          "Illustrative token ranges for typical Legis workflows (non-binding estimates; actual usage depends on prompts, attachments, and model behavior):",
         ],
         bullets: [
           "Short legal question and concise answer (e.g. when VAT registration is mandatory): approximately 500–1,500 tokens.",
@@ -88,7 +88,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "9. Intellectual property",
         paragraphs: [
-          "doLegal software, branding, and platform content (excluding your submitted content and public legal texts) are owned by us or our licensors.",
+          "Legis software, branding, and platform content (excluding your submitted content and public legal texts) are owned by us or our licensors.",
         ],
       },
       {
@@ -112,7 +112,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "13. Indemnification",
         paragraphs: [
-          "You agree to indemnify and hold harmless doLegal from claims arising out of your use of the service, your content, or your breach of these Terms.",
+          "You agree to indemnify and hold harmless Legis from claims arising out of your use of the service, your content, or your breach of these Terms.",
         ],
       },
       {
@@ -124,7 +124,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "15. Contact",
         paragraphs: [
-          "For legal notices or Terms-related questions, contact hello@dolegal.am.",
+          "For legal notices or Terms-related questions, contact hello@legis.am.",
         ],
       },
     ],
@@ -136,15 +136,15 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "1. Оператор и принятие условий",
         paragraphs: [
-          "Настоящие Условия заключаются между вами и Sergey Torosyan (doLegal, мы, нас, наш), физическим лицом, действующим в Республике Армения, по адресу Tsarav Aghbyur 55/20.",
-          "Используя doLegal, вы соглашаетесь с этими Условиями. Если вы используете сервис от имени организации, вы подтверждаете полномочия связывать эту организацию данными Условиями.",
+          "Настоящие Условия заключаются между вами и Sergey Torosyan (Legis, мы, нас, наш), физическим лицом, действующим в Республике Армения, по адресу Tsarav Aghbyur 55/20.",
+          "Используя Legis, вы соглашаетесь с этими Условиями. Если вы используете сервис от имени организации, вы подтверждаете полномочия связывать эту организацию данными Условиями.",
         ],
       },
       {
         heading: "2. Описание сервиса",
         paragraphs: [
-          "doLegal — это подписочный программный сервис для юридических и налоговых исследований по Армении, подготовки документов и связанных рабочих процессов.",
-          "doLegal — информационный и драфтинг-инструмент, не юридическая фирма и не замена профессиональной юридической консультации.",
+          "Legis — это подписочный программный сервис для юридических и налоговых исследований по Армении, подготовки документов и связанных рабочих процессов.",
+          "Legis — информационный и драфтинг-инструмент, не юридическая фирма и не замена профессиональной юридической консультации.",
         ],
       },
       {
@@ -159,7 +159,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
           "Платный доступ предоставляется по подписке и через дополнительные топ-апы, указанные на странице тарифов. Цены указаны в AMD и включают НДС.",
           "Мы используем Paddle как merchant of record для checkout, обработки платежей, налогов и выставления счетов.",
           "Учёт использования части функций ведётся в токенах. Токен — единица AI-обработки, примерно 0,75 слова типичного текста. Подписка обновляет фиксированный пакет токенов каждый расчётный период; дополнительные топ-апы увеличивают баланс без смены уровня тарифа.",
-          "Ориентировочные диапазоны для типовых сценариев doLegal (примерные значения; фактическое потребление зависит от запросов, вложений и поведения модели):",
+          "Ориентировочные диапазоны для типовых сценариев Legis (примерные значения; фактическое потребление зависит от запросов, вложений и поведения модели):",
         ],
         bullets: [
           "Короткий юридический вопрос и краткий ответ (например, когда обязательна регистрация НДС): примерно 500–1 500 токенов.",
@@ -200,7 +200,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "9. Интеллектуальная собственность",
         paragraphs: [
-          "Программное обеспечение doLegal, бренд и контент платформы (кроме вашего контента и публичных юридических текстов) принадлежат нам или нашим лицензиарам.",
+          "Программное обеспечение Legis, бренд и контент платформы (кроме вашего контента и публичных юридических текстов) принадлежат нам или нашим лицензиарам.",
         ],
       },
       {
@@ -224,7 +224,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "13. Возмещение убытков",
         paragraphs: [
-          "Вы соглашаетесь возместить убытки и освободить doLegal от претензий, возникших из-за вашего использования сервиса, вашего контента или нарушения этих Условий.",
+          "Вы соглашаетесь возместить убытки и освободить Legis от претензий, возникших из-за вашего использования сервиса, вашего контента или нарушения этих Условий.",
         ],
       },
       {
@@ -236,7 +236,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "15. Контакты",
         paragraphs: [
-          "По юридическим вопросам и вопросам по Условиям: hello@dolegal.am.",
+          "По юридическим вопросам и вопросам по Условиям: hello@legis.am.",
         ],
       },
     ],
@@ -248,15 +248,15 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "1. Օպերատոր և պայմանների ընդունում",
         paragraphs: [
-          "Սույն պայմանները կնքվում են ձեր և Sergey Torosyan-ի (doLegal, մենք, մեզ, մեր) միջև, որը գործում է Հայաստանի Հանրապետությունում՝ Tsarav Aghbyur 55/20 հասցեում։",
-          "doLegal-ից օգտվելով՝ դուք համաձայնում եք սույն պայմաններին։ Եթե ծառայությունից օգտվում եք կազմակերպության անունից, հաստատում եք, որ լիազորված եք պարտավորեցնել այդ կազմակերպությանը։",
+          "Սույն պայմանները կնքվում են ձեր և Sergey Torosyan-ի (Legis, մենք, մեզ, մեր) միջև, որը գործում է Հայաստանի Հանրապետությունում՝ Tsarav Aghbyur 55/20 հասցեում։",
+          "Legis-ից օգտվելով՝ դուք համաձայնում եք սույն պայմաններին։ Եթե ծառայությունից օգտվում եք կազմակերպության անունից, հաստատում եք, որ լիազորված եք պարտավորեցնել այդ կազմակերպությանը։",
         ],
       },
       {
         heading: "2. Ծառայության նկարագրություն",
         paragraphs: [
-          "doLegal-ը բաժանորդագրության հիմքով ծրագրային ծառայություն է՝ ՀՀ իրավական և հարկային հետազոտության, փաստաթղթերի նախագծման և հարակից աշխատանքային հոսքերի համար։",
-          "doLegal-ը տեղեկատվական և նախագծման գործիք է, ոչ իրավաբանական ընկերություն, և չի փոխարինում մասնագիտական իրավաբանական խորհրդատվությանը։",
+          "Legis-ը բաժանորդագրության հիմքով ծրագրային ծառայություն է՝ ՀՀ իրավական և հարկային հետազոտության, փաստաթղթերի նախագծման և հարակից աշխատանքային հոսքերի համար։",
+          "Legis-ը տեղեկատվական և նախագծման գործիք է, ոչ իրավաբանական ընկերություն, և չի փոխարինում մասնագիտական իրավաբանական խորհրդատվությանը։",
         ],
       },
       {
@@ -271,7 +271,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
           "Վճարովի մուտքը տրամադրվում է պարբերական բաժանորդագրությամբ և լրացուցիչ top-up-երով՝ ըստ գնացուցակի էջի։ Գները նշված են AMD-ով և ներառում են ԱԱՀ-ն։",
           "Մենք օգտագործում ենք Paddle-ը որպես merchant of record checkout-ի, վճարումների, հարկերի և հաշիվների մշակման համար։",
           "Որոշ գործառույթների օգտագործումը հաշվարկվում է թոքեններով։ Թոքենը AI մշակման միավոր է՝ մոտավորապես 0.75 բառ տիպիկ տեքստում։ Բաժանորդագրությունը յուրաքանչյուր վճարման ցիկլում թարմացնում է թոքենների սահմանաչափը, իսկ լրացուցիչ լիցքավորումները մեծացնում են մնացորդը՝ առանց փաթեթի մակարդակը փոխելու։",
-          "doLegal-ում տիպիկ աշխատանքների թոքենների կողմնորոշչական միջակայքեր (չեն կարող համարվել պարտավորեցնող, փաստացի սպառումը կախված է հարցումներից, կցված ֆայլերից և մոդելի վարքից)՝",
+          "Legis-ում տիպիկ աշխատանքների թոքենների կողմնորոշչական միջակայքեր (չեն կարող համարվել պարտավորեցնող, փաստացի սպառումը կախված է հարցումներից, կցված ֆայլերից և մոդելի վարքից)՝",
         ],
         bullets: [
           "Կարճ իրավական հարց և կարճ պատասխան (օր. երբ ԱԱՀ գրանցումը պարտադիր է)՝ մոտավորապես 500–1,500 թոքեն։",
@@ -312,7 +312,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "9. Մտավոր սեփականություն",
         paragraphs: [
-          "doLegal ծրագրային ապահովումը, բրենդը և հարթակի բովանդակությունը (բացառությամբ ձեր բովանդակության և հանրային իրավական տեքստերի) պատկանում են մեզ կամ մեր լիցենզավորողներին։",
+          "Legis ծրագրային ապահովումը, բրենդը և հարթակի բովանդակությունը (բացառությամբ ձեր բովանդակության և հանրային իրավական տեքստերի) պատկանում են մեզ կամ մեր լիցենզավորողներին։",
         ],
       },
       {
@@ -336,7 +336,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "13. Փոխհատուցում",
         paragraphs: [
-          "Դուք համաձայնում եք պաշտպանել և փոխհատուցել doLegal-ին՝ ձեր օգտագործման, ձեր բովանդակության կամ սույն պայմանների խախտման արդյունքում առաջացած պահանջների դեպքում։",
+          "Դուք համաձայնում եք պաշտպանել և փոխհատուցել Legis-ին՝ ձեր օգտագործման, ձեր բովանդակության կամ սույն պայմանների խախտման արդյունքում առաջացած պահանջների դեպքում։",
         ],
       },
       {
@@ -348,7 +348,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "15. Կապ",
         paragraphs: [
-          "Իրավական ծանուցումների և պայմանների վերաբերյալ հարցերի համար՝ hello@dolegal.am։",
+          "Իրավական ծանուցումների և պայմանների վերաբերյալ հարցերի համար՝ hello@legis.am։",
         ],
       },
     ],
@@ -356,9 +356,9 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
 };
 
 const TERMS_DESCRIPTIONS: Record<SupportedLocale, string> = {
-  en: "Read the doLegal Terms of Service, including billing, acceptable use, refunds, and legal conditions for using the platform.",
-  ru: "Ознакомьтесь с Условиями использования doLegal: оплата, допустимое использование, возвраты и правовые условия работы с платформой.",
-  am: "Կարդացեք doLegal-ի Օգտագործման պայմանները՝ վճարումներ, թույլատրելի օգտագործում, վերադարձներ և հարթակի իրավական պայմաններ։",
+  en: "Read the Legis Terms of Service, including billing, acceptable use, refunds, and legal conditions for using the platform.",
+  ru: "Ознакомьтесь с Условиями использования Legis: оплата, допустимое использование, возвраты и правовые условия работы с платформой.",
+  am: "Կարդացեք Legis-ի Օգտագործման պայմանները՝ վճարումներ, թույլատրելի օգտագործում, վերադարձներ և հարթակի իրավական պայմաններ։",
 };
 
 export async function generateMetadata({
@@ -369,7 +369,7 @@ export async function generateMetadata({
   const copy = COPY[key] ?? COPY.en;
 
   return {
-    title: `${copy.title} | doLegal`,
+    title: `${copy.title} | Legis`,
     description: TERMS_DESCRIPTIONS[key] ?? TERMS_DESCRIPTIONS.en,
   };
 }

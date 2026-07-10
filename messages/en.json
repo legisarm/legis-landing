@@ -43,7 +43,7 @@
       "titleMain": "Legal research in Armenia",
       "titleAccent": "stuck in 2005",
       "oldWayBadge": "The old way",
-      "withDoLegalBadge": "With doLegal",
+      "withLegisBadge": "With Legis",
       "oldWayItems": [
         "Manual keyword search across legal sources with no semantic understanding",
         "No way to check if you found the current version of a law or an outdated amendment",
@@ -51,7 +51,7 @@
         "2+ hours spent per case on research that still may miss relevant precedents",
         "Global AI tools have zero Armenian law coverage"
       ],
-      "doLegalItems": [
+      "legisItems": [
         "Ask in Armenian, Russian, or English - get answers grounded in the actual law",
         "Every answer cites the exact article, law code, and source",
         "Generate NDAs, employment contracts, legal letters, and reporting drafts from prompts",
@@ -60,7 +60,7 @@
       ]
     },
     "features": {
-      "description": "doLegal combines legal research, document drafting, and legal assistant guidance - all powered by authoritative legal corpora.",
+      "description": "Legis combines legal research, document drafting, and legal assistant guidance - all powered by authoritative legal corpora.",
       "cards": [
         {
           "number": "01",
@@ -108,7 +108,7 @@
         },
         {
           "title": "AI retrieves the law",
-          "description": "doLegal searches its indexed corpus of legislation and case law, retrieves the most relevant articles, and generates a grounded answer."
+          "description": "Legis searches its indexed corpus of legislation and case law, retrieves the most relevant articles, and generates a grounded answer."
         },
         {
           "title": "Verify every citation",
@@ -465,13 +465,13 @@
         },
         {
           "q": "When is pricing actually available?",
-          "a": "doLegal is in early access. Pricing shown is the planned launch pricing. Join the waitlist and we'll invite you in batches as we open access — starting with independent practitioners in Yerevan."
+          "a": "Legis is in early access. Pricing shown is the planned launch pricing. Join the waitlist and we'll invite you in batches as we open access — starting with independent practitioners in Yerevan."
         }
       ],
       "waitlist": {
         "headingMain": "Join the waitlist.",
         "headingAccent": "Lock in launch pricing.",
-        "body": "doLegal is not publicly released. Early-access invitees get the launch tariff grandfathered for 12 months after general availability."
+        "body": "Legis is not publicly released. Early-access invitees get the launch tariff grandfathered for 12 months after general availability."
       },
       "contactSales": {
         "sectionLabel": "Enterprise intake",
@@ -736,18 +736,18 @@
     },
     "faq": {
       "descriptionPrefix": "Still have questions? Write to us at",
-      "email": "hello@dolegal.am",
+      "email": "hello@legis.am",
       "items": [
         {
           "question": "Is this legal counsel?",
-          "answer": "No. doLegal is a legal research and drafting tool - not a lawyer. All responses include a disclaimer and should be reviewed by a qualified legal professional before taking action."
+          "answer": "No. Legis is a legal research and drafting tool - not a lawyer. All responses include a disclaimer and should be reviewed by a qualified legal professional before taking action."
         },
         {
           "question": "How accurate are the citations?",
           "answer": "Every response is grounded in text retrieved from official legislation sources. We aim for maximum citation accuracy based on regular updates."
         },
         {
-          "question": "What languages does doLegal support?",
+          "question": "What languages does Legis support?",
           "answer": "You can ask questions and receive answers in Armenian, Russian, or English. The legal corpus is primarily Armenian with cross-language retrieval."
         },
         {
@@ -763,7 +763,7 @@
     "earlyAccess": {
       "sectionLabel": "Coming soon",
       "titleMain": "Join the early access",
-      "titleAccent": "for doLegal",
+      "titleAccent": "for Legis",
       "description": "The product is not publicly released yet. Join the waitlist and get invited as soon as we open access.",
       "emailPlaceholder": "you@company.com",
       "buttonLabel": "Join Early Access",
@@ -771,7 +771,7 @@
     },
     "footer": {
       "description": "AI-powered legal research and drafting for professionals. Built on official government legislation sources.",
-      "copyright": "© 2026 doLegal. All rights reserved.",
+      "copyright": "© 2026 Legis. All rights reserved.",
       "columns": [
         {
           "title": "Product",
@@ -796,7 +796,7 @@
             "About",
             "Blog",
             "Contact",
-            "hello@dolegal.am"
+            "hello@legis.am"
           ]
         }
       ]
@@ -809,7 +809,7 @@
       "heroLine3Prefix": "&",
       "heroLine3Rest": "save the afternoon.",
       "heroLine4": "— work multi-language.",
-      "heroDescriptionExact": "Forward-thinking lawyers, accountants, and founders use doLegal to research legislation, draft documents, and navigate state compliance — grounded in the actual text of law.",
+      "heroDescriptionExact": "Forward-thinking lawyers, accountants, and founders use Legis to research legislation, draft documents, and navigate state compliance — grounded in the actual text of law.",
       "heroPrimaryCtaExact": "Join Early Access →",
       "heroSecondaryCtaExact": "See how it works ↗",
       "heroStat2Value": "20",
@@ -822,12 +822,12 @@
       "demoTab3": "Reg. deadline",
       "demoQueryLabel": "Query · EN",
       "demoQuestion": "When must I register for VAT as an individual entrepreneur in Armenia?",
-      "demoAssistantLabel": "doLegal",
+      "demoAssistantLabel": "Legis",
       "demoAnswer": "VAT registration becomes mandatory once turnover crosses the statutory threshold in any rolling 12-month period.",
       "demoSourcesVerified": "verified ✓",
       "demoInputPlaceholder": "Ask a question in Armenian, Russian, or English…",
       "demoCitationsTitle": "Legal sources",
-      "demoChromeMiddle": "doLegal / research",
+      "demoChromeMiddle": "Legis / research",
       "demoNote": "↑ Live preview · switch questions above",
       "demoComposerLang": "EN",
       "demoUserShort": "ME",
@@ -889,7 +889,7 @@
       "faqTitleAccentExact": "questions.",
       "issueLastSynced": "Data last synced — {days, plural, =0 {today} one {# day ago} other {# days ago}}",
       "corpusLastSynced": "CORPUS · last sync {days, plural, =0 {today} one {#d ago} other {#d ago}}",
-      "issueStats": "100,324 laws indexed · 3 languages · Complete Legal Corpus"
+      "issueStats": "300,000+ laws and regulations indexed · 3 languages · Complete Legal Corpus"
     },
     "pricingParity": {
       "monthly": "Monthly",
