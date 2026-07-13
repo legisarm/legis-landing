@@ -736,7 +736,7 @@
     },
     "faq": {
       "descriptionPrefix": "Still have questions? Write to us at",
-      "email": "hello@legis.am",
+      "email": "support@legis.am",
       "items": [
         {
           "question": "Is this legal counsel?",
@@ -796,7 +796,7 @@
             "About",
             "Blog",
             "Contact",
-            "hello@legis.am"
+            "support@legis.am"
           ]
         }
       ]

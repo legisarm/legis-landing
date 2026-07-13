@@ -57,7 +57,7 @@ const COPY: Record<SupportedLocale, RefundCopy> = {
       {
         heading: "6. How to request a refund",
         paragraphs: [
-          "Email hello@legis.am with your account email, Paddle transaction ID or receipt, and reason for request. We typically review requests within 5 business days.",
+          "Email support@legis.am with your account email, Paddle transaction ID or receipt, and reason for request. We typically review requests within 5 business days.",
         ],
       },
     ],
@@ -102,7 +102,7 @@ const COPY: Record<SupportedLocale, RefundCopy> = {
       {
         heading: "6. Как запросить возврат",
         paragraphs: [
-          "Напишите на hello@legis.am, указав email аккаунта, ID транзакции Paddle или чек, а также причину запроса. Обычно мы рассматриваем запросы в течение 5 рабочих дней.",
+          "Напишите на support@legis.am, указав email аккаунта, ID транзакции Paddle или чек, а также причину запроса. Обычно мы рассматриваем запросы в течение 5 рабочих дней.",
         ],
       },
     ],
@@ -147,7 +147,7 @@ const COPY: Record<SupportedLocale, RefundCopy> = {
       {
         heading: "6. Ինչպես պահանջել վերադարձ",
         paragraphs: [
-          "Գրեք hello@legis.am հասցեին՝ նշելով ձեր հաշվեհասցեն, Paddle գործարքի ID-ն կամ կտրոնը, և դիմումի պատճառը։ Սովորաբար դիմումները դիտարկվում են 5 աշխատանքային օրվա ընթացքում։",
+          "Գրեք support@legis.am հասցեին՝ նշելով ձեր հաշվեհասցեն, Paddle գործարքի ID-ն կամ կտրոնը, և դիմումի պատճառը։ Սովորաբար դիմումները դիտարկվում են 5 աշխատանքային օրվա ընթացքում։",
         ],
       },
     ],

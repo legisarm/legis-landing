@@ -124,7 +124,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "15. Contact",
         paragraphs: [
-          "For legal notices or Terms-related questions, contact hello@legis.am.",
+          "For legal notices or Terms-related questions, contact support@legis.am.",
         ],
       },
     ],
@@ -236,7 +236,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "15. Контакты",
         paragraphs: [
-          "По юридическим вопросам и вопросам по Условиям: hello@legis.am.",
+          "По юридическим вопросам и вопросам по Условиям: support@legis.am.",
         ],
       },
     ],
@@ -348,7 +348,7 @@ const COPY: Record<SupportedLocale, TermsCopy> = {
       {
         heading: "15. Կապ",
         paragraphs: [
-          "Իրավական ծանուցումների և պայմանների վերաբերյալ հարցերի համար՝ hello@legis.am։",
+          "Իրավական ծանուցումների և պայմանների վերաբերյալ հարցերի համար՝ support@legis.am։",
         ],
       },
     ],

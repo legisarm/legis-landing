@@ -736,7 +736,7 @@
     },
     "faq": {
       "descriptionPrefix": "Остались вопросы? Напишите нам:",
-      "email": "hello@legis.am",
+      "email": "support@legis.am",
       "items": [
         {
           "question": "Это юридическая консультация?",
@@ -796,7 +796,7 @@
             "О нас",
             "Блог",
             "Контакты",
-            "hello@legis.am"
+            "support@legis.am"
           ]
         }
       ]

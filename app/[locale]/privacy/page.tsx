@@ -24,7 +24,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "1. Controller",
         paragraphs: [
-          "Legis is operated by Sergey Torosyan, an individual in the Republic of Armenia, with address at Tsarav Aghbyur 55/20. Contact: hello@legis.am.",
+          "Legis is operated by Sergey Torosyan, an individual in the Republic of Armenia, with address at Tsarav Aghbyur 55/20. Contact: support@legis.am.",
         ],
       },
       {
@@ -79,7 +79,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "9. Your rights",
         paragraphs: [
-          "Subject to applicable law, you may request access, correction, deletion, restriction, objection, or data portability by contacting hello@legis.am.",
+          "Subject to applicable law, you may request access, correction, deletion, restriction, objection, or data portability by contacting support@legis.am.",
         ],
       },
       {
@@ -103,7 +103,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "1. Оператор персональных данных",
         paragraphs: [
-          "Legis управляется Sergey Torosyan, физическим лицом в Республике Армения, по адресу Tsarav Aghbyur 55/20. Контакт: hello@legis.am.",
+          "Legis управляется Sergey Torosyan, физическим лицом в Республике Армения, по адресу Tsarav Aghbyur 55/20. Контакт: support@legis.am.",
         ],
       },
       {
@@ -158,7 +158,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "9. Ваши права",
         paragraphs: [
-          "С учетом применимого права вы можете запросить доступ, исправление, удаление, ограничение, возражение или переносимость данных по адресу hello@legis.am.",
+          "С учетом применимого права вы можете запросить доступ, исправление, удаление, ограничение, возражение или переносимость данных по адресу support@legis.am.",
         ],
       },
       {
@@ -182,7 +182,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "1. Տվյալների վերահսկող",
         paragraphs: [
-          "Legis-ը կառավարվում է Sergey Torosyan-ի կողմից, որը գործում է Հայաստանի Հանրապետությունում՝ Tsarav Aghbyur 55/20 հասցեում։ Կապ՝ hello@legis.am։",
+          "Legis-ը կառավարվում է Sergey Torosyan-ի կողմից, որը գործում է Հայաստանի Հանրապետությունում՝ Tsarav Aghbyur 55/20 հասցեում։ Կապ՝ support@legis.am։",
         ],
       },
       {
@@ -237,7 +237,7 @@ const COPY: Record<SupportedLocale, PrivacyCopy> = {
       {
         heading: "9. Ձեր իրավունքները",
         paragraphs: [
-          "Կիրառելի օրենքով նախատեսված դեպքերում դուք կարող եք պահանջել հասանելիություն, ուղղում, ջնջում, սահմանափակում, առարկություն կամ տվյալների տեղափոխելիություն՝ hello@legis.am հասցեով։",
+          "Կիրառելի օրենքով նախատեսված դեպքերում դուք կարող եք պահանջել հասանելիություն, ուղղում, ջնջում, սահմանափակում, առարկություն կամ տվյալների տեղափոխելիություն՝ support@legis.am հասցեով։",
         ],
       },
       {

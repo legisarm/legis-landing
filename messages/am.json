@@ -736,7 +736,7 @@
     },
     "faq": {
       "descriptionPrefix": "Դեռ հարցե՞ր ունեք։ Գրեք մեզ՝",
-      "email": "hello@legis.am",
+      "email": "support@legis.am",
       "items": [
         {
           "question": "Սա իրավաբանական խորհրդատվությո՞ւն է։",
@@ -796,7 +796,7 @@
             "Մեր մասին",
             "Բլոգ",
             "Կապ",
-            "hello@legis.am"
+            "support@legis.am"
           ]
         }
       ]

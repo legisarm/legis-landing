@@ -275,7 +275,7 @@ export function LandingPage() {
               </h2>
               <p className="mt-4 text-sm leading-7 text-black/60">
                 {content.faq.descriptionPrefix}{" "}
-                <a className="border-b border-black/20 text-black" href="mailto:hello@legis.am">
+                <a className="border-b border-black/20 text-black" href="mailto:support@legis.am">
                   {content.faq.email}
                 </a>
               </p>
